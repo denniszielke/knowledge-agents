@@ -1,0 +1,145 @@
+<?xml version="1.0"?><rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:owl="http://www.w3.org/2002/07/owl#" xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#" xmlns:xsd="http://www.w3.org/2001/XMLSchema#" xmlns:mat="http://example.org/materials#" xml:base="http://example.org/materials"><owl:Ontology rdf:about="http://example.org/materials"/>
+<!-- Core Domain Extensions -->
+<owl:Class rdf:about="#Macromolecule"><rdfs:label>Macromolecule</rdfs:label><rdfs:comment>Large molecule such as a polymer</rdfs:comment></owl:Class>
+<owl:Class rdf:about="#Resin"><rdfs:label>Resin</rdfs:label><rdfs:comment>Organic solid or semi-solid material, base for plastics</rdfs:comment><rdfs:subClassOf rdf:resource="#Material"/></owl:Class>
+<!-- Polymers by Chemistry -->
+<owl:Class rdf:about="#Polyolefin"><rdfs:label>Polyolefin</rdfs:label><rdfs:comment>Plastic derived from alkene monomers (ethylene, propylene)</rdfs:comment><rdfs:subClassOf rdf:resource="#Plastic"/></owl:Class>
+<owl:Class rdf:about="#Polyvinyl"><rdfs:label>Polyvinyl</rdfs:label><rdfs:comment>Plastic polymers and copolymers based on vinyl group monomers</rdfs:comment><rdfs:subClassOf rdf:resource="#Plastic"/></owl:Class>
+<owl:Class rdf:about="#Polyamide"><rdfs:label>Polyamide</rdfs:label><rdfs:comment>Plastics with repeating amide groups (e.g., PA, nylon)</rdfs:comment><rdfs:subClassOf rdf:resource="#Plastic"/></owl:Class>
+<owl:Class rdf:about="#Polyurethane"><rdfs:label>Polyurethane</rdfs:label><rdfs:comment>Plastic in which urethane groups are main chain linkages</rdfs:comment><rdfs:subClassOf rdf:resource="#Plastic"/></owl:Class>
+<!-- Specialisation: Polyethylene hierarchy -->
+<owl:Class rdf:about="#LowDensityPolyethylene"><rdfs:label>LowDensityPolyethylene</rdfs:label><rdfs:comment>LDPE: highly-branched PE, density 0.910-0.925 g/cc</rdfs:comment><rdfs:subClassOf rdf:resource="#Polyethylene"/></owl:Class>
+<owl:Class rdf:about="#LinearLowDensityPolyethylene"><rdfs:label>LinearLowDensityPolyethylene</rdfs:label><rdfs:comment>PE-LLD: little long-chain branching, density 0.910-0.926 g/cc</rdfs:comment><rdfs:subClassOf rdf:resource="#Polyethylene"/></owl:Class>
+<owl:Class rdf:about="#MediumDensityPolyethylene"><rdfs:label>MediumDensityPolyethylene</rdfs:label><rdfs:comment>PE-MD: some short-chain branches, 0.926-0.940 g/cc</rdfs:comment><rdfs:subClassOf rdf:resource="#Polyethylene"/></owl:Class>
+<owl:Class rdf:about="#HighDensityPolyethylene"><rdfs:label>HighDensityPolyethylene</rdfs:label><rdfs:comment>PE-HD: density >0.940 g/cc, few branches</rdfs:comment><rdfs:subClassOf rdf:resource="#Polyethylene"/></owl:Class>
+<owl:Class rdf:about="#UltraHighMolecularWeightPolyethylene"><rdfs:label>UltraHighMolecularWeightPolyethylene</rdfs:label><rdfs:comment>PE-UHMW: no melt flow, very high molecular mass</rdfs:comment><rdfs:subClassOf rdf:resource="#Polyethylene"/></owl:Class>
+<owl:Class rdf:about="#VeryLowDensityPolyethylene"><rdfs:label>VeryLowDensityPolyethylene</rdfs:label><rdfs:comment>PE-VLD: many short-chain branches; density ≤0.910 g/cc</rdfs:comment><rdfs:subClassOf rdf:resource="#Polyethylene"/></owl:Class>
+<!-- Polypropylene -->
+<owl:Class rdf:about="#PolypropyleneCopolymer"><rdfs:label>PolypropyleneCopolymer</rdfs:label><rdfs:comment>Polypropylene with α-olefin co-monomers</rdfs:comment><rdfs:subClassOf rdf:resource="#Polypropylene"/></owl:Class>
+<owl:Class rdf:about="#PolypropyleneRandomCopolymer"><rdfs:label>PolypropyleneRandomCopolymer</rdfs:label><rdfs:comment>Semi-crystalline polypropylene; random α-olefin co-monomers</rdfs:comment><rdfs:subClassOf rdf:resource="#PolypropyleneCopolymer"/></owl:Class>
+<!-- Polyesters -->
+<owl:Class rdf:about="#PET"><rdfs:label>PET</rdfs:label><rdfs:comment>Polyethylene terephthalate; glycol + terephthalic acid</rdfs:comment><rdfs:subClassOf rdf:resource="#Polyester"/></owl:Class>
+<owl:Class rdf:about="#PBT"><rdfs:label>PBT</rdfs:label><rdfs:comment>Polybutylene terephthalate; butanediol + terephthalic acid</rdfs:comment><rdfs:subClassOf rdf:resource="#Polyester"/></owl:Class>
+<owl:Class rdf:about="#PEN"><rdfs:label>PEN</rdfs:label><rdfs:comment>Polyethylene naphthalate, glycol + naphthalenedicarboxylic acid</rdfs:comment><rdfs:subClassOf rdf:resource="#Polyester"/></owl:Class>
+<owl:Class rdf:about="#PCT"><rdfs:label>PCT</rdfs:label><rdfs:comment>Cyclohexylenedimethylene terephthalate</rdfs:comment><rdfs:subClassOf rdf:resource="#Polyester"/></owl:Class>
+<owl:Class rdf:about="#PTT"><rdfs:label>PTT</rdfs:label><rdfs:comment>Polytrimethylene terephthalate</rdfs:comment><rdfs:subClassOf rdf:resource="#Polyester"/></owl:Class>
+<!-- Polyvinyls -->
+<owl:Class rdf:about="#PVC"><rdfs:label>PVC</rdfs:label><rdfs:comment>Polyvinyl chloride</rdfs:comment><rdfs:subClassOf rdf:resource="#Polyvinyl"/></owl:Class>
+<owl:Class rdf:about="#PVDC"><rdfs:label>PVDC</rdfs:label><rdfs:comment>Polyvinylidene chloride</rdfs:comment><rdfs:subClassOf rdf:resource="#Polyvinyl"/></owl:Class>
+<owl:Class rdf:about="#PVF"><rdfs:label>PVF</rdfs:label><rdfs:comment>Polyvinyl fluoride</rdfs:comment><rdfs:subClassOf rdf:resource="#Polyvinyl"/></owl:Class>
+<owl:Class rdf:about="#PVDF"><rdfs:label>PVDF</rdfs:label><rdfs:comment>Polyvinylidene fluoride</rdfs:comment><rdfs:subClassOf rdf:resource="#Polyvinyl"/></owl:Class>
+<owl:Class rdf:about="#PVK"><rdfs:label>PVK</rdfs:label><rdfs:comment>Polyvinylcarbazole</rdfs:comment><rdfs:subClassOf rdf:resource="#Polyvinyl"/></owl:Class>
+<owl:Class rdf:about="#PVP"><rdfs:label>PVP</rdfs:label><rdfs:comment>Polyvinylpyrrolidone</rdfs:comment><rdfs:subClassOf rdf:resource="#Polyvinyl"/></owl:Class>
+<!-- Attribute/Property classes -->
+<owl:Class rdf:about="#MechanicalProperty"><rdfs:label>MechanicalProperty</rdfs:label><rdfs:comment>Property quantifying mechanical behaviour</rdfs:comment><rdfs:subClassOf rdf:resource="#PerformanceProperty"/></owl:Class>
+<owl:Class rdf:about="#ThermalProperty"><rdfs:label>ThermalProperty</rdfs:label><rdfs:comment>Property related to thermal behaviour</rdfs:comment><rdfs:subClassOf rdf:resource="#PerformanceProperty"/></owl:Class>
+<owl:Class rdf:about="#FireProperty"><rdfs:label>FireProperty</rdfs:label><rdfs:comment>Property measuring behaviour in combustion or flame</rdfs:comment><rdfs:subClassOf rdf:resource="#PerformanceProperty"/></owl:Class>
+<owl:Class rdf:about="#ChemicalProperty"><rdfs:label>ChemicalProperty</rdfs:label><rdfs:comment>Property of chemical composition or resistance</rdfs:comment><rdfs:subClassOf rdf:resource="#PerformanceProperty"/></owl:Class>
+<!-- Subclasses for Fire Properties -->
+<owl:Class rdf:about="#Flammability"><rdfs:label>Flammability</rdfs:label><rdfs:comment>Ability to burn with a flame under specified conditions</rdfs:comment><rdfs:subClassOf rdf:resource="#FireProperty"/></owl:Class>
+<owl:Class rdf:about="#Ignitability"><rdfs:label>Ignitability</rdfs:label><rdfs:comment>Ease of ignition of a material in test</rdfs:comment><rdfs:subClassOf rdf:resource="#FireProperty"/></owl:Class>
+<owl:Class rdf:about="#AfterFlameTime"><rdfs:label>AfterFlameTime</rdfs:label><rdfs:comment>Time after ignition source removal for flame persistence</rdfs:comment><rdfs:subClassOf rdf:resource="#FireProperty"/></owl:Class>
+<owl:Class rdf:about="#AfterGlowTime"><rdfs:label>AfterGlowTime</rdfs:label><rdfs:comment>Time after ignition and afterflame for glowing persistence</rdfs:comment><rdfs:subClassOf rdf:resource="#FireProperty"/></owl:Class>
+<owl:Class rdf:about="#BurningRate"><rdfs:label>BurningRate</rdfs:label><rdfs:comment>Rate of burning under standard test conditions</rdfs:comment><rdfs:subClassOf rdf:resource="#FireProperty"/></owl:Class>
+<owl:Class rdf:about="#FlashPoint"><rdfs:label>FlashPoint</rdfs:label><rdfs:comment>Minimum temperature for vapor ignition, °C</rdfs:comment><rdfs:subClassOf rdf:resource="#FireProperty"/></owl:Class>
+<owl:Class rdf:about="#OxygenIndex"><rdfs:label>OxygenIndex</rdfs:label><rdfs:comment>Minimum O2 concentration for flame; percent</rdfs:comment><rdfs:subClassOf rdf:resource="#FireProperty"/></owl:Class>
+<!-- Activity Extensions -->
+<owl:Class rdf:about="#Polymerization"><rdfs:label>Polymerization</rdfs:label><rdfs:comment>Chemical process to convert monomer(s) to polymer</rdfs:comment><rdfs:subClassOf rdf:resource="#Activity"/></owl:Class>
+<owl:Class rdf:about="#AdditionPolymerization"><rdfs:label>AdditionPolymerization</rdfs:label><rdfs:comment>Polymerization via successive monomer addition, no small molecule elimination</rdfs:comment><rdfs:subClassOf rdf:resource="#Polymerization"/></owl:Class>
+<owl:Class rdf:about="#CondensationPolymerization"><rdfs:label>CondensationPolymerization</rdfs:label><rdfs:comment>Polymerization where small molecules are split off, e.g., water</rdfs:comment><rdfs:subClassOf rdf:resource="#Polymerization"/></owl:Class>
+<owl:Class rdf:about="#CompositeManufacturing"><rdfs:label>CompositeManufacturing</rdfs:label><rdfs:comment>Group of processes to combine discrete materials in composites</rdfs:comment><rdfs:subClassOf rdf:resource="#Activity"/></owl:Class>
+<!-- Special Processes/Testing Hierarchy Examples -->
+<owl:Class rdf:about="#MouldingProcess"><rdfs:label>MouldingProcess</rdfs:label><rdfs:comment>Process of shaping by moulding; includes compression, injection, etc.</rdfs:comment><rdfs:subClassOf rdf:resource="#Moulding"/></owl:Class>
+<owl:Class rdf:about="#CompressionMoulding"><rdfs:label>CompressionMoulding</rdfs:label><rdfs:comment>Process of applying pressure and heat in a cavity</rdfs:comment><rdfs:subClassOf rdf:resource="#MouldingProcess"/></owl:Class>
+<owl:Class rdf:about="#InjectionMoulding"><rdfs:label>InjectionMoulding</rdfs:label><rdfs:comment>Shoots molten/plasticized material into closed cavity</rdfs:comment><rdfs:subClassOf rdf:resource="#MouldingProcess"/></owl:Class>
+<owl:Class rdf:about="#BlowMoulding"><rdfs:label>BlowMoulding</rdfs:label><rdfs:comment>Inflates parison in a mould with gas to form hollow part</rdfs:comment><rdfs:subClassOf rdf:resource="#MouldingProcess"/></owl:Class>
+<owl:Class rdf:about="#TestingProperty"><rdfs:label>TestingProperty</rdfs:label><rdfs:comment>Property specifically measured by a test</rdfs:comment><rdfs:subClassOf rdf:resource="#Property"/></owl:Class>
+<owl:Class rdf:about="#FireTesting"><rdfs:label>FireTesting</rdfs:label><rdfs:comment>Test activity measuring combustion properties</rdfs:comment><rdfs:subClassOf rdf:resource="#Testing"/></owl:Class>
+<!-- Viscosity hierarchy -->
+<owl:Class rdf:about="#DynamicShearViscosity"><rdfs:label>DynamicShearViscosity</rdfs:label><rdfs:comment>Dynamic part of complex shear viscosity, Pa·s</rdfs:comment><rdfs:subClassOf rdf:resource="#ViscosityProperty"/></owl:Class>
+<owl:Class rdf:about="#ComplexShearViscosity"><rdfs:label>ComplexShearViscosity</rdfs:label><rdfs:comment>Complex ratio of dynamic shear stress to rate, Pa·s</rdfs:comment><rdfs:subClassOf rdf:resource="#ViscosityProperty"/></owl:Class>
+<!-- Time property specializations: -->
+<owl:Class rdf:about="#HoldTime"><rdfs:label>HoldTime</rdfs:label><rdfs:comment>Time pressure is maintained in process (e.g. injection); s</rdfs:comment><rdfs:subClassOf rdf:resource="#TimeProperty"/></owl:Class>
+<owl:Class rdf:about="#CoolingTime"><rdfs:label>CoolingTime</rdfs:label><rdfs:comment>Time for part or specimen to cool; s</rdfs:comment><rdfs:subClassOf rdf:resource="#TimeProperty"/></owl:Class>
+<owl:Class rdf:about="#ExposureTime"><rdfs:label>ExposureTime</rdfs:label><rdfs:comment>Duration item is exposed under test conditions; s</rdfs:comment><rdfs:subClassOf rdf:resource="#TimeProperty"/></owl:Class>
+<!-- Composites & Reinforcements -->
+<owl:Class rdf:about="#FibreReinforcedComposite"><rdfs:label>FibreReinforcedComposite</rdfs:label><rdfs:comment>Composite with fibrous phase (e.g. glass, carbon, aramid)</rdfs:comment><rdfs:subClassOf rdf:resource="#Composite"/></owl:Class>
+<owl:Class rdf:about="#LaminateComposite"><rdfs:label>LaminateComposite</rdfs:label><rdfs:comment>Composite with layered structure</rdfs:comment><rdfs:subClassOf rdf:resource="#Composite"/></owl:Class>
+<owl:Class rdf:about="#SandwichPanel"><rdfs:label>SandwichPanel</rdfs:label><rdfs:comment>Core bonded to sheet materials both sides</rdfs:comment><rdfs:subClassOf rdf:resource="#LaminateComposite"/></owl:Class>
+<!-- Hierarchy for Activities relating to Adhesives -->
+<owl:Class rdf:about="#Curing"><rdfs:label>Curing</rdfs:label><rdfs:comment>Process converting a composition into stabilized state via chemical or physical process</rdfs:comment><rdfs:subClassOf rdf:resource="#Activity"/></owl:Class>
+<owl:Class rdf:about="#AdherendPreparation"><rdfs:label>AdherendPreparation</rdfs:label><rdfs:comment>Activities preparing the surface for adhesive bonding</rdfs:comment><rdfs:subClassOf rdf:resource="#Activity"/></owl:Class>
+<owl:Class rdf:about="#SurfaceCleaning"><rdfs:label>SurfaceCleaning</rdfs:label><rdfs:comment>Removing substances from a surface prior to bonding</rdfs:comment><rdfs:subClassOf rdf:resource="#AdherendPreparation"/></owl:Class>
+<owl:Class rdf:about="#SurfacePretreatment"><rdfs:label>SurfacePretreatment</rdfs:label><rdfs:comment>Physical or chemical pretreatment of a surface for bonding</rdfs:comment><rdfs:subClassOf rdf:resource="#AdherendPreparation"/></owl:Class>
+<!-- Adhesive Failure types -->
+<owl:Class rdf:about="#AdhesiveBondFailure"><rdfs:label>AdhesiveBondFailure</rdfs:label><rdfs:comment>Failure of an adhesive bond (adhesive, cohesive, adherend)</rdfs:comment><rdfs:subClassOf rdf:resource="#PerformanceProperty"/></owl:Class>
+<owl:Class rdf:about="#CohesionFailure"><rdfs:label>CohesionFailure</rdfs:label><rdfs:comment>Failure within the body of adhesive</rdfs:comment><rdfs:subClassOf rdf:resource="#AdhesiveBondFailure"/></owl:Class>
+<owl:Class rdf:about="#AdhesionFailure"><rdfs:label>AdhesionFailure</rdfs:label><rdfs:comment>Failure at adhesive/adherend interface</rdfs:comment><rdfs:subClassOf rdf:resource="#AdhesiveBondFailure"/></owl:Class>
+<owl:Class rdf:about="#AdherendFailure"><rdfs:label>AdherendFailure</rdfs:label><rdfs:comment>Failure in the body of the adherend</rdfs:comment><rdfs:subClassOf rdf:resource="#AdhesiveBondFailure"/></owl:Class>
+<!-- Synonyms and Deprecated marker -->
+<owl:ObjectProperty rdf:about="#hasSynonym"><rdfs:comment>Links term to synonym</rdfs:comment></owl:ObjectProperty>
+<owl:DatatypeProperty rdf:about="#isDeprecated"><rdfs:comment>True if the term is deprecated</rdfs:comment><rdfs:range rdf:resource="&xsd;boolean"/></owl:DatatypeProperty>
+<!-- Measure/unit range/value, with example ranges or units -->
+<owl:DatatypeProperty rdf:about="#unit"><rdfs:comment>Indicates the SI or other unit</rdfs:comment></owl:DatatypeProperty>
+<owl:DatatypeProperty rdf:about="#valueRange"><rdfs:comment>String providing allowed value range</rdfs:comment></owl:DatatypeProperty>
+<!-- Measure properties (added/new or extended) -->
+<owl:DatatypeProperty rdf:about="#afterFlameTimeValue"><rdfs:label>afterFlameTimeValue</rdfs:label><rdfs:comment>Afterflame duration, seconds</rdfs:comment><rdfs:domain rdf:resource="#AfterFlameTime"/><rdfs:range rdf:resource="&xsd;float"/><unit>seconds</unit></owl:DatatypeProperty>
+<owl:DatatypeProperty rdf:about="#afterGlowTimeValue"><rdfs:label>afterGlowTimeValue</rdfs:label><rdfs:comment>Afterglow duration, seconds</rdfs:comment><rdfs:domain rdf:resource="#AfterGlowTime"/><rdfs:range rdf:resource="&xsd;float"/><unit>seconds</unit></owl:DatatypeProperty>
+<owl:DatatypeProperty rdf:about="#burningRateValue"><rdfs:label>burningRateValue</rdfs:label><rdfs:comment>Burning rate (e.g. mm/s, m/s, kg/s)</rdfs:comment><rdfs:domain rdf:resource="#BurningRate"/><rdfs:range rdf:resource="&xsd;float"/><unit>mm/s</unit></owl:DatatypeProperty>
+<owl:DatatypeProperty rdf:about="#flashPointValue"><rdfs:label>flashPointValue</rdfs:label><rdfs:comment>Temperature for vapor ignition, °C</rdfs:comment><rdfs:domain rdf:resource="#FlashPoint"/><rdfs:range rdf:resource="&xsd;float"/><unit>degC</unit></owl:DatatypeProperty>
+<owl:DatatypeProperty rdf:about="#oxygenIndexValue"><rdfs:label>oxygenIndexValue</rdfs:label><rdfs:comment>Min O2 percent for flame</rdfs:comment><rdfs:domain rdf:resource="#OxygenIndex"/><rdfs:range rdf:resource="&xsd;float"/><unit>pct</unit><valueRange>0-100</valueRange></owl:DatatypeProperty>
+<owl:DatatypeProperty rdf:about="#glassTransitionTemperatureValue"><rdfs:label>glassTransitionTemperatureValue</rdfs:label><rdfs:comment>Glass transition midpoint temperature, °C</rdfs:comment><rdfs:domain rdf:resource="#Polymer"/><rdfs:range rdf:resource="&xsd;float"/><unit>degC</unit></owl:DatatypeProperty>
+<owl:DatatypeProperty rdf:about="#meltFlowRateValue"><rdfs:label>meltFlowRateValue</rdfs:label><rdfs:comment>Mass extruded/10min</rdfs:comment><rdfs:domain rdf:resource="#Polymer"/><rdfs:range rdf:resource="&xsd;float"/><unit>g/10min</unit><valueRange>0-100</valueRange></owl:DatatypeProperty>
+<owl:DatatypeProperty rdf:about="#impactStrengthValue"><rdfs:label>impactStrengthValue</rdfs:label><rdfs:comment>Impact required to break per area</rdfs:comment><rdfs:domain rdf:resource="#ImpactStrength"/><rdfs:range rdf:resource="&xsd;float"/><unit>kJ/m2</unit></owl:DatatypeProperty>
+<owl:DatatypeProperty rdf:about="#densityValue"><rdfs:label>densityValue</rdfs:label><rdfs:comment>Density, g/cm3 or kg/m3</rdfs:comment><rdfs:domain rdf:resource="#Material"/><rdfs:range rdf:resource="&xsd;float"/><unit>g/cm3</unit></owl:DatatypeProperty>
+<!-- Example deprecated subClass with synonym and bool -->
+<owl:Class rdf:about="#ColdGlue"><rdfs:label>ColdGlue</rdfs:label><rdfs:comment>Deprecated: cold-setting adhesive</rdfs:comment><owl:equivalentClass rdf:resource="#ColdSettingAdhesive"/><rdfs:subClassOf rdf:resource="#DeprecatedTerm"/></owl:Class>
+<owl:Class rdf:about="#ColdSettingAdhesive"><rdfs:label>ColdSettingAdhesive</rdfs:label><rdfs:comment>Adhesive that sets at room temperature</rdfs:comment></owl:Class>
+<owl:DatatypeProperty rdf:about="#coldGlueDeprecated"><rdfs:domain rdf:resource="#ColdGlue"/><rdfs:range rdf:resource="&xsd;boolean"/><rdfs:label>coldGlueDeprecated</rdfs:label></owl:DatatypeProperty>
+<!-- EquivalentClass examples: ImpactStrength/Istod/Charpy -->
+<owl:Class rdf:about="#IzodImpactStrength"><rdfs:label>IzodImpactStrength</rdfs:label><rdfs:comment>Izod impact energy per area, kJ/m2</rdfs:comment><owl:equivalentClass rdf:resource="#ImpactStrength"/><rdfs:subClassOf rdf:resource="#ImpactStrength"/></owl:Class>
+<owl:Class rdf:about="#CharpyImpactStrength"><rdfs:label>CharpyImpactStrength</rdfs:label><rdfs:comment>Charpy impact energy per area, kJ/m2</rdfs:comment><owl:equivalentClass rdf:resource="#ImpactStrength"/><rdfs:subClassOf rdf:resource="#ImpactStrength"/></owl:Class>
+<!-- Example hierarchy for Viscosity -->
+<owl:Class rdf:about="#InitialViscosity"><rdfs:label>InitialViscosity</rdfs:label><rdfs:comment>Viscosity at initial measurement, Pa·s</rdfs:comment><rdfs:subClassOf rdf:resource="#ViscosityProperty"/></owl:Class>
+<owl:Class rdf:about="#DynamicViscosity"><rdfs:label>DynamicViscosity</rdfs:label><rdfs:comment>Total force per area per velocity gradient, Pa·s</rdfs:comment><owl:equivalentClass rdf:resource="#DynamicShearViscosity"/><rdfs:subClassOf rdf:resource="#ViscosityProperty"/></owl:Class>
+<!-- Specialisations for time: -->
+<owl:Class rdf:about="#HoldTime"><rdfs:label>HoldTime</rdfs:label><rdfs:comment>Pressure holding time, s</rdfs:comment><rdfs:subClassOf rdf:resource="#TimeProperty"/></owl:Class>
+<owl:Class rdf:about="#CuringTime"><rdfs:label>CuringTime</rdfs:label><rdfs:comment>Curing process duration, s</rdfs:comment><rdfs:subClassOf rdf:resource="#TimeProperty"/></owl:Class>
+<owl:Class rdf:about="#ApplicationTime"><rdfs:label>ApplicationTime</rdfs:label><rdfs:comment>Time to apply adhesive, s</rdfs:comment><rdfs:subClassOf rdf:resource="#TimeProperty"/></owl:Class>
+<owl:Class rdf:about="#CycleTime"><rdfs:label>CycleTime</rdfs:label><rdfs:comment>Time for a process cycle, s</rdfs:comment><rdfs:subClassOf rdf:resource="#TimeProperty"/></owl:Class>
+<owl:DatatypeProperty rdf:about="#cycleTimeValue"><rdfs:label>cycleTimeValue</rdfs:label><rdfs:comment>Cycle time value, s</rdfs:comment><rdfs:domain rdf:resource="#CycleTime"/><rdfs:range rdf:resource="&xsd;float"/><unit>s</unit></owl:DatatypeProperty>
+<owl:Class rdf:about="#ExposureTime"><rdfs:label>ExposureTime</rdfs:label><rdfs:comment>Time item is exposed in testing, s</rdfs:comment><rdfs:subClassOf rdf:resource="#TimeProperty"/></owl:Class>
+<owl:Class rdf:about="#ShelfLife"><rdfs:label>ShelfLife</rdfs:label><rdfs:comment>Storage time retaining working properties</rdfs:comment><rdfs:subClassOf rdf:resource="#TimeProperty"/></owl:Class>
+<!-- Example for composites -->
+<owl:Class rdf:about="#CellularPlastic"><rdfs:label>CellularPlastic</rdfs:label><rdfs:comment>Foamed plastic, with reduced density by cells</rdfs:comment><rdfs:subClassOf rdf:resource="#Plastic"/></owl:Class>
+<owl:Class rdf:about="#ClosedCellCellularPlastic"><rdfs:label>ClosedCellCellularPlastic</rdfs:label><rdfs:comment>Cellular plastic with non-interconnecting cells</rdfs:comment><rdfs:subClassOf rdf:resource="#CellularPlastic"/></owl:Class>
+<owl:Class rdf:about="#OpenCellCellularPlastic"><rdfs:label>OpenCellCellularPlastic</rdfs:label><rdfs:comment>Cellular plastic with interconnecting cells</rdfs:comment><rdfs:subClassOf rdf:resource="#CellularPlastic"/></owl:Class>
+<owl:Class rdf:about="#ChemicallyFoamedPlastic"><rdfs:label>ChemicallyFoamedPlastic</rdfs:label><rdfs:comment>Cellular plastic with cells from chemical reaction</rdfs:comment><rdfs:subClassOf rdf:resource="#CellularPlastic"/></owl:Class>
+<owl:Class rdf:about="#MechanicallyFoamedPlastic"><rdfs:label>MechanicallyFoamedPlastic</rdfs:label><rdfs:comment>Cellular plastic with physically incorporated gas</rdfs:comment><rdfs:subClassOf rdf:resource="#CellularPlastic"/></owl:Class>
+<!-- Example for composite activities -->
+<owl:Class rdf:about="#LayUp"><rdfs:label>LayUp</rdfs:label><rdfs:comment>Process of assembling layers for composite manufacturing</rdfs:comment><rdfs:subClassOf rdf:resource="#CompositeManufacturing"/></owl:Class>
+<owl:Class rdf:about="#VacuumPressing"><rdfs:label>VacuumPressing</rdfs:label><rdfs:comment>Applying pressure by evacuating air, often with bagging</rdfs:comment><rdfs:subClassOf rdf:resource="#CompositeManufacturing"/></owl:Class>
+<!-- Example value range with units for oxygen index -->
+<owl:DatatypeProperty rdf:about="#oiRange"><rdfs:domain rdf:resource="#OxygenIndex"/><rdfs:range rdf:resource="&xsd;string"/><rdfs:label>OxygenIndexRange</rdfs:label><valueRange>0% to 100%</valueRange></owl:DatatypeProperty>
+<!-- Energy property specialisations -->
+<owl:Class rdf:about="#SurfaceEnergy"><rdfs:label>SurfaceEnergy</rdfs:label><rdfs:comment>Energy per unit area at surface, J/m2</rdfs:comment><rdfs:subClassOf rdf:resource="#EnergyProperty"/></owl:Class>
+<owl:Class rdf:about="#GibbsFreeEnergy"><rdfs:label>GibbsFreeEnergy</rdfs:label><rdfs:comment>Thermodynamic potential at constant T and P (J)</rdfs:comment><rdfs:subClassOf rdf:resource="#EnergyProperty"/></owl:Class>
+<owl:Class rdf:about="#ActivationEnergy"><rdfs:label>ActivationEnergy</rdfs:label><rdfs:comment>Minimum energy for reaction (J or kJ/mol)</rdfs:comment><rdfs:subClassOf rdf:resource="#EnergyProperty"/></owl:Class>
+<owl:Class rdf:about="#ThermalEnergy"><rdfs:label>ThermalEnergy</rdfs:label><rdfs:comment>Thermal portion of internal energy</rdfs:comment><rdfs:subClassOf rdf:resource="#EnergyProperty"/></owl:Class>
+<owl:Class rdf:about="#HeatReleaseRate"><rdfs:label>HeatReleaseRate</rdfs:label><rdfs:comment>Energy released per unit time; W</rdfs:comment><rdfs:subClassOf rdf:resource="#EnergyProperty"/></owl:Class>
+<owl:Class rdf:about="#EnergyReleaseRate"><rdfs:label>EnergyReleaseRate</rdfs:label><rdfs:comment>Change in external work and strain energy per area, J/m2</rdfs:comment><rdfs:subClassOf rdf:resource="#EnergyProperty"/></owl:Class>
+<!-- Relationships and domain/range for synonym and deprecation -->
+<owl:ObjectProperty rdf:about="#hasSynonym"><rdfs:domain rdf:resource="#Property"/><rdfs:range rdf:resource="#Property"/><rdfs:comment>Links property to synonyms</rdfs:comment></owl:ObjectProperty>
+<owl:DatatypeProperty rdf:about="#isDeprecated"><rdfs:domain rdf:resource="#Property"/><rdfs:range rdf:resource="&xsd;boolean"/><rdfs:comment>Whether property/term is deprecated</rdfs:comment></owl:DatatypeProperty>
+<!-- Example connection between plastics and their subtypes -->
+<owl:Class rdf:about="#ABSPlastic"><rdfs:label>ABSPlastic</rdfs:label><rdfs:comment>Acrylonitrile-Butadiene-Styrene plastic; terpolymer or blend</rdfs:comment><rdfs:subClassOf rdf:resource="#Plastic"/></owl:Class>
+<owl:Class rdf:about="#AMMAPlastic"><rdfs:label>AMMAPlastic</rdfs:label><rdfs:comment>Acrylonitrile-methyl methacrylate plastic</rdfs:comment><rdfs:subClassOf rdf:resource="#Plastic"/></owl:Class>
+<!-- Adhesive and application related terms hierarchy -->
+<owl:Class rdf:about="#Adhesive"><rdfs:label>Adhesive</rdfs:label><rdfs:comment>Substance used to bond surfaces by adhesion/cohesion</rdfs:comment><rdfs:subClassOf rdf:resource="#Material"/></owl:Class>
+<owl:Class rdf:about="#AnaerobicAdhesive"><rdfs:label>AnaerobicAdhesive</rdfs:label><rdfs:comment>Cures in absence of oxygen, catalyzed by metals</rdfs:comment><rdfs:subClassOf rdf:resource="#Adhesive"/></owl:Class>
+<owl:Class rdf:about="#HotMeltAdhesive"><rdfs:label>HotMeltAdhesive</rdfs:label><rdfs:comment>Applied molten, bonds on cooling</rdfs:comment><rdfs:subClassOf rdf:resource="#Adhesive"/></owl:Class>
+<!-- Activities related to environmental/aging evaluation -->
+<owl:Class rdf:about="#AgingTest"><rdfs:label>AgingTest</rdfs:label><rdfs:comment>Process for simulating long-term service effects</rdfs:comment><rdfs:subClassOf rdf:resource="#Testing"/></owl:Class>
+<owl:Class rdf:about="#AcceleratedAgingTest"><rdfs:label>AcceleratedAgingTest</rdfs:label><rdfs:comment>Short-term test to simulate long-term effects</rdfs:comment><rdfs:subClassOf rdf:resource="#AgingTest"/></owl:Class>
+<owl:Class rdf:about="#EnvironmentalTest"><rdfs:label>EnvironmentalTest</rdfs:label><rdfs:comment>Test item under service environment conditions</rdfs:comment><rdfs:subClassOf rdf:resource="#Testing"/></owl:Class>
+</rdf:RDF>

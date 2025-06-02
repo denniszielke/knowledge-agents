@@ -1,115 +1,355 @@
+<rdf:RDF
+xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+xmlns:owl="http://www.w3.org/2002/07/owl#"
+xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+xmlns:dc="http://purl.org/dc/elements/1.1/"
+xmlns:mat="http://example.org/materials#"
+xml:base="http://example.org/materials">
 
-<rdf:RDF xmlns="http://www.w3.org/2002/07/owl#" xml:base="http://www.example.org/ontology" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#" xmlns:owl="http://www.w3.org/2002/07/owl#" xmlns:xsd="http://www.w3.org/2001/XMLSchema#">
-<owl:Ontology rdf:about="http://www.example.org/ontology"/>
-<owl:Class rdf:about="http://www.example.org/ontology#Polymer"/>
-<owl:Class rdf:about="http://www.example.org/ontology#Plastic"/>
-<owl:Class rdf:about="http://www.example.org/ontology#Adhesive"/>
-<owl:Class rdf:about="http://www.example.org/ontology#FireTesting"/>
-<owl:Class rdf:about="http://www.example.org/ontology#Recycling"/>
-<owl:Class rdf:about="http://www.example.org/ontology#Composite"/>
-<owl:Class rdf:about="http://www.example.org/ontology#Thermoforming"/>
-<owl:Class rdf:about="http://www.example.org/ontology#Moulding"/>
-<owl:Class rdf:about="http://www.example.org/ontology#Testing"/>
-<owl:Class rdf:about="http://www.example.org/ontology#EnvironmentalImpact"/>
-<owl:Class rdf:about="http://www.example.org/ontology#Biodegradation"/>
-<owl:Class rdf:about="http://www.example.org/ontology#Polymerization"/>
-<owl:Class rdf:about="http://www.example.org/ontology#PolymerType"/>
-<owl:Class rdf:about="http://www.example.org/ontology#PolymerProperty"/>
-<owl:Class rdf:about="http://www.example.org/ontology#PolymerProcessing"/>
-<owl:Class rdf:about="http://www.example.org/ontology#PolymerStructure"/>
-<owl:Class rdf:about="http://www.example.org/ontology#PolymerApplication"/>
-<owl:Class rdf:about="http://www.example.org/ontology#PolymerTesting"/>
-<owl:Class rdf:about="http://www.example.org/ontology#PolymerRecycling"/>
-<owl:Class rdf:about="http://www.example.org/ontology#PolymerFireTesting"/>
-<owl:Class rdf:about="http://www.example.org/ontology#PolymerEnvironmentalImpact"/>
-<owl:Class rdf:about="http://www.example.org/ontology#PolymerBiodegradation"/>
-<owl:Class rdf:about="http://www.example.org/ontology#PolymerThermoforming"/>
-<owl:Class rdf:about="http://www.example.org/ontology#PolymerMoulding"/>
-<owl:Class rdf:about="http://www.example.org/ontology#PolymerAdhesive"/>
-<owl:Class rdf:about="http://www.example.org/ontology#PolymerComposite"/>
-<owl:Class rdf:about="http://www.example.org/ontology#PolymerPropertyType"/>
-<owl:Class rdf:about="http://www.example.org/ontology#PolymerProcessingType"/>
-<owl:Class rdf:about="http://www.example.org/ontology#PolymerStructureType"/>
-<owl:Class rdf:about="http://www.example.org/ontology#PolymerApplicationType"/>
-<owl:Class rdf:about="http://www.example.org/ontology#PolymerTestingType"/>
-<owl:Class rdf:about="http://www.example.org/ontology#PolymerRecyclingType"/>
-<owl:Class rdf:about="http://www.example.org/ontology#PolymerFireTestingType"/>
-<owl:Class rdf:about="http://www.example.org/ontology#PolymerEnvironmentalImpactType"/>
-<owl:Class rdf:about="http://www.example.org/ontology#PolymerBiodegradationType"/>
-<owl:Class rdf:about="http://www.example.org/ontology#PolymerThermoformingType"/>
-<owl:Class rdf:about="http://www.example.org/ontology#PolymerMouldingType"/>
-<owl:Class rdf:about="http://www.example.org/ontology#PolymerAdhesiveType"/>
-<owl:Class rdf:about="http://www.example.org/ontology#PolymerCompositeType"/>
-<owl:Class rdf:about="http://www.example.org/ontology#PolymerPropertyCharacteristic"/>
-<owl:Class rdf:about="http://www.example.org/ontology#PolymerProcessingCharacteristic"/>
-<owl:Class rdf:about="http://www.example.org/ontology#PolymerStructureCharacteristic"/>
-<owl:Class rdf:about="http://www.example.org/ontology#PolymerApplicationCharacteristic"/>
-<owl:Class rdf:about="http://www.example.org/ontology#PolymerTestingCharacteristic"/>
-<owl:Class rdf:about="http://www.example.org/ontology#PolymerRecyclingCharacteristic"/>
-<owl:Class rdf:about="http://www.example.org/ontology#PolymerFireTestingCharacteristic"/>
-<owl:Class rdf:about="http://www.example.org/ontology#PolymerEnvironmentalImpactCharacteristic"/>
-<owl:Class rdf:about="http://www.example.org/ontology#PolymerBiodegradationCharacteristic"/>
-<owl:Class rdf:about="http://www.example.org/ontology#PolymerThermoformingCharacteristic"/>
-<owl:Class rdf:about="http://www.example.org/ontology#PolymerMouldingCharacteristic"/>
-<owl:Class rdf:about="http://www.example.org/ontology#PolymerAdhesiveCharacteristic"/>
-<owl:Class rdf:about="http://www.example.org/ontology#PolymerCompositeCharacteristic"/>
-<owl:Class rdf:about="http://www.example.org/ontology#PolymerPropertyDefinition"/>
-<owl:Class rdf:about="http://www.example.org/ontology#PolymerProcessingDefinition"/>
-<owl:Class rdf:about="http://www.example.org/ontology#PolymerStructureDefinition"/>
-<owl:Class rdf:about="http://www.example.org/ontology#PolymerApplicationDefinition"/>
-<owl:Class rdf:about="http://www.example.org/ontology#PolymerTestingDefinition"/>
-<owl:Class rdf:about="http://www.example.org/ontology#PolymerRecyclingDefinition"/>
-<owl:Class rdf:about="http://www.example.org/ontology#PolymerFireTestingDefinition"/>
-<owl:Class rdf:about="http://www.example.org/ontology#PolymerEnvironmentalImpactDefinition"/>
-<owl:Class rdf:about="http://www.example.org/ontology#PolymerBiodegradationDefinition"/>
-<owl:Class rdf:about="http://www.example.org/ontology#PolymerThermoformingDefinition"/>
-<owl:Class rdf:about="http://www.example.org/ontology#PolymerMouldingDefinition"/>
-<owl:Class rdf:about="http://www.example.org/ontology#PolymerAdhesiveDefinition"/>
-<owl:Class rdf:about="http://www.example.org/ontology#PolymerCompositeDefinition"/>
-<owl:Class rdf:about="http://www.example.org/ontology#PolymerPropertySynonym"/>
-<owl:Class rdf:about="http://www.example.org/ontology#PolymerProcessingSynonym"/>
-<owl:Class rdf:about="http://www.example.org/ontology#PolymerStructureSynonym"/>
-<owl:Class rdf:about="http://www.example.org/ontology#PolymerApplicationSynonym"/>
-<owl:Class rdf:about="http://www.example.org/ontology#PolymerTestingSynonym"/>
-<owl:Class rdf:about="http://www.example.org/ontology#PolymerRecyclingSynonym"/>
-<owl:Class rdf:about="http://www.example.org/ontology#PolymerFireTestingSynonym"/>
-<owl:Class rdf:about="http://www.example.org/ontology#PolymerEnvironmentalImpactSynonym"/>
-<owl:Class rdf:about="http://www.example.org/ontology#PolymerBiodegradationSynonym"/>
-<owl:Class rdf:about="http://www.example.org/ontology#PolymerThermoformingSynonym"/>
-<owl:Class rdf:about="http://www.example.org/ontology#PolymerMouldingSynonym"/>
-<owl:Class rdf:about="http://www.example.org/ontology#PolymerAdhesiveSynonym"/>
-<owl:Class rdf:about="http://www.example.org/ontology#PolymerCompositeSynonym"/>
-<owl:Class rdf:about="http://www.example.org/ontology#PolymerPropertyDeprecated"/>
-<owl:Class rdf:about="http://www.example.org/ontology#PolymerProcessingDeprecated"/>
-<owl:Class rdf:about="http://www.example.org/ontology#PolymerStructureDeprecated"/>
-<owl:Class rdf:about="http://www.example.org/ontology#PolymerApplicationDeprecated"/>
-<owl:Class rdf:about="http://www.example.org/ontology#PolymerTestingDeprecated"/>
-<owl:Class rdf:about="http://www.example.org/ontology#PolymerRecyclingDeprecated"/>
-<owl:Class rdf:about="http://www.example.org/ontology#PolymerFireTestingDeprecated"/>
-<owl:Class rdf:about="http://www.example.org/ontology#PolymerEnvironmentalImpactDeprecated"/>
-<owl:Class rdf:about="http://www.example.org/ontology#PolymerBiodegradationDeprecated"/>
-<owl:Class rdf:about="http://www.example.org/ontology#PolymerThermoformingDeprecated"/>
-<owl:Class rdf:about="http://www.example.org/ontology#PolymerMouldingDeprecated"/>
-<owl:Class rdf:about="http://www.example.org/ontology#PolymerAdhesiveDeprecated"/>
-<owl:Class rdf:about="http://www.example.org/ontology#PolymerCompositeDeprecated"/>
-<owl:ObjectProperty rdf:about="http://www.example.org/ontology#hasSynonym">
-<rdfs:domain rdf:resource="http://www.example.org/ontology#Polymer"/>
-<rdfs:range rdf:resource="http://www.example.org/ontology#PolymerPropertySynonym"/>
+<owl:Ontology rdf:about="http://example.org/materials"/>
+
+<!-- Classes -->
+
+<owl:Class rdf:about="#Material">
+  <rdfs:label>Material</rdfs:label>
+  <rdfs:comment>Substance used as the basis for manufacturing, testing, or analysis</rdfs:comment>
+</owl:Class>
+
+<owl:Class rdf:about="#Polymer">
+  <rdfs:label>Polymer</rdfs:label>
+  <rdfs:comment>Macromolecule composed of repeating monomer units</rdfs:comment>
+  <rdfs:subClassOf rdf:resource="#Material"/>
+</owl:Class>
+
+<owl:Class rdf:about="#Plastic">
+  <rdfs:label>Plastic</rdfs:label>
+  <rdfs:comment>Material containing polymer, capable of being shaped by flow</rdfs:comment>
+  <rdfs:subClassOf rdf:resource="#Polymer"/>
+</owl:Class>
+
+<owl:Class rdf:about="#Polyethylene">
+  <rdfs:label>Polyethylene</rdfs:label>
+  <rdfs:comment>Polymer of ethylene, can be LDPE, HDPE, LLDPE, MDPE, or UHMWPE</rdfs:comment>
+  <rdfs:subClassOf rdf:resource="#Plastic"/>
+</owl:Class>
+
+<owl:Class rdf:about="#Polypropylene">
+  <rdfs:label>Polypropylene</rdfs:label>
+  <rdfs:comment>Polymer of propylene and copolymers with α-olefin units</rdfs:comment>
+  <rdfs:subClassOf rdf:resource="#Plastic"/>
+</owl:Class>
+
+<owl:Class rdf:about="#Polyester">
+  <rdfs:label>Polyester</rdfs:label>
+  <rdfs:comment>Polymer with repeating ester functional groups</rdfs:comment>
+  <rdfs:subClassOf rdf:resource="#Plastic"/>
+</owl:Class>
+
+<owl:Class rdf:about="#Elastomer">
+  <rdfs:label>Elastomer</rdfs:label>
+  <rdfs:comment>Polymer with elastic properties returning to initial shape after deformation</rdfs:comment>
+  <rdfs:subClassOf rdf:resource="#Polymer"/>
+</owl:Class>
+
+<owl:Class rdf:about="#Composite">
+  <rdfs:label>Composite</rdfs:label>
+  <rdfs:comment>Solid product with at least two distinct phases, such as a matrix and reinforcement</rdfs:comment>
+  <rdfs:subClassOf rdf:resource="#Material"/>
+</owl:Class>
+
+<owl:Class rdf:about="#TestSpecimen">
+  <rdfs:label>TestSpecimen</rdfs:label>
+  <rdfs:comment>Piece of material prepared for use in a test</rdfs:comment>
+  <rdfs:subClassOf rdf:resource="#Material"/>
+</owl:Class>
+
+<owl:Class rdf:about="#Reinforcement">
+  <rdfs:label>Reinforcement</rdfs:label>
+  <rdfs:comment>Material, such as fibre, added to a matrix to improve mechanical properties</rdfs:comment>
+</owl:Class>
+
+<owl:Class rdf:about="#Fibre">
+  <rdfs:label>Fibre</rdfs:label>
+  <rdfs:comment>Single textile element with small diameter and long length, e.g. glass, carbon</rdfs:comment>
+  <rdfs:subClassOf rdf:resource="#Reinforcement"/>
+</owl:Class>
+
+<owl:Class rdf:about="#Activity">
+  <rdfs:label>Activity</rdfs:label>
+  <rdfs:comment>Process or operation performed on a material or product</rdfs:comment>
+</owl:Class>
+
+<owl:Class rdf:about="#Property">
+  <rdfs:label>Property</rdfs:label>
+  <rdfs:comment>A measurable or qualitative attribute of a material</rdfs:comment>
+</owl:Class>
+
+<owl:Class rdf:about="#PerformanceProperty">
+  <rdfs:label>PerformanceProperty</rdfs:label>
+  <rdfs:comment>Property measured through tests relevant for application, e.g. strength</rdfs:comment>
+  <rdfs:subClassOf rdf:resource="#Property"/>
+</owl:Class>
+
+<owl:Class rdf:about="#TimeProperty">
+  <rdfs:label>TimeProperty</rdfs:label>
+  <rdfs:comment>Property related to time, such as curing, shelf life, or testing duration</rdfs:comment>
+  <rdfs:subClassOf rdf:resource="#Property"/>
+</owl:Class>
+
+<owl:Class rdf:about="#ViscosityProperty">
+  <rdfs:label>ViscosityProperty</rdfs:label>
+  <rdfs:comment>Property relating to viscosity, including dynamic, kinematic, or intrinsic viscosity</rdfs:comment>
+  <rdfs:subClassOf rdf:resource="#Property"/>
+</owl:Class>
+
+<owl:Class rdf:about="#EnergyProperty">
+  <rdfs:label>EnergyProperty</rdfs:label>
+  <rdfs:comment>Property relating to energy values, such as impact energy, heat of combustion</rdfs:comment>
+  <rdfs:subClassOf rdf:resource="#Property"/>
+</owl:Class>
+
+<owl:Class rdf:about="#DeprecatedTerm">
+  <rdfs:label>DeprecatedTerm</rdfs:label>
+  <rdfs:comment>Term marked as deprecated; replaced by new preferred terms</rdfs:comment>
+</owl:Class>
+
+<!-- Subclasses for TimeProperty -->
+
+<owl:Class rdf:about="#CuringTime">
+  <rdfs:label>CuringTime</rdfs:label>
+  <rdfs:comment>Time needed for curing process</rdfs:comment>
+  <rdfs:subClassOf rdf:resource="#TimeProperty"/>
+</owl:Class>
+<owl:Class rdf:about="#ShelfLife">
+  <rdfs:label>ShelfLife</rdfs:label>
+  <rdfs:comment>Time during which material retains working properties</rdfs:comment>
+  <rdfs:subClassOf rdf:resource="#TimeProperty"/>
+</owl:Class>
+<owl:Class rdf:about="#DurationOfTesting">
+  <rdfs:label>DurationOfTesting</rdfs:label>
+  <rdfs:comment>Time for test procedure, e.g. exposure or application time</rdfs:comment>
+  <rdfs:subClassOf rdf:resource="#TimeProperty"/>
+</owl:Class>
+
+<!-- Subclasses for ViscosityProperty -->
+
+<owl:Class rdf:about="#DynamicViscosity">
+  <rdfs:label>DynamicViscosity</rdfs:label>
+  <rdfs:comment>Viscosity corresponding to applied shear stress; in Pascal seconds</rdfs:comment>
+  <rdfs:subClassOf rdf:resource="#ViscosityProperty"/>
+</owl:Class>
+<owl:Class rdf:about="#KinematicViscosity">
+  <rdfs:label>KinematicViscosity</rdfs:label>
+  <rdfs:comment>Viscosity normalized by density</rdfs:comment>
+  <rdfs:subClassOf rdf:resource="#ViscosityProperty"/>
+</owl:Class>
+
+<!-- Subclasses for EnergyProperty -->
+
+<owl:Class rdf:about="#ImpactEnergy">
+  <rdfs:label>ImpactEnergy</rdfs:label>
+  <rdfs:comment>Energy expended in breaking the specimen in impact testing; in Joules</rdfs:comment>
+  <rdfs:subClassOf rdf:resource="#EnergyProperty"/>
+</owl:Class>
+<owl:Class rdf:about="#HeatOfCombustion">
+  <rdfs:label>HeatOfCombustion</rdfs:label>
+  <rdfs:comment>Thermal energy produced per unit mass by combustion; in J/kg</rdfs:comment>
+  <rdfs:subClassOf rdf:resource="#EnergyProperty"/>
+</owl:Class>
+
+<!-- Activities -->
+
+<owl:Class rdf:about="#Moulding">
+  <rdfs:label>Moulding</rdfs:label>
+  <rdfs:comment>Process of shaping material in a mould by pressure and usually heat</rdfs:comment>
+  <rdfs:subClassOf rdf:resource="#Activity"/>
+</owl:Class>
+<owl:Class rdf:about="#Testing">
+  <rdfs:label>Testing</rdfs:label>
+  <rdfs:comment>Activity of investigating a property or performance of a material or object</rdfs:comment>
+  <rdfs:subClassOf rdf:resource="#Activity"/>
+</owl:Class>
+<owl:Class rdf:about="#Thermoforming">
+  <rdfs:label>Thermoforming</rdfs:label>
+  <rdfs:comment>Process of shaping a heated thermoplastic sheet on a mould</rdfs:comment>
+  <rdfs:subClassOf rdf:resource="#Moulding"/>
+</owl:Class>
+<owl:Class rdf:about="#Welding">
+  <rdfs:label>Welding</rdfs:label>
+  <rdfs:comment>Uniting softened surfaces of materials using heat and/or pressure</rdfs:comment>
+  <rdfs:subClassOf rdf:resource="#Activity"/>
+</owl:Class>
+<owl:Class rdf:about="#AdhesiveBonding">
+  <rdfs:label>AdhesiveBonding</rdfs:label>
+  <rdfs:comment>Joining surfaces using adhesive to achieve adherence or cohesion</rdfs:comment>
+  <rdfs:subClassOf rdf:resource="#Activity"/>
+</owl:Class>
+
+<!-- Relationships -->
+
+<owl:ObjectProperty rdf:about="#hasSynonym">
+  <rdfs:comment>Links term to its synonym</rdfs:comment>
+  <rdfs:domain rdf:resource="#Property"/>
+  <rdfs:range rdf:resource="#Property"/>
 </owl:ObjectProperty>
-<owl:ObjectProperty rdf:about="http://www.example.org/ontology#isDeprecated">
-<rdfs:domain rdf:resource="http://www.example.org/ontology#Polymer"/>
-<rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+
+<owl:DatatypeProperty rdf:about="#isDeprecated">
+  <rdfs:comment>Indicates if a term is marked as deprecated</rdfs:comment>
+  <rdfs:domain rdf:resource="#Property"/>
+  <rdfs:range rdf:resource="&xsd;boolean"/>
+</owl:DatatypeProperty>
+
+<owl:ObjectProperty rdf:about="#hasPerformanceProperty">
+  <rdfs:comment>Material has certain performance properties</rdfs:comment>
+  <rdfs:domain rdf:resource="#Material"/>
+  <rdfs:range rdf:resource="#PerformanceProperty"/>
 </owl:ObjectProperty>
-<owl:DatatypeProperty rdf:about="http://www.example.org/ontology#hasDefinition">
-<rdfs:domain rdf:resource="http://www.example.org/ontology#Polymer"/>
-<rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+
+<owl:ObjectProperty rdf:about="#hasReinforcement">
+  <rdfs:comment>Composite or material contains reinforcement component</rdfs:comment>
+  <rdfs:domain rdf:resource="#Composite"/>
+  <rdfs:range rdf:resource="#Reinforcement"/>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="#usedInActivity">
+  <rdfs:comment>Relates a material or object to an activity</rdfs:comment>
+  <rdfs:domain rdf:resource="#Material"/>
+  <rdfs:range rdf:resource="#Activity"/>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="#performsActivity">
+  <rdfs:comment>Relates an Agent or Material to a performed activity</rdfs:comment>
+  <rdfs:range rdf:resource="#Activity"/>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="#hasCompositeLayer">
+  <rdfs:comment>Composite has component layers</rdfs:comment>
+  <rdfs:domain rdf:resource="#Composite"/>
+  <rdfs:range rdf:resource="#Material"/>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="#isTestedBy">
+  <rdfs:comment>Property is measured by certain test</rdfs:comment>
+  <rdfs:domain rdf:resource="#Property"/>
+  <rdfs:range rdf:resource="#Testing"/>
+</owl:ObjectProperty>
+
+<owl:DatatypeProperty rdf:about="#hasUnit">
+  <rdfs:comment>Unit of measurement (provided as label string)</rdfs:comment>
+  <rdfs:domain rdf:resource="#Property"/>
+  <rdfs:range rdf:resource="&xsd;string"/>
 </owl:DatatypeProperty>
-<owl:DatatypeProperty rdf:about="http://www.example.org/ontology#hasLabel">
-<rdfs:domain rdf:resource="http://www.example.org/ontology#Polymer"/>
-<rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+
+<owl:DatatypeProperty rdf:about="#valueRange">
+  <rdfs:comment>Data value range for a property</rdfs:comment>
+  <rdfs:domain rdf:resource="#Property"/>
+  <rdfs:range rdf:resource="&xsd;string"/>
 </owl:DatatypeProperty>
-<owl:DatatypeProperty rdf:about="http://www.example.org/ontology#hasNumericValue">
-<rdfs:domain rdf:resource="http://www.example.org/ontology#Polymer"/>
-<rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+
+<!-- Example property specializations and equivalents -->
+
+<owl:Class rdf:about="#ImpactStrength">
+  <rdfs:label>ImpactStrength</rdfs:label>
+  <rdfs:comment>Energy per area needed to break a specimen under impact</rdfs:comment>
+  <rdfs:subClassOf rdf:resource="#PerformanceProperty"/>
+  <owl:equivalentClass rdf:resource="#IzodImpactStrength"/>
+  <owl:equivalentClass rdf:resource="#CharpyImpactStrength"/>
+</owl:Class>
+<owl:Class rdf:about="#IzodImpactStrength">
+  <rdfs:label>IzodImpactStrength</rdfs:label>
+  <rdfs:comment>Impact energy absorbed in Izod notched test per area; kJ/m2</rdfs:comment>
+  <rdfs:subClassOf rdf:resource="#ImpactStrength"/>
+</owl:Class>
+<owl:Class rdf:about="#CharpyImpactStrength">
+  <rdfs:label>CharpyImpactStrength</rdfs:label>
+  <rdfs:comment>Impact energy absorbed in Charpy notched test per area; kJ/m2</rdfs:comment>
+  <rdfs:subClassOf rdf:resource="#ImpactStrength"/>
+</owl:Class>
+
+<!-- Example property members and numeric value ranges -->
+
+<owl:DatatypeProperty rdf:about="#afterFlameTime">
+  <rdfs:label>afterFlameTime</rdfs:label>
+  <rdfs:comment>Time for afterflame to persist; seconds</rdfs:comment>
+  <rdfs:domain rdf:resource="#PerformanceProperty"/>
+  <rdfs:range rdf:resource="&xsd;float"/>
 </owl:DatatypeProperty>
+<owl:DatatypeProperty rdf:about="#afterGlowTime">
+  <rdfs:label>afterGlowTime</rdfs:label>
+  <rdfs:comment>Time for afterglow to persist; seconds</rdfs:comment>
+  <rdfs:domain rdf:resource="#PerformanceProperty"/>
+  <rdfs:range rdf:resource="&xsd;float"/>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="#meltFlowRate">
+  <rdfs:label>meltFlowRate</rdfs:label>
+  <rdfs:comment>Mass of thermoplastic extruded per 10 min; g/10min</rdfs:comment>
+  <rdfs:domain rdf:resource="#Polymer"/>
+  <rdfs:range rdf:resource="&xsd;float"/>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="#density">
+  <rdfs:label>Density</rdfs:label>
+  <rdfs:comment>Mass per unit volume</rdfs:comment>
+  <rdfs:domain rdf:resource="#Material"/>
+  <rdfs:range rdf:resource="&xsd;float"/>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="#glassTransitionTemperature">
+  <rdfs:label>GlassTransitionTemperature</rdfs:label>
+  <rdfs:comment>Temperature at midpoint of glass transition, °C</rdfs:comment>
+  <rdfs:domain rdf:resource="#Polymer"/>
+  <rdfs:range rdf:resource="&xsd;float"/>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="#meltingTemperature">
+  <rdfs:label>MeltingTemperature</rdfs:label>
+  <rdfs:comment>Temperature where crystallinity disappears, °C</rdfs:comment>
+  <rdfs:domain rdf:resource="#Polymer"/>
+  <rdfs:range rdf:resource="&xsd;float"/>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="#impactEnergyValue">
+  <rdfs:label>ImpactEnergyValue</rdfs:label>
+  <rdfs:comment>Measured impact energy, Joules</rdfs:comment>
+  <rdfs:domain rdf:resource="#ImpactStrength"/>
+  <rdfs:range rdf:resource="&xsd;float"/>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="#tensileStrength">
+  <rdfs:label>TensileStrength</rdfs:label>
+  <rdfs:comment>Maximum tensile stress during test; MPa</rdfs:comment>
+  <rdfs:domain rdf:resource="#PerformanceProperty"/>
+  <rdfs:range rdf:resource="&xsd;float"/>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="#tensorModulus">
+  <rdfs:label>TensorModulus</rdfs:label>
+  <rdfs:comment>Tensile modulus, MPa</rdfs:comment>
+  <rdfs:domain rdf:resource="#PerformanceProperty"/>
+  <rdfs:range rdf:resource="&xsd;float"/>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="#volumeFractionFibre">
+  <rdfs:label>VolumeFractionFibre</rdfs:label>
+  <rdfs:comment>Volume ratio of fibres in composite; 0-1</rdfs:comment>
+  <rdfs:domain rdf:resource="#Composite"/>
+  <rdfs:range rdf:resource="&xsd;float"/>
+</owl:DatatypeProperty>
+
+<!-- Deprecated terms (example) -->
+
+<owl:Class rdf:about="#ColdGlue">
+  <rdfs:label>ColdGlue</rdfs:label>
+  <rdfs:comment>Deprecated term for cold-setting adhesive</rdfs:comment>
+  <rdfs:subClassOf rdf:resource="#DeprecatedTerm"/>
+  <owl:deprecated rdf:datatype="&xsd;boolean">true</owl:deprecated>
+  <hasSynonym rdf:resource="#ColdSettingAdhesive"/>
+</owl:Class>
+<owl:Class rdf:about="#ColdSettingAdhesive">
+  <rdfs:label>ColdSettingAdhesive</rdfs:label>
+  <rdfs:comment>Adhesive that sets without application of heat</rdfs:comment>
+</owl:Class>
+
 </rdf:RDF>
