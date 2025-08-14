@@ -1,0 +1,113 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://example.com/adhesive#"
+         xml:base="http://example.com/adhesive"
+         xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+         xmlns:owl="http://www.w3.org/2002/07/owl#"
+         xmlns:bfo="http://purl.obolibrary.org/obo/bfo.owl#"
+         xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+         xmlns:xsd="http://www.w3.org/2001/XMLSchema#">
+
+  <owl:Ontology rdf:about="http://example.com/adhesive">
+    <owl:imports rdf:resource="http://purl.obolibrary.org/obo/bfo.owl"/>
+  </owl:Ontology>
+
+  <!-- Continuant Subclasses -->
+  <owl:Class rdf:about="#AdhesiveSpecimen">
+    <rdfs:subClassOf rdf:resource="bfo:MaterialEntity"/>
+  </owl:Class>
+  <owl:Class rdf:about="#TensileBar">
+    <rdfs:subClassOf rdf:resource="#AdhesiveSpecimen"/>
+  </owl:Class>
+  <owl:Class rdf:about="#LapShearJoint">
+    <rdfs:subClassOf rdf:resource="#AdhesiveSpecimen"/>
+  </owl:Class>
+  <owl:Class rdf:about="#ButtJoint">
+    <rdfs:subClassOf rdf:resource="#AdhesiveSpecimen"/>
+  </owl:Class>
+  <owl:Class rdf:about="#PeelTestSample">
+    <rdfs:subClassOf rdf:resource="#AdhesiveSpecimen"/>
+  </owl:Class>
+
+  <owl:Class rdf:about="#TestEquipment">
+    <rdfs:subClassOf rdf:resource="bfo:MaterialEntity"/>
+  </owl:Class>
+  <owl:Class rdf:about="#LoadCell">
+    <rdfs:subClassOf rdf:resource="#TestEquipment"/>
+  </owl:Class>
+  <owl:Class rdf:about="#Crosshead">
+    <rdfs:subClassOf rdf:resource="#TestEquipment"/>
+  </owl:Class>
+  <owl:Class rdf:about="#Grips">
+    <rdfs:subClassOf rdf:resource="#TestEquipment"/>
+  </owl:Class>
+  <owl:Class rdf:about="#Extensometer">
+    <rdfs:subClassOf rdf:resource="#TestEquipment"/>
+  </owl:Class>
+
+  <owl:Class rdf:about="#TestData">
+    <rdfs:subClassOf rdf:resource="bfo:GenericallyDependentContinuant"/>
+  </owl:Class>
+  <owl:Class rdf:about="#ForceData">
+    <rdfs:subClassOf rdf:resource="#TestData"/>
+  </owl:Class>
+  <owl:Class rdf:about="#DisplacementData">
+    <rdfs:subClassOf rdf:resource="#TestData"/>
+  </owl:Class>
+  <owl:Class rdf:about="#StressStrainCurve">
+    <rdfs:subClassOf rdf:resource="#TestData"/>
+  </owl:Class>
+  <owl:Class rdf:about="#FailureModeData">
+    <rdfs:subClassOf rdf:resource="#TestData"/>
+  </owl:Class>
+
+  <owl:Class rdf:about="#MeasurementUnit">
+    <rdfs:subClassOf rdf:resource="bfo:GenericallyDependentContinuant"/>
+  </owl:Class>
+  <owl:Class rdf:about="#MPa">
+    <rdfs:subClassOf rdf:resource="#MeasurementUnit"/>
+  </owl:Class>
+  <owl:Class rdf:about="#mm">
+    <rdfs:subClassOf rdf:resource="#MeasurementUnit"/>
+  </owl:Class>
+  <owl:Class rdf:about="#N">
+    <rdfs:subClassOf rdf:resource="#MeasurementUnit"/>
+  </owl:Class>
+  <owl:Class rdf:about="#mm_per_min">
+    <rdfs:subClassOf rdf:resource="#MeasurementUnit"/>
+  </owl:Class>
+
+  <owl:Class rdf:about="#EnvironmentalCondition">
+    <rdfs:subClassOf rdf:resource="bfo:GenericallyDependentContinuant"/>
+  </owl:Class>
+  <owl:Class rdf:about="#TemperatureCondition">
+    <rdfs:subClassOf rdf:resource="#EnvironmentalCondition"/>
+  </owl:Class>
+  <owl:Class rdf:about="#HumidityCondition">
+    <rdfs:subClassOf rdf:resource="#EnvironmentalCondition"/>
+  </owl:Class>
+  <owl:Class rdf:about="#PressureCondition">
+    <rdfs:subClassOf rdf:resource="#EnvironmentalCondition"/>
+  </owl:Class>
+  <owl:Class rdf:about="#AirflowCondition">
+    <rdfs:subClassOf rdf:resource="#EnvironmentalCondition"/>
+  </owl:Class>
+
+  <owl:Class rdf:about="#TestStandard">
+    <rdfs:subClassOf rdf:resource="bfo:GenericallyDependentContinuant"/>
+  </owl:Class>
+  <owl:Class rdf:about="#ASTM_D1002">
+    <rdfs:subClassOf rdf:resource="#TestStandard"/>
+  </owl:Class>
+  <owl:Class rdf:about="#ASTM_D638">
+    <rdfs:subClassOf rdf:resource="#TestStandard"/>
+  </owl:Class>
+  <owl:Class rdf:about="#ISO_527">
+    <rdfs:subClassOf rdf:resource="#TestStandard"/>
+  </owl:Class>
+  <owl:Class rdf:about="#DIN_53504">
+    <rdfs:subClassOf rdf:resource="#TestStandard"/>
+  </owl:Class>
+
+  <!-- Other classes (occurrents, qualities, roles, properties) remain unchanged -->
+
+</rdf:RDF>

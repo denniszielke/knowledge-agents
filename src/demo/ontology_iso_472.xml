@@ -1,0 +1,2548 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://example.com/adhesive#" xml:base="http://example.com/adhesive" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:owl="http://www.w3.org/2002/07/owl#" xmlns:bfo="http://purl.obolibrary.org/obo/bfo.owl#" xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#" xmlns:xsd="http://www.w3.org/2001/XMLSchema#" xmlns:skos="http://www.w3.org/2004/02/skos/core#">
+  <owl:Ontology rdf:about="http://example.com/adhesive">
+    <owl:imports rdf:resource="http://purl.obolibrary.org/obo/bfo.owl"/>
+  </owl:Ontology>
+  <owl:Class rdf:about="#AdhesiveSpecimen">
+    <rdfs:subClassOf rdf:resource="bfo:MaterialEntity"/>
+  </owl:Class>
+  <owl:Class rdf:about="#TensileBar">
+    <rdfs:subClassOf rdf:resource="#AdhesiveSpecimen"/>
+  </owl:Class>
+  <owl:Class rdf:about="#LapShearJoint">
+    <rdfs:subClassOf rdf:resource="#AdhesiveSpecimen"/>
+    <skos:altLabel>lap joint</skos:altLabel>
+  </owl:Class>
+  <owl:Class rdf:about="#ButtJoint">
+    <rdfs:subClassOf rdf:resource="#AdhesiveSpecimen"/>
+  </owl:Class>
+  <owl:Class rdf:about="#PeelTestSample">
+    <rdfs:subClassOf rdf:resource="#AdhesiveSpecimen"/>
+  </owl:Class>
+  <owl:Class rdf:about="#TestEquipment">
+    <rdfs:subClassOf rdf:resource="bfo:MaterialEntity"/>
+  </owl:Class>
+  <owl:Class rdf:about="#LoadCell">
+    <rdfs:subClassOf rdf:resource="#TestEquipment"/>
+  </owl:Class>
+  <owl:Class rdf:about="#Crosshead">
+    <rdfs:subClassOf rdf:resource="#TestEquipment"/>
+    <rdfs:label>crosshead_2.231</rdfs:label>
+    <rdfs:comment>extruder head fixed perpendicular to the axis of the extruder barrel.</rdfs:comment>
+  </owl:Class>
+  <owl:Class rdf:about="#Grips">
+    <rdfs:subClassOf rdf:resource="#TestEquipment"/>
+  </owl:Class>
+  <owl:Class rdf:about="#Extensometer">
+    <rdfs:subClassOf rdf:resource="#TestEquipment"/>
+    <rdfs:label>extensometer_2.1775</rdfs:label>
+    <rdfs:comment>component of a tensile- or compression-testing machine which measures the change in the distance between the gauge marks on the test specimen.</rdfs:comment>
+  </owl:Class>
+  <owl:Class rdf:about="#TestData">
+    <rdfs:subClassOf rdf:resource="bfo:GenericallyDependentContinuant"/>
+  </owl:Class>
+  <owl:Class rdf:about="#ForceData">
+    <rdfs:subClassOf rdf:resource="#TestData"/>
+  </owl:Class>
+  <owl:Class rdf:about="#DisplacementData">
+    <rdfs:subClassOf rdf:resource="#TestData"/>
+  </owl:Class>
+  <owl:Class rdf:about="#StressStrainCurve">
+    <rdfs:subClassOf rdf:resource="#TestData"/>
+  </owl:Class>
+  <owl:Class rdf:about="#FailureModeData">
+    <rdfs:subClassOf rdf:resource="#TestData"/>
+  </owl:Class>
+  <owl:Class rdf:about="#MeasurementUnit">
+    <rdfs:subClassOf rdf:resource="bfo:GenericallyDependentContinuant"/>
+  </owl:Class>
+  <owl:Class rdf:about="#MPa">
+    <rdfs:subClassOf rdf:resource="#MeasurementUnit"/>
+  </owl:Class>
+  <owl:Class rdf:about="#mm">
+    <rdfs:subClassOf rdf:resource="#MeasurementUnit"/>
+  </owl:Class>
+  <owl:Class rdf:about="#N">
+    <rdfs:subClassOf rdf:resource="#MeasurementUnit"/>
+  </owl:Class>
+  <owl:Class rdf:about="#mm_per_min">
+    <rdfs:subClassOf rdf:resource="#MeasurementUnit"/>
+  </owl:Class>
+  <owl:Class rdf:about="#EnvironmentalCondition">
+    <rdfs:subClassOf rdf:resource="bfo:GenericallyDependentContinuant"/>
+  </owl:Class>
+  <owl:Class rdf:about="#TemperatureCondition">
+    <rdfs:subClassOf rdf:resource="#EnvironmentalCondition"/>
+  </owl:Class>
+  <owl:Class rdf:about="#HumidityCondition">
+    <rdfs:subClassOf rdf:resource="#EnvironmentalCondition"/>
+  </owl:Class>
+  <owl:Class rdf:about="#PressureCondition">
+    <rdfs:subClassOf rdf:resource="#EnvironmentalCondition"/>
+  </owl:Class>
+  <owl:Class rdf:about="#AirflowCondition">
+    <rdfs:subClassOf rdf:resource="#EnvironmentalCondition"/>
+  </owl:Class>
+  <owl:Class rdf:about="#TestStandard">
+    <rdfs:subClassOf rdf:resource="bfo:GenericallyDependentContinuant"/>
+  </owl:Class>
+  <owl:Class rdf:about="#ASTM_D1002">
+    <rdfs:subClassOf rdf:resource="#TestStandard"/>
+  </owl:Class>
+  <owl:Class rdf:about="#ASTM_D638">
+    <rdfs:subClassOf rdf:resource="#TestStandard"/>
+  </owl:Class>
+  <owl:Class rdf:about="#ISO_527">
+    <rdfs:subClassOf rdf:resource="#TestStandard"/>
+  </owl:Class>
+  <owl:Class rdf:about="#DIN_53504">
+    <rdfs:subClassOf rdf:resource="#TestStandard"/>
+  </owl:Class>
+  <owl:Class rdf:about="#PolymerMaterial">
+    <rdfs:subClassOf rdf:resource="bfo:MaterialEntity"/>
+    <rdfs:label>A polymer material</rdfs:label>
+    <rdfs:comment>Polymeric materials used in plastics and adhesives (added from ISO 472 vocabulary pages).</rdfs:comment>
+  </owl:Class>
+  <owl:Class rdf:about="#AcrylicPlastic">
+    <rdfs:subClassOf rdf:resource="#PolymerMaterial"/>
+    <rdfs:label>acrylic plastic</rdfs:label>
+    <rdfs:comment>plastic based on polymers made with acrylic acid or a structural derivative of acrylic acid, or their copolymers with other monomers; the acrylic monomer(s) being in the greatest amount by mass.</rdfs:comment>
+  </owl:Class>
+  <owl:Class rdf:about="#AcrylonitrileButadieneRubber">
+    <rdfs:subClassOf rdf:resource="#PolymerMaterial"/>
+    <rdfs:label>acrylonitrile-butadiene rubber</rdfs:label>
+    <rdfs:comment>range of synthetic rubbers made by the copolymerization of buta-1,3-diene and acrylonitrile. NOTE Depending on their acrylonitrile content, these rubbers are oil- and solvent-resistant. Commonly abbreviated NBR.</rdfs:comment>
+    <skos:altLabel>NBR</skos:altLabel>
+    <skos:altLabel>nitrile-butadiene rubber</skos:altLabel>
+  </owl:Class>
+  <owl:Class rdf:about="#ABSPlastic">
+    <rdfs:subClassOf rdf:resource="#PolymerMaterial"/>
+    <rdfs:label>acrylonitrile-butadiene-styrene plastic</rdfs:label>
+    <rdfs:comment>plastic, based on terpolymers and/or blends of polymers and copolymers, made with acrylonitrile, butadiene and styrene.</rdfs:comment>
+    <skos:altLabel>ABS plastic</skos:altLabel>
+  </owl:Class>
+  <owl:Class rdf:about="#AcrylonitrileMethylMethacrylatePlastic">
+    <rdfs:subClassOf rdf:resource="#PolymerMaterial"/>
+    <rdfs:label>acrylonitrile methyl methacrylate plastic</rdfs:label>
+    <rdfs:comment>plastic based on copolymers of acrylonitrile and methyl methacrylate.</rdfs:comment>
+  </owl:Class>
+  <owl:Class rdf:about="#AdditionPolymer">
+    <rdfs:subClassOf rdf:resource="#PolymerMaterial"/>
+    <rdfs:label>addition polymer</rdfs:label>
+    <rdfs:comment>polymer made by addition polymerization.</rdfs:comment>
+  </owl:Class>
+  <owl:Class rdf:about="#ActivatedSludge">
+    <rdfs:subClassOf rdf:resource="bfo:MaterialEntity"/>
+    <rdfs:label>activated sludge</rdfs:label>
+    <rdfs:comment>mixture produced in the aerobic treatment of waste water by the growth of bacteria and other microorganisms in the presence of dissolved oxygen. NOTE It is used in the composting of plastics waste.</rdfs:comment>
+  </owl:Class>
+  <owl:Class rdf:about="#Activator">
+    <rdfs:subClassOf rdf:resource="bfo:MaterialEntity"/>
+    <rdfs:label>activator</rdfs:label>
+    <rdfs:comment>substance used in small proportions to increase the effectiveness of an accelerator or to promote a reaction.</rdfs:comment>
+  </owl:Class>
+  <owl:Class rdf:about="#Activation">
+    <rdfs:subClassOf rdf:resource="bfo:Process"/>
+    <rdfs:label>activation</rdfs:label>
+    <rdfs:comment>provision or restoration of the bonding properties of a dried adhesive coat.</rdfs:comment>
+  </owl:Class>
+  <owl:Class rdf:about="#TestProcedure">
+    <rdfs:subClassOf rdf:resource="bfo:Process"/>
+    <rdfs:label>test procedure</rdfs:label>
+    <rdfs:comment>Procedural occurrents used to obtain test data (e.g. tensile tests, abrasion tests, ageing tests).</rdfs:comment>
+  </owl:Class>
+  <owl:Class rdf:about="#AcceleratedAgeingTest">
+    <rdfs:subClassOf rdf:resource="#TestProcedure"/>
+    <rdfs:label>accelerated-ageing test</rdfs:label>
+    <rdfs:comment>short-term test designed to simulate the effects of longer-term service conditions.</rdfs:comment>
+  </owl:Class>
+  <owl:Class rdf:about="#AbrasionTest">
+    <rdfs:subClassOf rdf:resource="#TestProcedure"/>
+    <rdfs:label>abrasion test</rdfs:label>
+    <rdfs:comment>abrasion testing: progressive loss of material from the operating surface of a plastic material resulting from the cutting or scratching action of an abrasive wheel or abrasive paper.</rdfs:comment>
+  </owl:Class>
+  <owl:Class rdf:about="#AbrasiveWheel">
+    <rdfs:subClassOf rdf:resource="#TestEquipment"/>
+    <rdfs:label>abrasive wheel</rdfs:label>
+    <rdfs:comment>abrasion testing small grinding wheel or a roller faced with abrasive paper used as an abrading tool in abrasion tests.</rdfs:comment>
+  </owl:Class>
+  <owl:Class rdf:about="#AccuracyOfTheMean">
+    <rdfs:subClassOf rdf:resource="#TestData"/>
+    <rdfs:label>accuracy of the mean_2.2</rdfs:label>
+    <rdfs:comment>closeness of agreement between the true value and the mean result which would be obtained by applying an experimental procedure a very large number of times. NOTE The smaller the systematic part of the experimental errors which affect the result, the more accurate is the procedure.</rdfs:comment>
+  </owl:Class>
+  <owl:Class rdf:about="#Adherence">
+    <rdfs:subClassOf rdf:resource="bfo:GenericallyDependentContinuant"/>
+    <rdfs:label>adherence_2.11</rdfs:label>
+    <rdfs:comment>be in a state of adherence.</rdfs:comment>
+  </owl:Class>
+  <owl:Class rdf:about="#Adherend">
+    <rdfs:subClassOf rdf:resource="bfo:MaterialEntity"/>
+    <rdfs:label>adherend_2.12</rdfs:label>
+    <rdfs:comment>body that is, or is intended to be, held to another body.</rdfs:comment>
+  </owl:Class>
+  <owl:Class rdf:about="#AdherendFailure">
+    <rdfs:subClassOf rdf:resource="bfo:Process"/>
+    <rdfs:label>adherend failure_2.1669</rdfs:label>
+    <rdfs:comment>failure of an adhesive bond in the body of an adherend.</rdfs:comment>
+  </owl:Class>
+  <owl:Class rdf:about="#Adhesion">
+    <rdfs:subClassOf rdf:resource="bfo:GenericallyDependentContinuant"/>
+    <rdfs:label>adhesion_2.1654</rdfs:label>
+    <rdfs:comment>state in which two surfaces are held together by interfacial adhesive bonds. NOTE Adherence can be achieved with or without the use of an adhesive.</rdfs:comment>
+  </owl:Class>
+  <owl:Class rdf:about="#AdhesionFailure">
+    <rdfs:subClassOf rdf:resource="bfo:Process"/>
+    <rdfs:label>adhesion failure_2.30</rdfs:label>
+    <rdfs:comment>failure of an adhesive bond in such a way that the separation appears to be at the adhesive/adherend interface.</rdfs:comment>
+  </owl:Class>
+  <owl:Class rdf:about="#AdhesionPromoter">
+    <rdfs:subClassOf rdf:resource="bfo:MaterialEntity"/>
+    <rdfs:label>adhesion promoter_2.1548</rdfs:label>
+    <rdfs:comment>coupling agent: substance used in small proportions to increase the adhesion to specific substrates.</rdfs:comment>
+    <skos:altLabel>coupling agent</skos:altLabel>
+  </owl:Class>
+  <owl:Class rdf:about="#AdhesiveCoat">
+    <rdfs:subClassOf rdf:resource="bfo:MaterialEntity"/>
+    <rdfs:label>adhesive coat_2.1623</rdfs:label>
+    <rdfs:comment>adhesive layer applied to an adherend.</rdfs:comment>
+  </owl:Class>
+  <owl:Class rdf:about="#AdhesiveFilm">
+    <rdfs:subClassOf rdf:resource="bfo:MaterialEntity"/>
+    <rdfs:label>adhesive film_2.1624</rdfs:label>
+    <rdfs:comment>adhesive coat separated from the substrate after setting. NOTE Adhesive films are used for test purposes.</rdfs:comment>
+  </owl:Class>
+  <owl:Class rdf:about="#AdhesiveLine">
+    <rdfs:subClassOf rdf:resource="bfo:MaterialEntity"/>
+    <rdfs:label>adhesive line_2.32</rdfs:label>
+    <rdfs:comment>glue line (deprecated) — space filled with adhesive between two parts to be bonded or in a bonded product.</rdfs:comment>
+    <skos:altLabel>glue line</skos:altLabel>
+    <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
+  </owl:Class>
+  <owl:Class rdf:about="#AdhesiveTape">
+    <rdfs:subClassOf rdf:resource="bfo:MaterialEntity"/>
+    <rdfs:label>adhesive tape_2.1527</rdfs:label>
+    <rdfs:comment>flexible backing or carrier coated with a pressure-sensitive, moistureable or heat-activatable adhesive.</rdfs:comment>
+  </owl:Class>
+  <owl:Class rdf:about="#Afterflame">
+    <rdfs:subClassOf rdf:resource="bfo:Process"/>
+    <rdfs:label>afterflame_2.33</rdfs:label>
+    <rdfs:comment>persistence of glowing combustion after both removal of the ignition source and the cessation of any flaming.</rdfs:comment>
+  </owl:Class>
+  <owl:Class rdf:about="#AfterflameTime">
+    <rdfs:subClassOf rdf:resource="#TestData"/>
+    <rdfs:label>afterflame time_2.34</rdfs:label>
+    <rdfs:comment>length of time for which an afterflame persists under specified conditions. NOTE It is expressed in seconds.</rdfs:comment>
+  </owl:Class>
+  <owl:Class rdf:about="#Afterglow">
+    <rdfs:subClassOf rdf:resource="bfo:Process"/>
+    <rdfs:label>afterglow_2.35</rdfs:label>
+    <rdfs:comment>persistence of glowing combustion after both removal of the ignition source and the cessation of any flaming.</rdfs:comment>
+  </owl:Class>
+  <owl:Class rdf:about="#AfterglowTime">
+    <rdfs:subClassOf rdf:resource="#TestData"/>
+    <rdfs:label>afterglow time_2.169</rdfs:label>
+    <rdfs:comment>length of time for which an afterglow persists under specified conditions. NOTE It is expressed in seconds.</rdfs:comment>
+  </owl:Class>
+  <owl:Class rdf:about="#Agglomerate">
+    <rdfs:subClassOf rdf:resource="bfo:MaterialEntity"/>
+    <rdfs:label>agglomerate_2.1677</rdfs:label>
+    <rdfs:comment>shredded and/or granulated plastics material in the form of particles which cling together.</rdfs:comment>
+  </owl:Class>
+  <owl:Class rdf:about="#AirPressing">
+    <rdfs:subClassOf rdf:resource="bfo:Process"/>
+    <rdfs:label>air pressing_2.1632</rdfs:label>
+    <rdfs:comment>application of pressure to an assembly by means of a flexible cover or bag inflated by compressed air.</rdfs:comment>
+  </owl:Class>
+  <owl:Class rdf:about="#AirAssistVacuumThermoforming">
+    <rdfs:subClassOf rdf:resource="#TestProcedure"/>
+    <rdfs:label>air-assist vacuum thermoforming_2.237</rdfs:label>
+    <rdfs:comment>vacuum thermoforming process in which partial preforming of a heated sheet is accomplished by air pressure before vacuum pulldown.</rdfs:comment>
+  </owl:Class>
+  <owl:Class rdf:about="#AirSlipVacuumThermoforming">
+    <rdfs:subClassOf rdf:resource="#TestProcedure"/>
+    <rdfs:label>air-slip vacuum thermoforming_2.238</rdfs:label>
+    <rdfs:comment>vacuum thermoforming process in which a male mould is enclosed in a box, providing an air cushion to keep the advancing mould from contacting a heated sheet until the end of its travel, at which point vacuum is applied to destroy the air cushion and pull the sheet against the mould.</rdfs:comment>
+  </owl:Class>
+  <owl:Class rdf:about="#AllylPolymer">
+    <rdfs:subClassOf rdf:resource="#PolymerMaterial"/>
+    <rdfs:label>allyl polymer_2.41</rdfs:label>
+    <rdfs:comment>polymer or resin made by polymerization of chemical compounds containing the allyl group.</rdfs:comment>
+  </owl:Class>
+  <owl:Class rdf:about="#AlternatingCopolymer">
+    <rdfs:subClassOf rdf:resource="#PolymerMaterial"/>
+    <rdfs:label>alternating copolymer_2.43</rdfs:label>
+    <rdfs:comment>copolymer in the molecules of which two species of monomeric unit are distributed in alternating sequence.</rdfs:comment>
+  </owl:Class>
+  <owl:Class rdf:about="#AminoResin">
+    <rdfs:subClassOf rdf:resource="#PolymerMaterial"/>
+    <rdf:label>amino resin_2.47</rdf:label>
+    <rdfs:comment>resin made by polycondensation of a compound containing amino groups, such as urea or melamine, with an aldehyde, such as formaldehyde, or an aldehyde-yielding material. NOTE Urea-formaldehyde and melamine-formaldehyde resins are mainly of significance in the adhesive field.</rdfs:comment>
+    <skos:altLabel>urea-formaldehyde resin</skos:altLabel>
+    <skos:altLabel>melamine-formaldehyde resin</skos:altLabel>
+  </owl:Class>
+  <owl:Class rdf:about="#Amorphous">
+    <rdfs:subClassOf rdf:resource="#PolymerMaterial"/>
+    <rdfs:label>amorphous_2.50</rdfs:label>
+    <rdfs:comment>non-crystalline, or devoid of crystalline structure.</rdfs:comment>
+  </owl:Class>
+  <owl:Class rdf:about="#AmorphousRegions">
+    <rdfs:subClassOf rdf:resource="#PolymerMaterial"/>
+    <rdfs:label>amorphous regions_2.409</rdfs:label>
+    <rdfs:comment>regions within a polymeric material that, on the basis of X-ray diffraction or other suitable techniques, do not show any evidence of crystalline structure.</rdfs:comment>
+  </owl:Class>
+  <owl:Class rdf:about="#AnaerobicAdhesive">
+    <rdfs:subClassOf rdf:resource="bfo:MaterialEntity"/>
+    <rdfs:label>anaerobic adhesive_2.51</rdfs:label>
+    <rdfs:comment>adhesive that cures in the absence of oxygen, curing being inhibited by the presence of oxygen and catalysed by metallic ions.</rdfs:comment>
+  </owl:Class>
+  <owl:Class rdf:about="#AngleHead">
+    <rdfs:subClassOf rdf:resource="#TestEquipment"/>
+    <rdfs:label>angle-head_2.52</rdfs:label>
+    <rdfs:comment>extruder head fixed at an angle to the axis of the extruder barrel.</rdfs:comment>
+  </owl:Class>
+  <owl:Class rdf:about="#AnilineFormaldehydeResin">
+    <rdfs:subClassOf rdf:resource="#PolymerMaterial"/>
+    <rdfs:label>aniline-formaldehyde resin_2.54</rdfs:label>
+    <rdfs:comment>resin made by polycondensation of aniline with formaldehyde.</rdfs:comment>
+  </owl:Class>
+  <owl:Class rdf:about="#Annealing">
+    <rdfs:subClassOf rdf:resource="bfo:Process"/>
+    <rdfs:label>annealing_2.1051</rdfs:label>
+    <rdfs:comment>heat treatment of plastic materials to reduce stress concentrations.</rdfs:comment>
+  </owl:Class>
+  <owl:Class rdf:about="#AntiblockingAgent">
+    <rdfs:subClassOf rdf:resource="bfo:MaterialEntity"/>
+    <rdfs:label>antiblocking agent_2.55</rdfs:label>
+    <rdfs:comment>substance incorporated in or applied to films to prevent them sticking together during manufacture, storage or use.</rdfs:comment>
+  </owl:Class>
+  <owl:Class rdf:about="#Antioxidant">
+    <rdfs:subClassOf rdf:resource="bfo:MaterialEntity"/>
+    <rdfs:label>antioxidant_2.56</rdfs:label>
+    <rdfs:comment>substance used to retard deterioration caused by oxidation.</rdfs:comment>
+  </owl:Class>
+  <owl:Class rdf:about="#ApparentDensity">
+    <rdfs:subClassOf rdf:resource="#TestData"/>
+    <rdfs:label>apparent density_2.58</rdfs:label>
+    <rdfs:comment>mass divided by the volume of a sample of material, including both permeable and impermeable voids normally present in the material.</rdfs:comment>
+  </owl:Class>
+  <owl:DatatypeProperty rdf:about="#hasApparentDensityValue">
+    <rdfs:domain rdf:resource="#ApparentDensity"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+    <rdfs:label>has apparent density value</rdfs:label>
+  </owl:DatatypeProperty>
+  <owl:Class rdf:about="#ApplicationTime">
+    <rdfs:subClassOf rdf:resource="#TestData"/>
+    <rdfs:label>application time_2.1648</rdfs:label>
+    <rdfs:comment>time interval required for spreading an adhesive on the surfaces specified to be coated.</rdfs:comment>
+  </owl:Class>
+  <owl:DatatypeProperty rdf:about="#hasApplicationTimeValue">
+    <rdfs:domain rdf:resource="#ApplicationTime"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+    <rdfs:label>has application time value</rdfs:label>
+  </owl:DatatypeProperty>
+  <owl:Class rdf:about="#ApplicatorRoller">
+    <rdfs:subClassOf rdf:resource="#TestEquipment"/>
+    <rdfs:label>applicator roller_2.1092</rdfs:label>
+    <rdfs:comment>roller that transfers a controlled amount of adhesive to a surface.</rdfs:comment>
+  </owl:Class>
+  <owl:Class rdf:about="#ApprenticeInstaller">
+    <rdfs:subClassOf rdf:resource="bfo:MaterialEntity"/>
+    <rdfs:label>apprentice installer_2.1716</rdfs:label>
+    <rdfs:comment>polyurethane foam spraying: individual who applies polyurethane spray foam on the job site, under direct supervision of a polyurethane spray installer.</rdfs:comment>
+  </owl:Class>
+  <owl:Class rdf:about="#ArcResistance">
+    <rdfs:subClassOf rdf:resource="#TestData"/>
+    <rdfs:label>arc resistance_2.1720</rdfs:label>
+    <rdfs:comment>ability of an electrically insulating material to resist, under specified conditions, the influence of an electric arc along its surface.</rdfs:comment>
+  </owl:Class>
+  <owl:Class rdf:about="#AreaBurningRate">
+    <rdfs:subClassOf rdf:resource="#TestData"/>
+    <rdfs:label>area burning rate_2.60</rdfs:label>
+    <rdfs:comment>area burned per unit time under specified conditions. NOTE It is expressed in square metres per second.</rdfs:comment>
+  </owl:Class>
+  <owl:Class rdf:about="#Assembly">
+    <rdfs:subClassOf rdf:resource="bfo:Process"/>
+    <rdfs:label>assembly_2.1272</rdfs:label>
+    <rdfs:comment>unit or structure composed of a combination of materials or products, or both.</rdfs:comment>
+  </owl:Class>
+  <owl:Class rdf:about="#AStage">
+    <rdfs:subClassOf rdf:resource="#PolymerMaterial"/>
+    <rdfs:label>A-stage_2.66</rdfs:label>
+    <rdfs:comment>early stage in the preparation of certain thermosetting resins, in which the material is still soluble in certain liquids and still fusible.</rdfs:comment>
+  </owl:Class>
+  <owl:Class rdf:about="#AtacticPolymer">
+    <rdfs:subClassOf rdf:resource="#PolymerMaterial"/>
+    <rdfs:label>atactic polymer_2.68</rdfs:label>
+    <rdfs:comment>polymer in which the molecules of which have equal numbers of the possible configurational base units in a random sequence distribution.</rdfs:comment>
+  </owl:Class>
+  <owl:Class rdf:about="#AutothermalExtrusion">
+    <rdfs:subClassOf rdf:resource="#TestProcedure"/>
+    <rdfs:label>autothermal extrusion_2.70</rdfs:label>
+    <rdfs:comment>method of extrusion in which the sole source of the heat is the conversion of the drive energy through viscous resistance of the plastic mass in the extruder.</rdfs:comment>
+  </owl:Class>
+  <owl:DatatypeProperty rdf:about="#hasApparentDensityValue">
+    <rdfs:domain rdf:resource="#ApparentDensity"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+    <rdfs:label>has apparent density value</rdfs:label>
+  </owl:DatatypeProperty>
+  <owl:Class rdf:about="#AverageMolecularMass_2.1720">
+    <rdfs:subClassOf rdf:resource="#TestData"/>
+    <rdfs:label>average molecular mass_2.1720</rdfs:label>
+    <rdfs:comment>average of molecular mass values as defined by ISO 472: includes four types: number-average (M_n), mass-average (M_w), z-average (M_z) and viscosity-average (M_v).</rdfs:comment>
+  </owl:Class>
+  <owl:Class rdf:about="#NumberAverageMolecularMass_Mn_2.1720">
+    <rdfs:subClassOf rdf:resource="#AverageMolecularMass_2.1720"/>
+    <rdfs:label>number-average molecular mass M_n_2.1720</rdfs:label>
+    <rdfs:comment>number-average molecular mass M_n defined as Σ(N_i·M_i)/Σ(N_i) where N_i is the number of molecules of species i and M_i is the molecular mass of species i.</rdfs:comment>
+  </owl:Class>
+  <owl:Class rdf:about="#MassAverageMolecularMass_Mw_2.1720">
+    <rdfs:subClassOf rdf:resource="#AverageMolecularMass_2.1720"/>
+    <rdfs:label>mass-average molecular mass M_w_2.1720</rdfs:label>
+    <rdfs:comment>mass-average molecular mass M_w defined as Σ(N_i·M_i^2)/Σ(N_i·M_i).</rdfs:comment>
+  </owl:Class>
+  <owl:Class rdf:about="#ZAverageMolecularMass_Mz_2.1720">
+    <rdfs:subClassOf rdf:resource="#AverageMolecularMass_2.1720"/>
+    <rdfs:label>z-average molecular mass M_z_2.1720</rdfs:label>
+    <rdfs:comment>z-average molecular mass M_z defined as Σ(N_i·M_i^3)/Σ(N_i·M_i^2).</rdfs:comment>
+  </owl:Class>
+  <owl:Class rdf:about="#ViscosityAverageMolecularMass_Mv_2.1720">
+    <rdfs:subClassOf rdf:resource="#AverageMolecularMass_2.1720"/>
+    <rdfs:label>viscosity-average molecular mass M_v_2.1720</rdfs:label>
+    <rdfs:comment>viscosity-average molecular mass M_v defined by the Mark-Houwink-Sakurada relation: [η] = K·M^a, and M_v = (Σ(N_i·M_i^{1+a})/Σ(N_i·M_i))^{1/a} where a is the exponent of the relation.</rdfs:comment>
+  </owl:Class>
+  <owl:Class rdf:about="#BackDraft_2.14">
+    <rdfs:subClassOf rdf:resource="bfo:MaterialEntity"/>
+    <rdfs:label>back draft_2.14</rdfs:label>
+    <rdfs:comment>regular polymer: the molecules of which have equal numbers of the possible configurational base units in a random sequence distribution. (Note: term appears in context of mould geometry variants such as back draft/back taper).</rdfs:comment>
+  </owl:Class>
+  <owl:Class rdf:about="#BackingPlate_2.15">
+    <rdfs:subClassOf rdf:resource="bfo:MaterialEntity"/>
+    <rdfs:label>backing plate_2.15</rdfs:label>
+    <rdfs:comment>support plate: mould plate that supports the cavity block, guide pins, etc.</rdfs:comment>
+  </owl:Class>
+  <owl:Class rdf:about="#Baffle_2.16">
+    <rdfs:subClassOf rdf:resource="bfo:MaterialEntity"/>
+    <rdfs:label>baffle_2.16</rdfs:label>
+    <rdfs:comment>mould plug or other device fitted in a steam or water channel to divert the melt flow and direct it to a required path.</rdfs:comment>
+  </owl:Class>
+  <owl:Class rdf:about="#BagMoulding_2.17">
+    <rdfs:subClassOf rdf:resource="bfo:Process"/>
+    <rdfs:label>bag moulding_2.17</rdfs:label>
+    <rdfs:comment>process of moulding reinforced plastics in which consolidation of material placed over or in a rigid mould is accomplished by application of uniform pressure through a flexible membrane, for example by a vacuum bag.</rdfs:comment>
+  </owl:Class>
+  <owl:Class rdf:about="#Baling_2.1678">
+    <rdfs:subClassOf rdf:resource="bfo:Process"/>
+    <rdfs:label>baling_2.1678</rdfs:label>
+    <rdfs:comment>process in which plastics waste is compacted and secured as a bundle to facilitate handling, storage and transportation.</rdfs:comment>
+  </owl:Class>
+  <owl:Class rdf:about="#BallIndentationHardness_2.486">
+    <rdfs:subClassOf rdf:resource="#TestData"/>
+    <rdfs:label>ball indentation hardness_2.486</rdfs:label>
+    <rdfs:comment>quotient of the load on a ball indenter and the surface area of the impression caused by the ball indenter after a specified time of load application. Expressed in newtons per square millimetre.</rdfs:comment>
+  </owl:Class>
+  <owl:Class rdf:about="#BarMould_2.18">
+    <rdfs:subClassOf rdf:resource="bfo:MaterialEntity"/>
+    <rdfs:label>bar mould_2.18</rdfs:label>
+    <rdfs:comment>multi-impression mould in which the impressions are arranged in rows on separate bars which can be removed individually.</rdfs:comment>
+  </owl:Class>
+  <owl:Class rdf:about="#Barrel_2.19">
+    <rdfs:subClassOf rdf:resource="bfo:MaterialEntity"/>
+    <rdfs:label>barrel_2.19</rdfs:label>
+    <rdfs:comment>tube of steel that forms the housing around extruder screws, injection screws or injection plungers.</rdfs:comment>
+  </owl:Class>
+  <owl:Class rdf:about="#Batch_2.1679">
+    <rdfs:subClassOf rdf:resource="bfo:MaterialEntity"/>
+    <rdfs:label>batch_2.1679</rdfs:label>
+    <rdfs:comment>quantity of material regarded as a single unit, and having a unique reference. Note: 'Batch' is primarily a processing term.</rdfs:comment>
+  </owl:Class>
+  <owl:Class rdf:about="#DrawDownRatio_2.303">
+    <rdfs:subClassOf rdf:resource="#TestData"/>
+    <rdfs:label>draw-down ratio_2.303</rdfs:label>
+    <rdfs:comment>the ratio of the thickness of the die opening to the final thickness of the product.</rdfs:comment>
+  </owl:Class>
+  <owl:Class rdf:about="#Draw_2.304">
+    <rdfs:subClassOf rdf:resource="bfo:Process"/>
+    <rdfs:label>draw_2.304</rdfs:label>
+    <rdfs:comment>process of stretching a thermoplastic sheet, rod or filament to reduce its cross-sectional area and/or improve some of its physical properties by orientation.</rdfs:comment>
+  </owl:Class>
+  <owl:Class rdf:about="#DryBlend_2.305">
+    <rdfs:subClassOf rdf:resource="bfo:MaterialEntity"/>
+    <rdfs:label>dry blend_2.305</rdfs:label>
+    <rdfs:comment>free-flowing mixture prepared without fluxing or addition of solvent.</rdfs:comment>
+  </owl:Class>
+  <owl:Class rdf:about="#DryAsMouldedState_DAM_2.1763">
+    <rdfs:subClassOf rdf:resource="bfo:GenericallyDependentContinuant"/>
+    <rdfs:label>dry-as-moulded (DAM) state_2.1763</rdfs:label>
+    <rdfs:comment>state of a moulding, such as a test specimen, which has been placed in a moisture-proof container immediately after moulding.</rdfs:comment>
+    <skos:altLabel>DAM state</skos:altLabel>
+  </owl:Class>
+  <owl:Class rdf:about="#DryPatch_2.306">
+    <rdfs:subClassOf rdf:resource="bfo:MaterialEntity"/>
+    <rdfs:label>dry patch_2.306</rdfs:label>
+    <rdfs:comment>&lt;reinforced plastics&gt; area where the reinforcement has not been wetted sufficiently with resin.</rdfs:comment>
+  </owl:Class>
+  <owl:Class rdf:about="#DryStrength_2.307">
+    <rdfs:subClassOf rdf:resource="#TestData"/>
+    <rdfs:label>dry strength_2.307</rdfs:label>
+    <rdfs:comment>strength of an adhesive bond dried under specified conditions.</rdfs:comment>
+  </owl:Class>
+  <owl:Class rdf:about="#DryTack_2.308">
+    <rdfs:subClassOf rdf:resource="#TestData"/>
+    <rdfs:label>dry tack_2.308</rdfs:label>
+    <rdfs:comment>property of certain adhesives to adhere to themselves when apparently dry. NOTE "Apparently dry" means that the adhesive coat is dry to the touch due to the evaporation of sufficient amounts of the volatile constituents.</rdfs:comment>
+  </owl:Class>
+  <owl:Class rdf:about="#ExternalPlasticizer_2.353">
+    <rdfs:subClassOf rdf:resource="bfo:MaterialEntity"/>
+    <rdfs:label>external plasticizer_2.353</rdfs:label>
+    <rdfs:comment>plasticizer added as an additive in a plastic compound (as opposed to an internal plasticizer chemically bound in the polymer).</rdfs:comment>
+  </owl:Class>
+  <owl:Class rdf:about="#ExtruderHead_2.354">
+    <rdfs:subClassOf rdf:resource="#TestEquipment"/>
+    <rdfs:label>extruder head_2.354</rdfs:label>
+    <rdfs:comment>part of an extruder situated between the barrel and the die. NOTE In some cases the head may be part of the die.</rdfs:comment>
+  </owl:Class>
+  <owl:Class rdf:about="#ExtruderScrew_2.355">
+    <rdfs:subClassOf rdf:resource="bfo:MaterialEntity"/>
+    <rdfs:label>extruder screw_2.355</rdfs:label>
+    <rdfs:comment>shaft with one or more helical ribs, often divided into different zones, with different depths of the channel between the ribs and sometimes different pitch, usually having a cylindrical part at one end and a curved or pointed surface at the other, designed to drive the plastic mass along the surrounding barrel.</rdfs:comment>
+  </owl:Class>
+  <owl:Class rdf:about="#Extrusion_2.356">
+    <rdfs:subClassOf rdf:resource="bfo:Process"/>
+    <rdfs:label>extrusion_2.356</rdfs:label>
+    <rdfs:comment>process whereby heated or unheated plastic forced through a shaping orifice becomes one continuously formed piece.</rdfs:comment>
+  </owl:Class>
+  <owl:Class rdf:about="#ExtrusionCoating_2.357">
+    <rdfs:subClassOf rdf:resource="bfo:Process"/>
+    <rdfs:label>extrusion coating_2.357</rdfs:label>
+    <rdfs:comment>process in which a molten plastic is extruded continuously on to a moving substrate.</rdfs:comment>
+  </owl:Class>
+  <owl:Class rdf:about="#Exudation_2.358">
+    <rdfs:subClassOf rdf:resource="bfo:Process"/>
+    <rdfs:label>exudation_2.358</rdfs:label>
+    <rdfs:comment>migration of liquid constituents to the surface.</rdfs:comment>
+  </owl:Class>
+  <owl:Class rdf:about="#BleedOut_2.358">
+    <rdfs:subClassOf rdf:resource="#Exudation_2.358"/>
+    <rdfs:label>bleed-out_2.358</rdfs:label>
+    <rdfs:comment>migration of liquid constituents to the surface (deprecated synonym of exudation).</rdfs:comment>
+    <skos:altLabel>bleed out</skos:altLabel>
+    <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
+  </owl:Class>
+  <owl:Class rdf:about="#SweatOut_2.358">
+    <rdfs:subClassOf rdf:resource="#Exudation_2.358"/>
+    <rdfs:label>sweat-out_2.358</rdfs:label>
+    <rdfs:comment>migration of liquid constituents to the surface (deprecated synonym of exudation).</rdfs:comment>
+    <skos:altLabel>sweat out</skos:altLabel>
+    <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
+  </owl:Class>
+  <owl:Class rdf:about="#Failure_2.1463">
+    <rdfs:subClassOf rdf:resource="bfo:Process"/>
+    <rdfs:label>failure_2.1463</rdfs:label>
+    <rdfs:comment>capture testing: any break in the surface of the specimen which is visible to the naked eye.</rdfs:comment>
+  </owl:Class>
+  <owl:Class rdf:about="#FatigueLife_2.362">
+    <rdfs:subClassOf rdf:resource="#TestData"/>
+    <rdfs:label>fatigue life_2.362</rdfs:label>
+    <rdfs:comment>number of cycles to which a test specimen is subjected until failure occurs or the test is terminated. NOTE Fatigue life depends on the frequency and waveform of the applied stress, the magnitude of the applied stress and whether or not both compressive and tensile stresses occur within each cycle.</rdfs:comment>
+  </owl:Class>
+  <owl:Class rdf:about="#FatigueStrength_2.362">
+    <rdfs:subClassOf rdf:resource="#TestData"/>
+    <rdfs:label>fatigue strength_2.362</rdfs:label>
+    <rdfs:comment>value of stress associated with fatigue life under specified conditions.</rdfs:comment>
+  </owl:Class>
+  <owl:Class rdf:about="#Feeding_2.366">
+    <rdfs:subClassOf rdf:resource="bfo:Process"/>
+    <rdfs:label>feeding_2.366</rdfs:label>
+    <rdfs:comment>supplying of plastic material to a processing machine.</rdfs:comment>
+  </owl:Class>
+  <owl:Class rdf:about="#FeedstockRecycling_2.1690">
+    <rdfs:subClassOf rdf:resource="bfo:Process"/>
+    <rdfs:label>feedstock recycling_2.1690</rdfs:label>
+    <rdfs:comment>conversion to monomer or production of new raw materials by changing the chemical structure of plastics waste through cracking, gasification or depolymerization, excluding energy recovery and incineration.</rdfs:comment>
+    <skos:altLabel>feedstock recycling</skos:altLabel>
+    <skos:altLabel>chemical recycling</skos:altLabel>
+  </owl:Class>
+  <owl:Class rdf:about="#FilamentWinding_2.368">
+    <rdfs:subClassOf rdf:resource="bfo:Process"/>
+    <rdfs:label>filament winding_2.368</rdfs:label>
+    <rdfs:comment>method of forming reinforced plastic products by winding resin-coated continuous strands of reinforcing material on to a mandrel or mould under controlled tension and in a predetermined pattern.</rdfs:comment>
+  </owl:Class>
+  <owl:Class rdf:about="#Filler_2.369">
+    <rdfs:subClassOf rdf:resource="bfo:MaterialEntity"/>
+    <rdfs:label>filler_2.369</rdfs:label>
+    <rdfs:comment>relatively inert solid material added to a plastic or to an adhesive to modify its strength, permanence, working properties or other qualities, or to lower costs.</rdfs:comment>
+  </owl:Class>
+  <owl:Class rdf:about="#FillerRod_2.370">
+    <rdfs:subClassOf rdf:resource="bfo:MaterialEntity"/>
+    <rdfs:label>filler rod_2.370</rdfs:label>
+    <rdfs:comment>rod of thermoplastic material used in hot-gas welding to provide a source of softened material to fill a welded joint.</rdfs:comment>
+  </owl:Class>
+  <owl:Class rdf:about="#FillerSheet_2.371">
+    <rdfs:subClassOf rdf:resource="bfo:MaterialEntity"/>
+    <rdfs:label>filler sheet_2.371</rdfs:label>
+    <rdfs:comment>sheetless sheet of deformable or resilient material which, when placed between an assembly to be bonded and the pressure applicator or when distributed between a stack of assemblies, aids in providing uniform application of pressure over the area to be bonded.</rdfs:comment>
+  </owl:Class>
+  <owl:Class rdf:about="#Fillet_2.372">
+    <rdfs:subClassOf rdf:resource="bfo:MaterialEntity"/>
+    <rdfs:label>fillet_2.372</rdfs:label>
+    <rdfs:comment>portion of an adhesive that fills the corner or angle formed where two adherends are joined. NOTE A fillet is usually formed by "squeeze-out" or by capillary action.</rdfs:comment>
+  </owl:Class>
+  <owl:Class rdf:about="#Film_2.373">
+    <rdfs:subClassOf rdf:resource="bfo:MaterialEntity"/>
+    <rdfs:label>film_2.373</rdfs:label>
+    <rdfs:comment>thin planar product of arbitrarily limited maximum thickness, the thickness being very small compared to the length and width.</rdfs:comment>
+  </owl:Class>
+  <owl:Class rdf:about="#FilmAdhesive_2.374">
+    <rdfs:subClassOf rdf:resource="bfo:MaterialEntity"/>
+    <rdfs:label>film adhesive_2.374</rdfs:label>
+    <rdfs:comment>film adhesives are usually caused to set by means of heat under pressure; they may be with or without a carrier.</rdfs:comment>
+  </owl:Class>
+  <owl:Class rdf:about="#FilmBlowing_2.375">
+    <rdfs:subClassOf rdf:resource="bfo:Process"/>
+    <rdfs:label>film blowing_2.375</rdfs:label>
+    <rdfs:comment>process of making film by extruding a thermoplastic tube kept inflated continuously by internal gas pressure or during stretching and cooling.</rdfs:comment>
+  </owl:Class>
+  <owl:Class rdf:about="#FilmCasting_2.376">
+    <rdfs:subClassOf rdf:resource="bfo:Process"/>
+    <rdfs:label>film casting_2.376</rdfs:label>
+    <rdfs:comment>process of making film by distributing a fluid polymer, polymer dispersion or solution on a suitable substrate and then solidifying the polymeric material by suitable means.</rdfs:comment>
+  </owl:Class>
+  <owl:Class rdf:about="#FilmExtrusion_2.377">
+    <rdfs:subClassOf rdf:resource="bfo:Process"/>
+    <rdfs:label>film extrusion_2.377</rdfs:label>
+    <rdfs:comment>process of making film by extruding a molten thermoplastic through a die.</rdfs:comment>
+  </owl:Class>
+  <owl:Class rdf:about="#TextileGlass_2.379">
+    <rdfs:subClassOf rdf:resource="bfo:MaterialEntity"/>
+    <rdfs:label>textile glass_2.379</rdfs:label>
+    <rdfs:comment>&lt;textile glass&gt; application of a coupling agent to glass textile products in order to improve the bond between the glass fibre surface and the matrix.</rdfs:comment>
+  </owl:Class>
+  <owl:Class rdf:about="#FibreVolumeContent_2.1061">
+    <rdfs:subClassOf rdf:resource="#TestData"/>
+    <rdfs:label>fibre volume content_2.1061</rdfs:label>
+    <rdfs:comment>ratio of fibre volume to total volume of composite.</rdfs:comment>
+  </owl:Class>
+  <owl:DatatypeProperty rdf:about="#hasFibreVolumeContentValue">
+    <rdfs:domain rdf:resource="#FibreVolumeContent_2.1061"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+    <rdfs:label>has fibre volume content value</rdfs:label>
+  </owl:DatatypeProperty>
+  <owl:Class rdf:about="#FlameSprayCoating_2.389">
+    <rdfs:subClassOf rdf:resource="bfo:Process"/>
+    <rdfs:label>flame spray coating_2.389</rdfs:label>
+    <rdfs:comment>coating process in which a powdered polymer is heated to fusing temperature in a cone of flame placed between the spray gun orifice and the substrate.</rdfs:comment>
+  </owl:Class>
+  <owl:Class rdf:about="#FlameSpread_2.390">
+    <rdfs:subClassOf rdf:resource="bfo:Process"/>
+    <rdfs:label>flame spread_2.390</rdfs:label>
+    <rdfs:comment>propagation of a fire front.</rdfs:comment>
+  </owl:Class>
+  <owl:Class rdf:about="#FlameSpreadRate_2.391">
+    <rdfs:subClassOf rdf:resource="#TestData"/>
+    <rdfs:label>flame spread rate_2.391</rdfs:label>
+    <rdfs:comment>distance travelled by a fire front during its propagation divided by the time of travel, measured under specified conditions. NOTE It is expressed in metres per second.</rdfs:comment>
+  </owl:Class>
+  <owl:Class rdf:about="#FlameSpreadTime_2.392">
+    <rdfs:subClassOf rdf:resource="#TestData"/>
+    <rdfs:label>flame spread time_2.392</rdfs:label>
+    <rdfs:comment>time taken by a fire front on a burning material to travel a specified distance on the surface, or to cover a specified surface area, under specified conditions. NOTE It is expressed in seconds.</rdfs:comment>
+  </owl:Class>
+  <owl:Class rdf:about="#Flame_Noun_2.385">
+    <rdfs:subClassOf rdf:resource="bfo:Process"/>
+    <rdfs:label>flame (noun)_2.385</rdfs:label>
+    <rdfs:comment>zone of combustion in the gaseous phase, usually with emission of light.</rdfs:comment>
+  </owl:Class>
+  <owl:Class rdf:about="#Flame_Verb_2.386">
+    <rdfs:subClassOf rdf:resource="bfo:Process"/>
+    <rdfs:label>flame (verb)_2.386</rdfs:label>
+    <rdfs:comment>intransitive: undergo combustion in the gaseous phase with emission of light.</rdfs:comment>
+  </owl:Class>
+  <owl:Class rdf:about="#Flameproof_2.1390">
+    <rdfs:subClassOf rdf:resource="bfo:GenericallyDependentContinuant"/>
+    <rdfs:label>flameproof_2.1390</rdfs:label>
+    <rdfs:comment>deprecated term, except in the context of electrical equipment for explosive atmospheres.</rdfs:comment>
+    <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
+  </owl:Class>
+  <owl:Class rdf:about="#FlameRetardantTreatment_2.1333">
+    <rdfs:subClassOf rdf:resource="bfo:Process"/>
+    <rdfs:label>flame-retardant treatment_2.1333</rdfs:label>
+    <rdfs:comment>process whereby improved flame retardance is imparted to a material or product.</rdfs:comment>
+  </owl:Class>
+  <owl:Class rdf:about="#FlameRetarded_2.1334">
+    <rdfs:subClassOf rdf:resource="bfo:MaterialEntity"/>
+    <rdfs:label>flame-retarded_2.1334</rdfs:label>
+    <rdfs:comment>treated with a flame retardant.</rdfs:comment>
+  </owl:Class>
+  <owl:Class rdf:about="#FlamingCombustion_2.1335">
+    <rdfs:subClassOf rdf:resource="bfo:Process"/>
+    <rdfs:label>flaming combustion_2.1335</rdfs:label>
+    <rdfs:comment>combustion in the gaseous phase, usually with emission of light.</rdfs:comment>
+  </owl:Class>
+  <owl:Class rdf:about="#FlamingDebris_2.1336">
+    <rdfs:subClassOf rdf:resource="bfo:MaterialEntity"/>
+    <rdfs:label>flaming debris_2.1336</rdfs:label>
+    <rdfs:comment>material separating from a burning item during a fire test and continuing to flame.</rdfs:comment>
+  </owl:Class>
+  <owl:Class rdf:about="#Flammability_2.393">
+    <rdfs:subClassOf rdf:resource="bfo:GenericallyDependentContinuant"/>
+    <rdfs:label>flammability_2.393</rdfs:label>
+    <rdfs:comment>ability of a material or product to burn with a flame under specified conditions.</rdfs:comment>
+  </owl:Class>
+  <owl:Class rdf:about="#Flammable_2.394">
+    <rdfs:subClassOf rdf:resource="bfo:GenericallyDependentContinuant"/>
+    <rdfs:label>flammable_2.394</rdfs:label>
+    <rdfs:comment>capable of flaming under specified conditions.</rdfs:comment>
+  </owl:Class>
+  <owl:Class rdf:about="#Flash_2.395">
+    <rdfs:subClassOf rdf:resource="bfo:MaterialEntity"/>
+    <rdfs:label>flash_2.395</rdfs:label>
+    <rdfs:comment>that portion of the charge which escapes from the moulding cavity during moulding.</rdfs:comment>
+  </owl:Class>
+  <owl:Class rdf:about="#FlashGroove_2.396">
+    <rdfs:subClassOf rdf:resource="bfo:MaterialEntity"/>
+    <rdfs:label>flash groove_2.396</rdfs:label>
+    <rdfs:comment>groove in a mould designed to allow surplus material to escape during the moulding operation.</rdfs:comment>
+  </owl:Class>
+  <owl:Class rdf:about="#FlashLine_2.397">
+    <rdfs:subClassOf rdf:resource="bfo:MaterialEntity"/>
+    <rdfs:label>flash line_2.397</rdfs:label>
+    <rdfs:comment>raised line appearing on the surface of a moulding and formed at the junction of mould parts.</rdfs:comment>
+  </owl:Class>
+  <owl:Class rdf:about="#FlashMould_2.398">
+    <rdfs:subClassOf rdf:resource="bfo:MaterialEntity"/>
+    <rdfs:label>flash mould_2.398</rdfs:label>
+    <rdfs:comment>mould that is designed to allow excess charge to escape in the form of flash. NOTE The flash sustains part of the total applied pressure.</rdfs:comment>
+  </owl:Class>
+  <owl:Class rdf:about="#FlashPoint_2.1268">
+    <rdfs:subClassOf rdf:resource="#TestData"/>
+    <rdfs:label>flash point_2.1268</rdfs:label>
+    <rdfs:comment>minimum temperature to which a material or a product must be heated for the vapours emitted to ignite momentarily in the presence of flame under specified conditions. NOTE 1 It is expressed in degrees Celsius. NOTE 2 Various standards, using different methods and equipment, exist for the determination of the flash point.</rdfs:comment>
+  </owl:Class>
+  <owl:DatatypeProperty rdf:about="#hasFlashPointValue">
+    <rdfs:domain rdf:resource="#FlashPoint_2.1268"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+    <rdfs:label>has flash point value</rdfs:label>
+  </owl:DatatypeProperty>
+  <owl:Class rdf:about="#Flatwise_2.400">
+    <rdfs:subClassOf rdf:resource="bfo:GenericallyDependentContinuant"/>
+    <rdfs:label>flatwise_2.400</rdfs:label>
+    <rdfs:comment>&lt;laminates&gt; perpendicular to the layers of the laminate.</rdfs:comment>
+  </owl:Class>
+  <owl:Class rdf:about="#FlatwiseImpact_2.1420">
+    <rdfs:subClassOf rdf:resource="#TestProcedure"/>
+    <rdfs:label>flatwise impact_2.1420</rdfs:label>
+    <rdfs:comment>Charpy and Izod impact testing: impact on the broad longitudinal surface of the test specimen, in the direction parallel to the width of the specimen.</rdfs:comment>
+  </owl:Class>
+  <owl:Class rdf:about="#FlatwisePosition_2.1783">
+    <rdfs:subClassOf rdf:resource="bfo:GenericallyDependentContinuant"/>
+    <rdfs:label>flatwise position_2.1783</rdfs:label>
+    <rdfs:comment>&lt;determination of temperature of deflection under load&gt; test specimen position in which the test load is applied at right angles to the thickness direction on the narrow longitudinal surface of the specimen.</rdfs:comment>
+  </owl:Class>
+  <owl:Class rdf:about="#FlexuralStrain_2.1407">
+    <rdfs:subClassOf rdf:resource="#TestData"/>
+    <rdfs:label>flexural strain_2.1407</rdfs:label>
+    <rdfs:comment>&lt;flexural testing&gt; nominal fractional change in length of an element of the outer surface of the test specimen at mid-span in flexural testing. NOTE It is expressed as a dimensionless ratio or as a percentage.</rdfs:comment>
+  </owl:Class>
+  <owl:Class rdf:about="#FlexuralStrength_2.1404">
+    <rdfs:subClassOf rdf:resource="#TestData"/>
+    <rdfs:label>flexural strength_2.1404</rdfs:label>
+    <rdfs:comment>maximum flexural stress sustained by the test specimen during a test. NOTE It is expressed in megapascals.</rdfs:comment>
+  </owl:Class>
+  <owl:Class rdf:about="#FlexuralStress_2.1406">
+    <rdfs:subClassOf rdf:resource="#TestData"/>
+    <rdfs:label>flexural stress_2.1406</rdfs:label>
+    <rdfs:comment>nominal flexural stress in a test specimen at mid-span. NOTE It is expressed in megapascals.</rdfs:comment>
+  </owl:Class>
+  <owl:Class rdf:about="#FlexuralCreepModulus_2.1461">
+    <rdfs:subClassOf rdf:resource="#TestData"/>
+    <rdfs:label>flexural-creep modulus_2.1461</rdfs:label>
+    <rdfs:comment>ratio of the flexural stress to the flexural-creep strain. NOTE It is expressed in megapascals.</rdfs:comment>
+  </owl:Class>
+  <owl:Class rdf:about="#FlexuralCreepStrain_2.1784">
+    <rdfs:subClassOf rdf:resource="#TestData"/>
+    <rdfs:label>flexural-creep strain_2.1784</rdfs:label>
+    <rdfs:comment>temperature-dependent strain at the surface of the test specimen produced by a stress at any given time during a creep test.</rdfs:comment>
+  </owl:Class>
+  <owl:Class rdf:about="#FlexuralStrainIncrease_2.1408">
+    <rdfs:subClassOf rdf:resource="#TestData"/>
+    <rdfs:label>flexural-strain increase_2.1408</rdfs:label>
+    <rdfs:comment>specified increase in flexural strain that takes place during heating.</rdfs:comment>
+  </owl:Class>
+  <owl:Class rdf:about="#FloatingPlaten_2.406">
+    <rdfs:subClassOf rdf:resource="#TestEquipment"/>
+    <rdfs:label>floating platen_2.406</rdfs:label>
+    <rdfs:comment>platen located between the main head and the press table in a multiplaten press and capable of being moved independently.</rdfs:comment>
+  </owl:Class>
+  <owl:Class rdf:about="#FlowLine_2.408">
+    <rdfs:subClassOf rdf:resource="bfo:MaterialEntity"/>
+    <rdfs:label>flow line_2.408</rdfs:label>
+    <rdfs:comment>visible line in a moulding in the direction of, and caused by, flow.</rdfs:comment>
+  </owl:Class>
+  <owl:Class rdf:about="#Flowability_2.1062">
+    <rdfs:subClassOf rdf:resource="#TestData"/>
+    <rdfs:label>flowability_2.1061</rdfs:label>
+    <rdfs:comment>ability of a thermosetting moulding compound to flow and fill the cavity of a mould under given conditions.</rdfs:comment>
+  </owl:Class>
+  <owl:Class rdf:about="#Fluff_2.1692">
+    <rdfs:subClassOf rdf:resource="bfo:MaterialEntity"/>
+    <rdfs:label>fluff_2.1692</rdfs:label>
+    <rdfs:comment>recycling of plastics: filament-like regrind. NOTE Common usage of the term "fluff" also includes shredder residue fractions produced in the commercial recycling of durable goods such as automobiles.</rdfs:comment>
+  </owl:Class>
+  <owl:Class rdf:about="#FluidizedBedCoating_2.409">
+    <rdfs:subClassOf rdf:resource="bfo:Process"/>
+    <rdfs:label>fluidized-bed coating_2.409</rdfs:label>
+    <rdfs:comment>coating process in which either a part to be coated is preheated, dipped into a bed of powdered plastic particles kept in a state of flotation by an upward air current, and is usually subsequently heated to fuse the adhering particles, or a part to be coated which is at least slightly conductive electrically and earthed (grounded) is dipped onto an upward air current and which adhere to the part, and is subsequently heated to fuse the particles.</rdfs:comment>
+  </owl:Class>
+  <owl:Class rdf:about="#Fluoroplastic_2.410">
+    <rdfs:subClassOf rdf:resource="#PolymerMaterial"/>
+    <rdfs:label>fluoroplastic_2.410</rdfs:label>
+    <rdfs:comment>plastic based on polymers made with monomers containing one or more atoms of fluorine, or copolymers of such monomers with other monomers, the fluoromonmer(s) being in the greatest amount by mass.</rdfs:comment>
+  </owl:Class>
+  <owl:Class rdf:about="#FoamInSitu_Verb_2.412">
+    <rdfs:subClassOf rdf:resource="bfo:Process"/>
+    <rdfs:label>foam in situ (verb)_2.412</rdfs:label>
+    <rdfs:comment>form a foam, deposit and cure a cellular plastic mix at the site where it is used.</rdfs:comment>
+  </owl:Class>
+  <owl:Class rdf:about="#FoamInSituAdhesive_2.413">
+    <rdfs:subClassOf rdf:resource="bfo:MaterialEntity"/>
+    <rdfs:label>foam-in-situ adhesive_2.413</rdfs:label>
+    <rdfs:comment>adhesive designed to foam in situ, after application, in order to provide effective gap-filling properties.</rdfs:comment>
+  </owl:Class>
+  <owl:Class rdf:about="#FoldedYarn_2.415">
+    <rdfs:subClassOf rdf:resource="bfo:MaterialEntity"/>
+    <rdfs:label>folded yarn_2.415</rdfs:label>
+    <rdfs:comment>textile: general term designating yarn formed by twisting two or more single yarns in one folding operation.</rdfs:comment>
+  </owl:Class>
+  <owl:Class rdf:about="#FoldedChainCrystal_2.414">
+    <rdfs:subClassOf rdf:resource="#PolymerMaterial"/>
+    <rdfs:label>folded-chain crystal_2.414</rdfs:label>
+    <rdfs:comment>polymer crystal consisting predominantly of chains that traverse the crystal repeatedly by folding as they emerge at its external surfaces.</rdfs:comment>
+  </owl:Class>
+  <owl:Class rdf:about="#Force_2.411">
+    <rdfs:subClassOf rdf:resource="#TestData"/>
+    <rdfs:label>force_2.411</rdfs:label>
+    <rdfs:comment>fracture toughness testing: applied load at the initiation of crack growth. NOTE It is expressed in newtons.</rdfs:comment>
+  </owl:Class>
+  <owl:Class rdf:about="#ForceDeflectionDiagram_2.1785">
+    <rdfs:subClassOf rdf:resource="#TestData"/>
+    <rdfs:label>force-deflection diagram_2.1785</rdfs:label>
+    <rdfs:comment>instrumented Charpy impact and puncture testing: plot of impact force as ordinate against specimen deflection from the moment of impact as abscissa.</rdfs:comment>
+  </owl:Class>
+  <owl:Class rdf:about="#ForceTimeDiagram_2.1786">
+    <rdfs:subClassOf rdf:resource="#TestData"/>
+    <rdfs:label>force-time diagram_2.1786</rdfs:label>
+    <rdfs:comment>instrumented Charpy impact and puncture testing: plot of impact force as ordinate against time from the moment of impact as abscissa.</rdfs:comment>
+  </owl:Class>
+  <owl:Class rdf:about="#Forming_2.416">
+    <rdfs:subClassOf rdf:resource="bfo:Process"/>
+    <rdfs:label>forming_2.416</rdfs:label>
+    <rdfs:comment>process in which the shape of plastic pieces such as sheets, rods or tubes is changed to a desired configuration.</rdfs:comment>
+  </owl:Class>
+  <owl:Class rdf:about="#Fractionation_2.417">
+    <rdfs:subClassOf rdf:resource="bfo:Process"/>
+    <rdfs:label>fractionation_2.417</rdfs:label>
+    <rdfs:comment>process by means of which macromolecular species differing in some characteristic (such as chemical composition, relative molecular mass, branching or stereoregularity) are separated from each other.</rdfs:comment>
+  </owl:Class>
+  <owl:Class rdf:about="#FracturePattern_2.1668">
+    <rdfs:subClassOf rdf:resource="#TestData"/>
+    <rdfs:label>fracture pattern_2.1668</rdfs:label>
+    <rdfs:comment>&lt;adhesives&gt; visual appearance of the fracture surfaces produced by the rupture of an adhesive bond. NOTE The pattern can be classified with regard to the amount (or percentage) of adhesion or cohesion failure.</rdfs:comment>
+  </owl:Class>
+  <owl:Class rdf:about="#Frame_2.140">
+    <rdfs:subClassOf rdf:resource="#TestEquipment"/>
+    <rdfs:label>frame_2.140</rdfs:label>
+    <rdfs:comment>&lt;pendulum impact-testing machine&gt; that part of the machine carrying the pendulum bearings, the supports, the vice and/or clamps, the measurement instrument and the mechanism for holding and releasing the pendulum.</rdfs:comment>
+  </owl:Class>
+  <owl:Class rdf:about="#FrictionWelding_2.421">
+    <rdfs:subClassOf rdf:resource="bfo:Process"/>
+    <rdfs:label>friction welding_2.421</rdfs:label>
+    <rdfs:comment>pin welding in which the surfaces to be united are softened by heat generated by friction prior to being joined.</rdfs:comment>
+  </owl:Class>
+  <owl:Class rdf:about="#FullFireDevelopment_2.1339">
+    <rdfs:subClassOf rdf:resource="bfo:Process"/>
+    <rdfs:label>full fire development_2.1339</rdfs:label>
+    <rdfs:comment>evolution of a fire to a state of full flaming of the combustible materials.</rdfs:comment>
+  </owl:Class>
+  <owl:Class rdf:about="#FullyDevelopedFire_2.1340">
+    <rdfs:subClassOf rdf:resource="bfo:Process"/>
+    <rdfs:label>fully developed fire_2.1340</rdfs:label>
+    <rdfs:comment>state of total involvement of combustible materials in a fire.</rdfs:comment>
+  </owl:Class>
+  <owl:Class rdf:about="#FuranPlastic_2.425">
+    <rdfs:subClassOf rdf:resource="#PolymerMaterial"/>
+    <rdfs:label>furan plastic_2.425</rdfs:label>
+    <rdfs:comment>plastic based on furan resins.</rdfs:comment>
+  </owl:Class>
+  <owl:Class rdf:about="#FuranResin_2.426">
+    <rdfs:subClassOf rdf:resource="#PolymerMaterial"/>
+    <rdfs:label>furan resin_2.426</rdfs:label>
+    <rdfs:comment>resin obtained by thermosetting resins obtained by condensation of furfuryl alcohol or co-condensation of furfuryl alcohol or 2-furaldehyde with other compounds like formaldehyde, phenol, urea and/or acetone.</rdfs:comment>
+  </owl:Class>
+  <owl:Class rdf:about="#Gap_2.429">
+    <rdfs:subClassOf rdf:resource="bfo:MaterialEntity"/>
+    <rdfs:label>gap_2.429</rdfs:label>
+    <rdfs:comment>opening between two adjacent rolls or between two adjacent parts of a calender or other similar machine.</rdfs:comment>
+  </owl:Class>
+  <owl:Class rdf:about="#GapFillingAdhesive_2.1523">
+    <rdfs:subClassOf rdf:resource="bfo:MaterialEntity"/>
+    <rdfs:label>gap filling adhesive_2.1523</rdfs:label>
+    <rdfs:comment>adhesive designed to fill gaps between uneven surfaces.</rdfs:comment>
+  </owl:Class>
+  <owl:Class rdf:about="#GasTransmissionRate_2.430">
+    <rdfs:subClassOf rdf:resource="#TestData"/>
+    <rdfs:label>gas transmission rate_2.430</rdfs:label>
+    <rdfs:comment>volume of gas which, under steady conditions, passes through unit area of a specimen in unit time under unit pressure difference and at constant temperature.</rdfs:comment>
+  </owl:Class>
+  <owl:DatatypeProperty rdf:about="#hasGasTransmissionRateValue">
+    <rdfs:domain rdf:resource="#GasTransmissionRate_2.430"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+    <rdfs:label>has gas transmission rate value</rdfs:label>
+  </owl:DatatypeProperty>
+  <owl:Class rdf:about="#Gasification_2.1341">
+    <rdfs:subClassOf rdf:resource="bfo:Process"/>
+    <rdfs:label>gasification_2.1341</rdfs:label>
+    <rdfs:comment>transformation of a solid and/or liquid material to a gaseous state.</rdfs:comment>
+  </owl:Class>
+  <owl:Class rdf:about="#Gasify_2.1342">
+    <rdfs:subClassOf rdf:resource="bfo:Process"/>
+    <rdfs:label>gasify_2.1342</rdfs:label>
+    <rdfs:comment>transform a solid and/or liquid material into a gaseous state.</rdfs:comment>
+  </owl:Class>
+  <owl:Class rdf:about="#GaugeLength_2.432">
+    <rdfs:subClassOf rdf:resource="#TestData"/>
+    <rdfs:label>gauge length_2.432</rdfs:label>
+    <rdfs:comment>&lt;tensile and compression testing&gt; initial distance between the gauge marks on the central part of the test specimen. NOTE It is expressed in millimetres.</rdfs:comment>
+  </owl:Class>
+  <owl:DatatypeProperty rdf:about="#hasGaugeLengthValue">
+    <rdfs:domain rdf:resource="#GaugeLength_2.432"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+    <rdfs:label>has gauge length value</rdfs:label>
+  </owl:DatatypeProperty>
+  <owl:Class rdf:about="#GaugeMarks_2.433">
+    <rdfs:subClassOf rdf:resource="bfo:GenericallyDependentContinuant"/>
+    <rdfs:label>gauge marks_2.433</rdfs:label>
+    <rdfs:comment>&lt;tensile and compression testing&gt; marks made on the surface of the central part of the test specimen to indicate the point between which the change in separation is measured when determining the longitudinal strain (elongation) or compression.</rdfs:comment>
+  </owl:Class>
+  <owl:Class rdf:about="#GelPoint_2.436">
+    <rdfs:subClassOf rdf:resource="#TestData"/>
+    <rdfs:label>gel point_2.436</rdfs:label>
+    <rdfs:comment>stage at which a liquid begins to exhibit pseudoelastic properties. NOTE This stage can conveniently be determined as the point of inflection of a viscosity-time plot.</rdfs:comment>
+  </owl:Class>
+  <owl:DatatypeProperty rdf:about="#hasGelPointValue">
+    <rdfs:domain rdf:resource="#GelPoint_2.436"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+    <rdfs:label>has gel point value</rdfs:label>
+  </owl:DatatypeProperty>
+  <owl:Class rdf:about="#GelStrength_2.437">
+    <rdfs:subClassOf rdf:resource="#TestData"/>
+    <rdfs:label>gel strength_2.437</rdfs:label>
+    <rdfs:comment>measure, in arbitrary units, of the rigidity modulus of a gel prepared and matured under standard conditions. NOTE "Bloom strength" is a quantitative assessment of "gel strength", determined under standard conditions in a Bloom gelometer or electronic gel tester.</rdfs:comment>
+    <skos:altLabel>Bloom strength</skos:altLabel>
+  </owl:Class>
+  <owl:DatatypeProperty rdf:about="#hasGelStrengthValue">
+    <rdfs:domain rdf:resource="#GelStrength_2.437"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+    <rdfs:label>has gel strength value</rdfs:label>
+  </owl:DatatypeProperty>
+  <owl:Class rdf:about="#GelTemperature_2.1050">
+    <rdfs:subClassOf rdf:resource="#TestData"/>
+    <rdfs:label>gel temperature_2.1050</rdfs:label>
+    <rdfs:comment>temperature at which a system no longer flows under shear stresses, but shows a tendency to tear.</rdfs:comment>
+  </owl:Class>
+  <owl:Class rdf:about="#GeometryCalibrationFactor_2.1481">
+    <rdfs:subClassOf rdf:resource="#TestData"/>
+    <rdfs:label>geometry calibration factor_2.1481</rdfs:label>
+    <rdfs:comment>&lt;fracture toughness testing&gt; factor to correct the error due to the dimensions of the test specimen.</rdfs:comment>
+  </owl:Class>
+  <owl:Class rdf:about="#GlassTransition_2.440">
+    <rdfs:subClassOf rdf:resource="#TestData"/>
+    <rdfs:label>glass transition_2.440</rdfs:label>
+    <rdfs:comment>reversible transition occurring in an amorphous polymer or in amorphous regions of a partially crystalline polymer from (or to) a viscous or rubbery condition to (or from) a hard and relatively brittle one.</rdfs:comment>
+  </owl:Class>
+  <owl:Class rdf:about="#GlassTransitionTemperature_2.441">
+    <rdfs:subClassOf rdf:resource="#TestData"/>
+    <rdfs:label>glass transition temperature_2.441</rdfs:label>
+    <rdfs:comment>approximate midpoint of the temperature range over which the glass transition takes place.</rdfs:comment>
+  </owl:Class>
+  <owl:DatatypeProperty rdf:about="#hasGlassTransitionTemperatureValue">
+    <rdfs:domain rdf:resource="#GlassTransitionTemperature_2.441"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+    <rdfs:label>has glass transition temperature value</rdfs:label>
+  </owl:DatatypeProperty>
+  <owl:Class rdf:about="#Glowing_2.1343">
+    <rdfs:subClassOf rdf:resource="bfo:Process"/>
+    <rdfs:label>glowing_2.1343</rdfs:label>
+    <rdfs:comment>made luminous by heat.</rdfs:comment>
+  </owl:Class>
+  <owl:Class rdf:about="#GlowingCombustion_2.444">
+    <rdfs:subClassOf rdf:resource="bfo:Process"/>
+    <rdfs:label>glowing combustion_2.444</rdfs:label>
+    <rdfs:comment>combustion of a material in the solid phase without flame but with emission of light from the combustion zone (see "incandescence").</rdfs:comment>
+  </owl:Class>
+  <owl:Class rdf:about="#Granulator_2.449">
+    <rdfs:subClassOf rdf:resource="bfo:MaterialEntity"/>
+    <rdfs:label>granulator_2.449</rdfs:label>
+    <rdfs:comment>machine for reducing large pieces of material or rejected moulded articles to a granular state.</rdfs:comment>
+  </owl:Class>
+  <owl:Class rdf:about="#Granule_2.450">
+    <rdfs:subClassOf rdf:resource="bfo:MaterialEntity"/>
+    <rdfs:label>granule_2.450</rdfs:label>
+    <rdfs:comment>small particle produced in various sizes and shapes in operations such as cutting, grinding, crushing, precipitation and polymerization. NOTE These operations also yield material in the form of powder; in some precipitation and polymerization processes material in the form of beads is produced.</rdfs:comment>
+  </owl:Class>
+  <owl:Class rdf:about="#GravityLength_2.1488">
+    <rdfs:subClassOf rdf:resource="#TestData"/>
+    <rdfs:label>gravity length_2.1488</rdfs:label>
+    <rdfs:comment>&lt;pendulum impact-testing machine&gt; distance between the axis of rotation of the pendulum and the centre of gravity of the pendulum. NOTE It is expressed in metres.</rdfs:comment>
+  </owl:Class>
+  <owl:Class rdf:about="#GreenStrength_2.1663">
+    <rdfs:subClassOf rdf:resource="#TestData"/>
+    <rdfs:label>green strength_2.1663</rdfs:label>
+    <rdfs:comment>&lt;adhesives&gt; strength of a bond determined immediately after assembly.</rdfs:comment>
+  </owl:Class>
+  <owl:Class rdf:about="#GrossHeatOfCombustion_2.1346">
+    <rdfs:subClassOf rdf:resource="#TestData"/>
+    <rdfs:label>gross heat of combustion_2.1346</rdfs:label>
+    <rdfs:comment>heat of combustion of a substance when the combustion is complete and any water produced has been entirely condensed under specified conditions.</rdfs:comment>
+  </owl:Class>
+  <owl:DatatypeProperty rdf:about="#hasGlassTransitionValue">
+    <rdfs:domain rdf:resource="#GlassTransition_2.440"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+    <rdfs:label>has glass transition value</rdfs:label>
+  </owl:DatatypeProperty>
+  <owl:Class rdf:about="#Gum_2.1563">
+    <rdfs:subClassOf rdf:resource="bfo:MaterialEntity"/>
+    <rdfs:label>gum_2.1563</rdfs:label>
+    <rdfs:comment>water-soluble vegetable resin; gums are dried exudations of plants or dried mucilaginous exudations and related vegetable products used as thickeners, stabilizers or adhesives (includes gum arabic, gum tragacanth and similar gums).</rdfs:comment>
+    <skos:altLabel>gum arabic</skos:altLabel>
+    <skos:altLabel>gum tragacanth</skos:altLabel>
+    <skos:altLabel>cellulose gum</skos:altLabel>
+    <skos:altLabel>mucilage</skos:altLabel>
+  </owl:Class>
+  <owl:Class rdf:about="#HandlingStrength_2.1664">
+    <rdfs:subClassOf rdf:resource="#TestData"/>
+    <rdfs:label>handling strength_2.1664</rdfs:label>
+    <rdfs:comment>&lt;adhesives&gt; level of strength which allows the removal of a recently bonded joint from the clamping or pressing device without damaging it.</rdfs:comment>
+  </owl:Class>
+  <owl:Class rdf:about="#HardeningAgent_2.452">
+    <rdfs:subClassOf rdf:resource="bfo:MaterialEntity"/>
+    <rdfs:label>hardening agent_2.452</rdfs:label>
+    <rdfs:comment>agent that promotes or regulates the curing reaction of resins or adhesives by taking part in the reaction.</rdfs:comment>
+  </owl:Class>
+  <owl:Class rdf:about="#HeatActivation_2.1629">
+    <rdfs:subClassOf rdf:resource="bfo:Process"/>
+    <rdfs:label>heat activation_2.1629</rdfs:label>
+    <rdfs:comment>use of heat to provide or restore the bonding properties of a dried adhesive coat (also referred to as heat reactivation).</rdfs:comment>
+    <skos:altLabel>heat reactivation</skos:altLabel>
+  </owl:Class>
+  <owl:Class rdf:about="#HeatFlux_2.1640">
+    <rdfs:subClassOf rdf:resource="#TestData"/>
+    <rdfs:label>heat flux_2.1640</rdfs:label>
+    <rdfs:comment>amount of thermal energy emitted, transmitted or received per unit area and unit time. NOTE It is expressed in watts per square metre.</rdfs:comment>
+  </owl:Class>
+  <owl:DatatypeProperty rdf:about="#hasHeatFluxValue">
+    <rdfs:domain rdf:resource="#HeatFlux_2.1640"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+    <rdfs:label>has heat flux value</rdfs:label>
+  </owl:DatatypeProperty>
+  <owl:Class rdf:about="#HeatReleaseRate_2.1349">
+    <rdfs:subClassOf rdf:resource="#TestData"/>
+    <rdfs:label>heat release rate_2.1349</rdfs:label>
+    <rdfs:comment>thermal energy released per unit time by an item during combustion under specified conditions. NOTE It is expressed in watts.</rdfs:comment>
+  </owl:Class>
+  <owl:DatatypeProperty rdf:about="#hasHeatReleaseRateValue">
+    <rdfs:domain rdf:resource="#HeatReleaseRate_2.1349"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+    <rdfs:label>has heat release rate value</rdfs:label>
+  </owl:DatatypeProperty>
+  <owl:Class rdf:about="#HeatingCurveDetermination_2.460">
+    <rdfs:subClassOf rdf:resource="#TestProcedure"/>
+    <rdfs:label>heating-curve determination_2.460</rdfs:label>
+    <rdfs:comment>technique in which the temperature of a substance is measured as a function of the programmed temperature while the substance is subjected to a controlled temperature programme in the heating mode.</rdfs:comment>
+  </owl:Class>
+  <owl:Class rdf:about="#HeatSealingAdhesive_2.1537">
+    <rdfs:subClassOf rdf:resource="bfo:MaterialEntity"/>
+    <rdfs:label>heat-sealing adhesive_2.1537</rdfs:label>
+    <rdfs:comment>adhesive pre-applied to one or both adherends that is activated by the application of heat and forms a bond on cooling. NOTE Heat-sealing adhesives are commonly used in the packaging industry.</rdfs:comment>
+    <skos:altLabel>heat sealing adhesive</skos:altLabel>
+  </owl:Class>
+  <owl:Class rdf:about="#HotMeltAdhesive_2.469">
+    <rdfs:subClassOf rdf:resource="bfo:MaterialEntity"/>
+    <rdfs:label>hot-melt adhesive_2.469</rdfs:label>
+    <rdfs:comment>adhesive that is applied in the molten state and forms a bond on cooling to a solid state.</rdfs:comment>
+  </owl:Class>
+  <owl:Class rdf:about="#Ignited_2.1355">
+    <rdfs:subClassOf rdf:resource="bfo:GenericallyDependentContinuant"/>
+    <rdfs:label>ignited_2.1355</rdfs:label>
+    <rdfs:comment>state of an item undergoing combustion.</rdfs:comment>
+  </owl:Class>
+  <owl:Class rdf:about="#Ignition_2.477">
+    <rdfs:subClassOf rdf:resource="bfo:Process"/>
+    <rdfs:label>ignition_2.477</rdfs:label>
+    <rdfs:comment>initiation of combustion.</rdfs:comment>
+  </owl:Class>
+  <owl:Class rdf:about="#IgnitionSource_2.1356">
+    <rdfs:subClassOf rdf:resource="bfo:MaterialEntity"/>
+    <rdfs:label>ignition source_2.1356</rdfs:label>
+    <rdfs:comment>source of energy that initiates combustion.</rdfs:comment>
+  </owl:Class>
+  <owl:Class rdf:about="#IgnitionTemperature_2.478">
+    <rdfs:subClassOf rdf:resource="#TestData"/>
+    <rdfs:label>ignition temperature_2.478</rdfs:label>
+    <rdfs:comment>minimum temperature at which combustion can be initiated under specified test conditions. NOTE It is expressed in degrees Celsius.</rdfs:comment>
+  </owl:Class>
+  <owl:DatatypeProperty rdf:about="#hasIgnitionTemperatureValue">
+    <rdfs:domain rdf:resource="#IgnitionTemperature_2.478"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+    <rdfs:label>has ignition temperature value</rdfs:label>
+  </owl:DatatypeProperty>
+  <owl:Class rdf:about="#ImpactEnergy_2.1428">
+    <rdfs:subClassOf rdf:resource="#TestData"/>
+    <rdfs:label>impact energy_2.1428</rdfs:label>
+    <rdfs:comment>&lt;Charpy and Izod impact testing&gt; energy expended accelerating, deforming and breaking the test specimen during the deflection. NOTE It is expressed in joules.</rdfs:comment>
+  </owl:Class>
+  <owl:DatatypeProperty rdf:about="#hasImpactEnergyValue">
+    <rdfs:domain rdf:resource="#ImpactEnergy_2.1428"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+    <rdfs:label>has impact energy value</rdfs:label>
+  </owl:DatatypeProperty>
+  <owl:Class rdf:about="#ImpactEnergyAtBreak_2.1433">
+    <rdfs:subClassOf rdf:resource="#TestData"/>
+    <rdfs:label>impact energy at break_2.1433</rdfs:label>
+    <rdfs:comment>&lt;Charpy and Izod impact testing&gt; impact energy up to the deflection at break. NOTE It is expressed in joules.</rdfs:comment>
+  </owl:Class>
+  <owl:DatatypeProperty rdf:about="#hasImpactEnergyAtBreakValue">
+    <rdfs:domain rdf:resource="#ImpactEnergyAtBreak_2.1433"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+    <rdfs:label>has impact energy at break value</rdfs:label>
+  </owl:DatatypeProperty>
+  <owl:Class rdf:about="#ImpactForce_2.1427">
+    <rdfs:subClassOf rdf:resource="#TestData"/>
+    <rdfs:label>impact force_2.1427</rdfs:label>
+    <rdfs:comment>&lt;Charpy and Izod impact testing&gt; force exerted by the striking edge on the test specimen in the direction of the impact. NOTE It is expressed in newtons.</rdfs:comment>
+  </owl:Class>
+  <owl:Class rdf:about="#ImpactLength_2.1490">
+    <rdfs:subClassOf rdf:resource="#TestData"/>
+    <rdfs:label>impact length_2.1490</rdfs:label>
+    <rdfs:comment>&lt;pendulum impact-testing machine&gt; distance between the axis of rotation of the pendulum and the point of the striking edge at the centre of the specimen face. NOTE It is expressed in metres.</rdfs:comment>
+  </owl:Class>
+  <owl:Class rdf:about="#ImpactStrength_2.479">
+    <rdfs:subClassOf rdf:resource="#TestData"/>
+    <rdfs:label>impact strength_2.479</rdfs:label>
+    <rdfs:comment>&lt;Charpy and Izod impact testing&gt; energy absorbed in breaking a specimen, under shock loading, referred to the cross-section of the specimen. NOTE The force required is usually measured in units of energy.</rdfs:comment>
+  </owl:Class>
+  <owl:DatatypeProperty rdf:about="#hasImpactStrengthValue">
+    <rdfs:domain rdf:resource="#ImpactStrength_2.479"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+    <rdfs:label>has impact strength value</rdfs:label>
+  </owl:DatatypeProperty>
+  <owl:Class rdf:about="#ImpactVelocity_2.1425">
+    <rdfs:subClassOf rdf:resource="#TestData"/>
+    <rdfs:label>impact velocity_2.1425</rdfs:label>
+    <rdfs:comment>velocity of the striker relative to the test specimen supports at the moment of impact. NOTE It is expressed in metre per second.</rdfs:comment>
+  </owl:Class>
+  <owl:DatatypeProperty rdf:about="#hasImpactVelocityValue">
+    <rdfs:domain rdf:resource="#ImpactVelocity_2.1425"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+    <rdfs:label>has impact velocity value</rdfs:label>
+  </owl:DatatypeProperty>
+  <owl:Class rdf:about="#ImpactFailureHeight_2.1467">
+    <rdfs:subClassOf rdf:resource="#TestData"/>
+    <rdfs:label>impact-failure height_2.1467</rdfs:label>
+    <rdfs:comment>&lt;puncture testing&gt; pendulum drop height that will cause 50 % of the test specimens to fail. NOTE It is expressed in joules.</rdfs:comment>
+  </owl:Class>
+  <owl:Class rdf:about="#ImpactImpulseMass_2.1468">
+    <rdfs:subClassOf rdf:resource="#TestData"/>
+    <rdfs:label>impact-impulse mass_2.1468</rdfs:label>
+    <rdfs:comment>puncture testing: falling mass that will cause 50 % of the test specimens to fail, for a given pendulum height. NOTE It is expressed in kilograms.</rdfs:comment>
+  </owl:Class>
+  <owl:Class rdf:about="#InstrumentalPeak_2.1426">
+    <rdfs:subClassOf rdf:resource="#TestData"/>
+    <rdfs:label>instrumental peak_2.1426</rdfs:label>
+    <rdfs:comment>&lt;instrumented Charpy impact and puncture testing&gt; first peak in a force-time or a force-deflection diagram, which arises from the inertia of the part of the test specimen accelerated after the first contact with the striker.</rdfs:comment>
+  </owl:Class>
+  <owl:Class rdf:about="#IndicativeData_2.1286">
+    <rdfs:subClassOf rdf:resource="#TestData"/>
+    <rdfs:label>indicative data_2.1286</rdfs:label>
+    <rdfs:comment>&lt;exposure testing&gt; ratios of the mean values of indicative properties measured before and after exposure. NOTE They give a measure of the severity of the influence of an environment on a material for specific exposure conditions.</rdfs:comment>
+  </owl:Class>
+  <owl:Class rdf:about="#IndicativeProperty_2.790">
+    <rdfs:subClassOf rdf:resource="bfo:GenericallyDependentContinuant"/>
+    <rdfs:label>indicative property_2.790</rdfs:label>
+    <rdfs:comment>&lt;exposure testing&gt; property that has been selected to reveal the influence of an environment on a material through a comparison of measurements of the property before and after exposure.</rdfs:comment>
+  </owl:Class>
+  <owl:Class rdf:about="#InherentViscosity_2.487">
+    <rdfs:subClassOf rdf:resource="#TestData"/>
+    <rdfs:label>inherent viscosity_2.487</rdfs:label>
+    <rdfs:comment>logarithmic viscosity number ratio of the mutual logarithm of the relative viscosity to the mass concentration of the polymer. NOTE See notes to reduced viscosity.</rdfs:comment>
+  </owl:Class>
+  <owl:Class rdf:about="#Inhibitor_2.488">
+    <rdfs:subClassOf rdf:resource="bfo:MaterialEntity"/>
+    <rdfs:label>inhibitor_2.488</rdfs:label>
+    <rdfs:comment>substance used in small proportions to suppress a chemical reaction.</rdfs:comment>
+  </owl:Class>
+  <owl:Class rdf:about="#InitialCrackLength_2.1510">
+    <rdfs:subClassOf rdf:resource="#TestData"/>
+    <rdfs:label>initial crack length_2.1510</rdfs:label>
+    <rdfs:comment>&lt;crack propagation testing&gt; length of the notch made in the test specimen. NOTE It is expressed in metres.</rdfs:comment>
+  </owl:Class>
+  <owl:Class rdf:about="#InitialStress_2.1452">
+    <rdfs:subClassOf rdf:resource="#TestData"/>
+    <rdfs:label>initial stress_2.1452</rdfs:label>
+    <rdfs:comment>tensile stress for unit area of the initial cross-section within the gauge length. NOTE It is expressed in megapascals.</rdfs:comment>
+  </owl:Class>
+  <owl:DatatypeProperty rdf:about="#hasInitialStressValue">
+    <rdfs:domain rdf:resource="#InitialStress_2.1452"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+    <rdfs:label>has initial stress value</rdfs:label>
+  </owl:DatatypeProperty>
+  <owl:Class rdf:about="#KnittedFabric_2.515">
+    <rdfs:subClassOf rdf:resource="bfo:MaterialEntity"/>
+    <rdfs:label>knitted fabric_2.515</rdfs:label>
+    <rdfs:comment>&lt;textile glass&gt; planar or tubular structure made by the intermeshing of loops of glass yarn.</rdfs:comment>
+  </owl:Class>
+  <owl:Class rdf:about="#LargeScaleTest_2.1363">
+    <rdfs:subClassOf rdf:resource="#TestProcedure"/>
+    <rdfs:label>large-scale test_2.1363</rdfs:label>
+    <rdfs:comment>&lt;fire testing&gt; test, which cannot be carried out in a typical laboratory test chamber, performed on an item or items of large dimensions.</rdfs:comment>
+  </owl:Class>
+  <owl:Class rdf:about="#Latex_2.529">
+    <rdfs:subClassOf rdf:resource="bfo:MaterialEntity"/>
+    <rdfs:label>latex_2.529</rdfs:label>
+    <rdfs:comment>colloidal aqueous dispersion of a polymeric material.</rdfs:comment>
+  </owl:Class>
+  <owl:Class rdf:about="#LayUp_Noun_2.530">
+    <rdfs:subClassOf rdf:resource="bfo:MaterialEntity"/>
+    <rdfs:label>lay-up (noun)_2.530</rdfs:label>
+    <rdfs:comment>&lt;reinforced plastics&gt; assembly of layers of resin-impregnated material ready for processing.</rdfs:comment>
+  </owl:Class>
+  <owl:Class rdf:about="#LayUp_Verb_2.531">
+    <rdfs:subClassOf rdf:resource="bfo:Process"/>
+    <rdfs:label>lay up (verb)_2.531</rdfs:label>
+    <rdfs:comment>&lt;reinforced plastics&gt; assemble layers of resin-impregnated material for processing.</rdfs:comment>
+  </owl:Class>
+  <owl:Class rdf:about="#LethalConcentration50_2.1362">
+    <rdfs:subClassOf rdf:resource="#TestData"/>
+    <rdfs:label>lethal concentration 50_2.1362</rdfs:label>
+    <rdfs:comment>&lt;fire testing&gt; concentration of toxic gas or fire effluent statistically calculated from concentration-response data to cause the death of 50 % of test animals of a given species under specified conditions. NOTE It is expressed in grams per cubic metre.</rdfs:comment>
+  </owl:Class>
+  <owl:DatatypeProperty rdf:about="#hasLethalConcentration50Value">
+    <rdfs:domain rdf:resource="#LethalConcentration50_2.1362"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+    <rdfs:label>has lethal concentration 50 value</rdfs:label>
+  </owl:DatatypeProperty>
+  <owl:Class rdf:about="#LifeCycleAssessment_2.1803">
+    <rdfs:subClassOf rdf:resource="bfo:Process"/>
+    <rdfs:label>life cycle assessment_2.1803</rdfs:label>
+    <rdfs:comment>compilation and evaluation of the inputs, outputs and potential environmental impacts of a product system throughout its life cycle.</rdfs:comment>
+  </owl:Class>
+  <owl:Class rdf:about="#Light_Verb_2.1365">
+    <rdfs:subClassOf rdf:resource="bfo:Process"/>
+    <rdfs:label>light (verb)_2.1365</rdfs:label>
+    <rdfs:comment>initiate combustion. See also 'ignite'.</rdfs:comment>
+  </owl:Class>
+  <owl:Class rdf:about="#Lighted_Adjective_2.1367">
+    <rdfs:subClassOf rdf:resource="bfo:GenericallyDependentContinuant"/>
+    <rdfs:label>lighted (adjective)_2.1367</rdfs:label>
+    <rdfs:comment>state of an item after the appearance and during persistence of flame.</rdfs:comment>
+  </owl:Class>
+  <owl:Class rdf:about="#LongitudinalShearStrength_2.1099">
+    <rdfs:subClassOf rdf:resource="#TestData"/>
+    <rdfs:label>longitudinal shear strength_2.1099</rdfs:label>
+    <rdfs:comment>lap joint strength: force per unit surface area necessary to rupture an adhesive joint by means of stress applied parallel to the plane of the bond.</rdfs:comment>
+  </owl:Class>
+  <owl:DatatypeProperty rdf:about="#hasLongitudinalShearStrengthValue">
+    <rdfs:domain rdf:resource="#LongitudinalShearStrength_2.1099"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+    <rdfs:label>has longitudinal shear strength value</rdfs:label>
+  </owl:DatatypeProperty>
+  <owl:Class rdf:about="#MechanicalAdhesion_2.1622">
+    <rdfs:subClassOf rdf:resource="bfo:GenericallyDependentContinuant"/>
+    <rdfs:label>mechanical adhesion_2.1622</rdfs:label>
+    <rdfs:comment>adhesion between surfaces produced by an adhesive after setting due to interlocking with the asperities of the surfaces and to absorption of the adhesive by porous substrates during application.</rdfs:comment>
+  </owl:Class>
+  <owl:Class rdf:about="#MaximumOpenTime_2.1650">
+    <rdfs:subClassOf rdf:resource="#TestData"/>
+    <rdfs:label>maximum open time_2.1650</rdfs:label>
+    <rdfs:comment>maximum length of time after which an adhesive coat which has been applied to an adherend loses its bonding ability.</rdfs:comment>
+  </owl:Class>
+  <owl:DatatypeProperty rdf:about="#hasMaximumOpenTimeValue">
+    <rdfs:domain rdf:resource="#MaximumOpenTime_2.1650"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+    <rdfs:label>has maximum open time value</rdfs:label>
+  </owl:DatatypeProperty>
+  <owl:Class rdf:about="#PolybutyleneTerephthalate_PBT_2.729">
+    <rdfs:subClassOf rdf:resource="#PolymerMaterial"/>
+    <rdfs:label>poly(butylene terephthalate) PBT_2.729</rdfs:label>
+    <rdfs:comment>poly(butylene terephthalate)</rdfs:comment>
+    <skos:altLabel>PBT</skos:altLabel>
+  </owl:Class>
+  <owl:Class rdf:about="#PolycyclohexylenedimethyleneTerephthalate_PCT_2.1829">
+    <rdfs:subClassOf rdf:resource="#PolymerMaterial"/>
+    <rdfs:label>poly(cyclohexylenedimethylene terephthalate) PCT_2.1829</rdfs:label>
+    <rdfs:comment>polyester based on cyclohexanedimethanol and terephthalic acid (or one of its esters)</rdfs:comment>
+    <skos:altLabel>PCT</skos:altLabel>
+  </owl:Class>
+  <owl:Class rdf:about="#PolydiallylPhthalate_PDAP_2.600">
+    <rdfs:subClassOf rdf:resource="#PolymerMaterial"/>
+    <rdfs:label>poly(diallyl phthalate) PDAP_2.600</rdfs:label>
+    <rdfs:comment>polymer of diallyl phthalate</rdfs:comment>
+    <skos:altLabel>PDAP</skos:altLabel>
+  </owl:Class>
+  <owl:Class rdf:about="#PolyethyleneNaphthalate_PEN_2.1831">
+    <rdfs:subClassOf rdf:resource="#PolymerMaterial"/>
+    <rdfs:label>poly(ethylene naphthalate) PEN_2.1831</rdfs:label>
+    <rdfs:comment>polyester based on ethylene glycol and 2,6-naphthalenedicarboxylic acid (or one of its esters)</rdfs:comment>
+    <skos:altLabel>PEN</skos:altLabel>
+  </owl:Class>
+  <owl:Class rdf:about="#PolyethyleneOxide_PEOX_2.608">
+    <rdfs:subClassOf rdf:resource="#PolymerMaterial"/>
+    <rdfs:label>poly(ethylene oxide) PEOX_2.608</rdfs:label>
+    <rdfs:comment>polymer of ethylene oxide</rdfs:comment>
+    <skos:altLabel>PEOX</skos:altLabel>
+    <skos:altLabel>PEO</skos:altLabel>
+  </owl:Class>
+  <owl:Class rdf:about="#PolyethyleneTerephthalate_PET_2.610">
+    <rdfs:subClassOf rdf:resource="#PolymerMaterial"/>
+    <rdfs:label>poly(ethylene terephthalate) PET_2.610</rdfs:label>
+    <rdfs:comment>polymer made by the polycondensation of ethylene glycol and terephthalic acid or dimethyl terephthalate</rdfs:comment>
+    <skos:altLabel>PET</skos:altLabel>
+  </owl:Class>
+  <owl:Class rdf:about="#PolymethylMethacrylate_PMMA_2.747">
+    <rdfs:subClassOf rdf:resource="#PolymerMaterial"/>
+    <rdfs:label>poly(methyl methacrylate) PMMA_2.747</rdfs:label>
+    <rdfs:comment>polymer of methyl methacrylate</rdfs:comment>
+    <skos:altLabel>PMMA</skos:altLabel>
+  </owl:Class>
+  <owl:Class rdf:about="#PolyphenyleneSulfide_PPS_2.756">
+    <rdfs:subClassOf rdf:resource="#PolymerMaterial"/>
+    <rdfs:label>poly(phenylene sulfide) PPS_2.756</rdfs:label>
+    <rdfs:comment>polymer in which the constitutional repeating unit is phenylene sulfide</rdfs:comment>
+    <skos:altLabel>PPS</skos:altLabel>
+  </owl:Class>
+  <owl:Class rdf:about="#PolyphenyleneSulfone_PPSU_2.757">
+    <rdfs:subClassOf rdf:resource="#PolymerMaterial"/>
+    <rdfs:label>poly(phenylene sulfone) PPSU_2.757</rdfs:label>
+    <rdfs:comment>polymer in which the constitutional repeating unit is phenylene sulfone</rdfs:comment>
+    <skos:altLabel>PPSU</skos:altLabel>
+  </owl:Class>
+  <owl:Class rdf:about="#PolypropyleneOxide_PPOX_2.792">
+    <rdfs:subClassOf rdf:resource="#PolymerMaterial"/>
+    <rdfs:label>poly(propylene oxide) PPOX_2.792</rdfs:label>
+    <rdfs:comment>polymer of propylene oxide</rdfs:comment>
+    <skos:altLabel>PPOX</skos:altLabel>
+    <skos:altLabel>PPO</skos:altLabel>
+  </owl:Class>
+  <owl:Class rdf:about="#PolytrimethyleneTerephthalate_PTT_2.1832">
+    <rdfs:subClassOf rdf:resource="#PolymerMaterial"/>
+    <rdfs:label>poly(trimethylene terephthalate) PTT_2.1832</rdfs:label>
+    <rdfs:comment>polymer made by the polycondensation of trimethylene glycol and terephthalic acid or dimethyl terephthalate</rdfs:comment>
+    <skos:altLabel>PTT</skos:altLabel>
+  </owl:Class>
+  <owl:Class rdf:about="#PolyvinylChlorideVinylAcetate_PVC_PVAc_2.809">
+    <rdfs:subClassOf rdf:resource="#PolymerMaterial"/>
+    <rdfs:label>poly(vinyl chloride-vinyl acetate) PVC/PVAc_2.809</rdfs:label>
+    <rdfs:comment>copolymer of vinyl chloride and vinyl acetate</rdfs:comment>
+    <skos:altLabel>PVC/PVAc</skos:altLabel>
+    <skos:altLabel>PVC</skos:altLabel>
+    <skos:altLabel>PVAc</skos:altLabel>
+  </owl:Class>
+  <owl:Class rdf:about="#PolyvinylFluoride_PVF_2.810">
+    <rdfs:subClassOf rdf:resource="#PolymerMaterial"/>
+    <rdfs:label>poly(vinyl fluoride) PVF_2.810</rdfs:label>
+    <rdfs:comment>polymer of vinyl fluoride</rdfs:comment>
+    <skos:altLabel>PVF</skos:altLabel>
+  </owl:Class>
+  <owl:Class rdf:about="#PolyvinylPyrrolidone_PVP_2.815">
+    <rdfs:subClassOf rdf:resource="#PolymerMaterial"/>
+    <rdfs:label>poly(vinyl pyrrolidone) PVP_2.815</rdfs:label>
+    <rdfs:comment>polymer of N-vinyl-2-pyrrolidone</rdfs:comment>
+    <skos:altLabel>PVP</skos:altLabel>
+  </owl:Class>
+  <owl:Class rdf:about="#PolyvinylideneChloride_PVDC_2.813">
+    <rdfs:subClassOf rdf:resource="#PolymerMaterial"/>
+    <rdfs:label>poly(vinylidene chloride) PVDC_2.813</rdfs:label>
+    <rdfs:comment>polymer of vinylidene chloride</rdfs:comment>
+    <skos:altLabel>PVDC</skos:altLabel>
+  </owl:Class>
+  <owl:Class rdf:about="#PolyvinylideneFluoride_PVDF_2.814">
+    <rdfs:subClassOf rdf:resource="#PolymerMaterial"/>
+    <rdfs:label>poly(vinylidene fluoride) PVDF_2.814</rdfs:label>
+    <rdfs:comment>polymer of vinylidene fluoride</rdfs:comment>
+    <skos:altLabel>PVDF</skos:altLabel>
+  </owl:Class>
+  <owl:Class rdf:about="#Polyacetal_POM_2.717">
+    <rdfs:subClassOf rdf:resource="#PolymerMaterial"/>
+    <rdfs:label>polyacetal_2.717</rdfs:label>
+    <rdfs:comment>polymer in which the repeated structural unit in the chain is of the acetal type</rdfs:comment>
+    <skos:altLabel>POM</skos:altLabel>
+  </owl:Class>
+  <owl:Class rdf:about="#Polyacrylonitrile_PAN_2.721">
+    <rdfs:subClassOf rdf:resource="#PolymerMaterial"/>
+    <rdfs:label>polyacrylonitrile PAN_2.721</rdfs:label>
+    <rdfs:comment>polymer of acrylonitrile</rdfs:comment>
+    <skos:altLabel>PAN</skos:altLabel>
+  </owl:Class>
+  <owl:Class rdf:about="#PolyallylPlastic_2.723">
+    <rdfs:subClassOf rdf:resource="#PolymerMaterial"/>
+    <rdfs:label>polyallyl plastic_2.723</rdfs:label>
+    <rdfs:comment>plastic based on allyl polymers</rdfs:comment>
+    <skos:altLabel>allyl plastic</skos:altLabel>
+    <skos:altLabel>allyl resin</skos:altLabel>
+  </owl:Class>
+  <owl:Class rdf:about="#Polyaryletherketone_PAEK_2.726">
+    <rdfs:subClassOf rdf:resource="#PolymerMaterial"/>
+    <rdfs:label>poly(aryletherketone) PAEK_2.726</rdfs:label>
+    <rdfs:comment>polymer in which aryl groups are connected by one or more ether linkages and by one or more ketone linkages</rdfs:comment>
+    <skos:altLabel>PAEK</skos:altLabel>
+  </owl:Class>
+  <owl:Class rdf:about="#Polybutylene_PB_2.727">
+    <rdfs:subClassOf rdf:resource="#PolymerMaterial"/>
+    <rdfs:label>polybutylene PB_2.727</rdfs:label>
+    <rdfs:comment>polymer of butene</rdfs:comment>
+    <skos:altLabel>PB</skos:altLabel>
+  </owl:Class>
+  <owl:Class rdf:about="#Polycarbonate_PC_2.730">
+    <rdfs:subClassOf rdf:resource="#PolymerMaterial"/>
+    <rdfs:label>polycarbonate PC_2.730</rdfs:label>
+    <rdfs:comment>polymer in which the repeated structural unit in the chain is of the carbonate type</rdfs:comment>
+    <skos:altLabel>PC</skos:altLabel>
+  </owl:Class>
+  <owl:Class rdf:about="#PolychlorofluorocarbonPlastic_2.732">
+    <rdfs:subClassOf rdf:resource="#PolymerMaterial"/>
+    <rdfs:label>polychlorofluorocarbon plastic_2.732</rdfs:label>
+    <rdfs:comment>plastic based on polymers with monomers composed of chlorine, fluorine and carbon only</rdfs:comment>
+  </owl:Class>
+  <owl:Class rdf:about="#PolychlorofluorohydrocarbonPlastic_2.733">
+    <rdfs:subClassOf rdf:resource="#PolymerMaterial"/>
+    <rdfs:label>polychlorofluorohydrocarbon plastic_2.733</rdfs:label>
+    <rdfs:comment>plastic based on polymers made with monomers composed of chlorine, fluorine, hydrogen and carbon only</rdfs:comment>
+  </owl:Class>
+  <owl:Class rdf:about="#Polychlorotrifluoroethylene_PCTFE_2.734">
+    <rdfs:subClassOf rdf:resource="#PolymerMaterial"/>
+    <rdfs:label>polychlorotrifluoroethylene PCTFE_2.734</rdfs:label>
+    <rdfs:comment>polymer of chlorotrifluoroethylene</rdfs:comment>
+    <skos:altLabel>PCTFE</skos:altLabel>
+  </owl:Class>
+  <owl:Class rdf:about="#Polycycloolefin_2.1834">
+    <rdfs:subClassOf rdf:resource="#PolymerMaterial"/>
+    <rdfs:label>polycycloolefin_2.1834</rdfs:label>
+    <rdfs:comment>polymer or polymer which has an alicyclic group (cycloolefins)</rdfs:comment>
+  </owl:Class>
+  <owl:Class rdf:about="#Polyelectrolyte_2.601">
+    <rdfs:subClassOf rdf:resource="#PolymerMaterial"/>
+    <rdfs:label>polyelectrolyte_2.601</rdfs:label>
+    <rdfs:comment>macromolecule with a large number of ionic groups</rdfs:comment>
+  </owl:Class>
+  <owl:Class rdf:about="#Polyether_2.604">
+    <rdfs:subClassOf rdf:resource="#PolymerMaterial"/>
+    <rdfs:label>polyether_2.604</rdfs:label>
+    <rdfs:comment>polymer in which the repeated structural unit in the chain is of the ether type</rdfs:comment>
+  </owl:Class>
+  <owl:Class rdf:about="#PolyfluorocarbonPlastic_2.735">
+    <rdfs:subClassOf rdf:resource="#PolymerMaterial"/>
+    <rdfs:label>polyfluorocarbon plastic_2.735</rdfs:label>
+    <rdfs:comment>plastic based on polymers made with monomers composed of fluorine and carbon only</rdfs:comment>
+    <skos:altLabel>fluorocarbon plastic</skos:altLabel>
+  </owl:Class>
+  <owl:Class rdf:about="#PolyfluorohydrocarbonPlastic_2.736">
+    <rdfs:subClassOf rdf:resource="#PolymerMaterial"/>
+    <rdfs:label>polyfluorohydrocarbon plastic_2.736</rdfs:label>
+    <rdfs:comment>plastic based on polymers made with monomers composed of fluorine, hydrogen and carbon only</rdfs:comment>
+  </owl:Class>
+  <owl:Class rdf:about="#PolyhalocarbonPlastic_2.737">
+    <rdfs:subClassOf rdf:resource="#PolymerMaterial"/>
+    <rdfs:label>polyhalocarbon plastic_2.737</rdfs:label>
+    <rdfs:comment>plastic based on polymers from monomers composed only of carbon and a halogen or halogens</rdfs:comment>
+  </owl:Class>
+  <owl:Class rdf:about="#HydrocarbonPlastic_2.738">
+    <rdfs:subClassOf rdf:resource="#PolymerMaterial"/>
+    <rdfs:label>hydrocarbon plastic_2.738</rdfs:label>
+    <rdfs:comment>plastic based on polymers made with monomers composed of carbon and hydrogen only</rdfs:comment>
+  </owl:Class>
+  <owl:Class rdf:about="#PolyisocyanuratePlastic_2.740">
+    <rdfs:subClassOf rdf:resource="#PolymerMaterial"/>
+    <rdfs:label>polyisocyanurate plastic_2.740</rdfs:label>
+    <rdfs:comment>plastic based on polymers in which trimerization of isocyanates incorporates six-membered isocyanurate ring groups in a chain</rdfs:comment>
+  </owl:Class>
+  <owl:Class rdf:about="#PolymerRichPhase_2.746">
+    <rdfs:subClassOf rdf:resource="bfo:GenericallyDependentContinuant"/>
+    <rdfs:label>polymer-rich phase_2.746</rdfs:label>
+    <rdfs:comment>concentrated phase of a two-phase equilibrium system, consisting of a polymer and low-molecular-mass material, in which the polymer concentration is higher</rdfs:comment>
+  </owl:Class>
+  <owl:Class rdf:about="#PolymerPoorPhase_2.744">
+    <rdfs:subClassOf rdf:resource="bfo:GenericallyDependentContinuant"/>
+    <rdfs:label>polymer-poor phase_2.744</rdfs:label>
+    <rdfs:comment>dilute phase of a two-phase equilibrium system consisting of a polymer and low-molecular-mass material, in which the polymer concentration is lower (term "sol phase" discouraged)</rdfs:comment>
+  </owl:Class>
+  <owl:Class rdf:about="#Polymethacrylate_2.1579">
+    <rdfs:subClassOf rdf:resource="#PolymerMaterial"/>
+    <rdfs:label>polymethacrylate_2.1579</rdfs:label>
+    <rdfs:comment>polymer or copolymer in which at least one constitutional unit is derived from methacrylic acid, CH2 = C(CH3)-COOH, or one of its esters, CH2 = C(CH3)-COOR</rdfs:comment>
+  </owl:Class>
+  <owl:Class rdf:about="#PolypropyleneCopolymer_2.1380">
+    <rdfs:subClassOf rdf:resource="#PolymerMaterial"/>
+    <rdfs:label>polypropylene copolymer_2.1380</rdfs:label>
+    <rdfs:comment>polypropylene in which the CH2-CH- repeating units are partially replaced by ethylene and/or another α-olefin</rdfs:comment>
+  </owl:Class>
+  <owl:Class rdf:about="#PolypropyleneRandomCopolymer_2.1381">
+    <rdfs:subClassOf rdf:resource="#PolymerMaterial"/>
+    <rdfs:label>polypropylene random copolymer_2.1381</rdfs:label>
+    <rdfs:comment>copolymer of polypropylene in which the repeating structural unit -CH2-CH- in the macromolecular chain is partially replaced randomly by ethylene and/or another α-olefin</rdfs:comment>
+  </owl:Class>
+  <owl:Class rdf:about="#Polysulphide_2.1588">
+    <rdfs:subClassOf rdf:resource="bfo:MaterialEntity"/>
+    <rdfs:label>polysulphide_2.1588</rdfs:label>
+    <rdfs:comment>polymer containing disulfide, -(S-S)-, linkages together with repeating polyether units and usually terminated by thiol or hydroxyl groups</rdfs:comment>
+    <skos:altLabel>polysulfide</skos:altLabel>
+  </owl:Class>
+  <owl:Class rdf:about="#Polysulfone_PSU_2.1837">
+    <rdfs:subClassOf rdf:resource="#PolymerMaterial"/>
+    <rdfs:label>polysulfone PSU_2.1837</rdfs:label>
+    <rdfs:comment>polymer in which the constitutional repeating unit is oxy-1,4-phenylensulfony1-1,4-phenylene-1,4-phenylene(dimethylmethylene)-1,4-phenylene</rdfs:comment>
+    <skos:altLabel>PSU</skos:altLabel>
+  </owl:Class>
+  <owl:Class rdf:about="#Polytetrafluoroethylene_PTFE_2.796">
+    <rdfs:subClassOf rdf:resource="#PolymerMaterial"/>
+    <rdfs:label>polytetrafluoroethylene PTFE_2.796</rdfs:label>
+    <rdfs:comment>polymer of tetrafluoroethylene</rdfs:comment>
+    <skos:altLabel>PTFE</skos:altLabel>
+  </owl:Class>
+  <owl:Class rdf:about="#Polyurea_2.799">
+    <rdfs:subClassOf rdf:resource="#PolymerMaterial"/>
+    <rdfs:label>polyurea_2.799</rdfs:label>
+    <rdfs:comment>polymer produced by the reaction of a polyfunctional isocyanate with primary or secondary diamines</rdfs:comment>
+  </owl:Class>
+  <owl:Class rdf:about="#Polyvinylcarbazole_PVK_2.806">
+    <rdfs:subClassOf rdf:resource="#PolymerMaterial"/>
+    <rdfs:label>polyvinylcarbazole PVK_2.806</rdfs:label>
+    <rdfs:comment>polymer of vinylcarbazole</rdfs:comment>
+    <skos:altLabel>PVK</skos:altLabel>
+  </owl:Class>
+  <owl:Class rdf:about="#Porosity_2.817">
+    <rdfs:subClassOf rdf:resource="bfo:GenericallyDependentContinuant"/>
+    <rdfs:label>porosity_2.817</rdfs:label>
+    <rdfs:comment>property of a material that contains very fine continuous holes which allow the passage of gases, liquids and solids in through one surface and out at another surface. NOTE Not to be confused with permeability.</rdfs:comment>
+  </owl:Class>
+  <owl:Class rdf:about="#PositiveMould_2.818">
+    <rdfs:subClassOf rdf:resource="bfo:MaterialEntity"/>
+    <rdfs:label>positive mould_2.818</rdfs:label>
+    <rdfs:comment>mould in which the total applied pressure rests only, and continuously, on the moulding and in which there is no provision for escape of excess moulding material</rdfs:comment>
+  </owl:Class>
+  <owl:Class rdf:about="#PostConsumer_2.1700">
+    <rdfs:subClassOf rdf:resource="bfo:MaterialEntity"/>
+    <rdfs:label>post-consumer_2.1700</rdfs:label>
+    <rdfs:comment>covering material, generated by the end-users of products, that has fulfilled its intended purpose or can no longer be used (including material returned from within the distribution chain)</rdfs:comment>
+    <skos:altLabel>post-consumer</skos:altLabel>
+  </owl:Class>
+  <owl:Class rdf:about="#Postforming_2.2820">
+    <rdfs:subClassOf rdf:resource="bfo:Process"/>
+    <rdfs:label>postforming_2.2820</rdfs:label>
+    <rdfs:comment>process for forming into which a product is subjected after initial manufacture, often applied to cured or partially cured thermosetting plastics</rdfs:comment>
+  </owl:Class>
+  <owl:Class rdf:about="#PostShrinkage_2.2821">
+    <rdfs:subClassOf rdf:resource="#TestData"/>
+    <rdfs:label>post-shrinkage_2.2821</rdfs:label>
+    <rdfs:comment>shrinkage of a plastic product after moulding, during post-treatment, storage or use</rdfs:comment>
+  </owl:Class>
+  <owl:Class rdf:about="#PotentialEnergyOfPendulum_2.1492">
+    <rdfs:subClassOf rdf:resource="#TestData"/>
+    <rdfs:label>potential energy of pendulum_2.1492</rdfs:label>
+    <rdfs:comment>&lt;pendulum impact-testing machine&gt; potential energy of the pendulum in its starting position, relative to its position at impact. NOTE It is expressed in joules.</rdfs:comment>
+  </owl:Class>
+  <owl:Class rdf:about="#Potting_2.2823">
+    <rdfs:subClassOf rdf:resource="bfo:Process"/>
+    <rdfs:label>potting_2.2823</rdfs:label>
+    <rdfs:comment>embedding process in which the mould remains attached to the resin-encased article</rdfs:comment>
+  </owl:Class>
+  <owl:Class rdf:about="#PowderMoulding_2.2824">
+    <rdfs:subClassOf rdf:resource="bfo:Process"/>
+    <rdfs:label>powder moulding_2.2824</rdfs:label>
+    <rdfs:comment>process of moulding in which a dry, fusible powder is caused to fuse into a uniform layer against a mould wall</rdfs:comment>
+  </owl:Class>
+  <owl:Class rdf:about="#Precision_2.2827">
+    <rdfs:subClassOf rdf:resource="bfo:GenericallyDependentContinuant"/>
+    <rdfs:label>precision_2.2827</rdfs:label>
+    <rdfs:comment>closeness of agreement between the results obtained by applying an experimental procedure several times under prescribed conditions.</rdfs:comment>
+  </owl:Class>
+  <owl:Class rdf:about="#Preconditioning_2.1838">
+    <rdfs:subClassOf rdf:resource="bfo:Process"/>
+    <rdfs:label>preconditioning_2.1838</rdfs:label>
+    <rdfs:comment>&lt;exposure testing&gt; pre-incubation of an inoculum under the conditions of the subsequent test, in the absence of the chemical compound or organic matter under test, with the aim of improving the test by acclimatization of the microorganisms to the test conditions.</rdfs:comment>
+  </owl:Class>
+  <owl:Class rdf:about="#PreConsumer_2.1701">
+    <rdfs:subClassOf rdf:resource="bfo:MaterialEntity"/>
+    <rdfs:label>pre-consumer_2.1701</rdfs:label>
+    <rdfs:comment>post-industrial material diverted during a manufacturing process (this term excludes re-utilized material, such as rework, regrind or scrap)</rdfs:comment>
+    <skos:altLabel>pre-consumer</skos:altLabel>
+  </owl:Class>
+  <owl:Class rdf:about="#PreExposure_2.1839">
+    <rdfs:subClassOf rdf:resource="bfo:Process"/>
+    <rdfs:label>pre-exposure_2.1839</rdfs:label>
+    <rdfs:comment>pre-exposure of plastics waste: pre-incubation of an inoculum in the presence of the chemical compound or organic matter under test, with the aim of enhancing the ability of the inoculum to biodegrade the test material by adaptation and/or selection of the microorganisms</rdfs:comment>
+  </owl:Class>
+  <owl:Class rdf:about="#Preform_2.2828">
+    <rdfs:subClassOf rdf:resource="bfo:MaterialEntity"/>
+    <rdfs:label>preform_2.2828</rdfs:label>
+    <rdfs:comment>shaped mass of powdered, granular or fibrous moulding compound, or of a fibrous filler material with or without resin</rdfs:comment>
+    <skos:altLabel>preform</skos:altLabel>
+  </owl:Class>
+  <owl:Class rdf:about="#PreimpregnatedFabric_2.1073">
+    <rdfs:subClassOf rdf:resource="bfo:MaterialEntity"/>
+    <rdfs:label>pre-impregnated fabric_2.1073</rdfs:label>
+    <rdfs:comment>woven fabric that has been impregnated with a thermosetting or thermoplastic resin system</rdfs:comment>
+    <skos:altLabel>prepreg</skos:altLabel>
+  </owl:Class>
+  <owl:Class rdf:about="#Premix_2.829">
+    <rdfs:subClassOf rdf:resource="bfo:MaterialEntity"/>
+    <rdfs:label>premix_2.829</rdfs:label>
+    <rdfs:comment>admixture of resin, reinforcement, fillers, etc. not in web or filamentous form, usually prepared by the moulder shortly before use</rdfs:comment>
+  </owl:Class>
+  <owl:Class rdf:about="#Prepolymer_2.831">
+    <rdfs:subClassOf rdf:resource="bfo:MaterialEntity"/>
+    <rdfs:label>prepolymer_2.831</rdfs:label>
+    <rdfs:comment>polymer of degree of polymerization intermediate between that of the monomer or monomers and that of the final polymer</rdfs:comment>
+  </owl:Class>
+  <owl:Class rdf:about="#Press_2.1631">
+    <rdfs:subClassOf rdf:resource="bfo:Process"/>
+    <rdfs:label>press (verb)_2.1631</rdfs:label>
+    <rdfs:comment>&lt;adhesives&gt; hold an adhesive joint under pressure in a press during setting of the adhesive</rdfs:comment>
+  </owl:Class>
+  <owl:Class rdf:about="#PressingTime_2.1075">
+    <rdfs:subClassOf rdf:resource="#TestData"/>
+    <rdfs:label>pressing time_2.1075</rdfs:label>
+    <rdfs:comment>period during a press cycle in which the mould is closed and the required pressure is reached</rdfs:comment>
+  </owl:Class>
+  <owl:Class rdf:about="#PressureBreak_2.2832">
+    <rdfs:subClassOf rdf:resource="bfo:Process"/>
+    <rdfs:label>pressure break_2.2832</rdfs:label>
+    <rdfs:comment>defects in laminates: apparent break in one or more outer sheets of the paper, fabric or other base of a laminated plastic, visible through the surface layer of resin which covers it</rdfs:comment>
+  </owl:Class>
+  <owl:Class rdf:about="#PressureReducing_2.2833">
+    <rdfs:subClassOf rdf:resource="bfo:Process"/>
+    <rdfs:label>pressure reducing_2.2833</rdfs:label>
+    <rdfs:comment>reducing the pressure on the land areas of a mould when the mould is closed</rdfs:comment>
+  </owl:Class>
+  <owl:Class rdf:about="#PressureThermoforming_2.2835">
+    <rdfs:subClassOf rdf:resource="#TestProcedure"/>
+    <rdfs:label>pressure thermoforming_2.2835</rdfs:label>
+    <rdfs:comment>thermoforming process in which air pressure is used to form a heated sheet against the mould surface</rdfs:comment>
+  </owl:Class>
+  <owl:Class rdf:about="#PressureWelding_2.2836">
+    <rdfs:subClassOf rdf:resource="bfo:Process"/>
+    <rdfs:label>pressure welding_2.2836</rdfs:label>
+    <rdfs:comment>welding method depending essentially on using pressure and also applying heat, e.g. to produce thick plates or blocks from thermoplastic sheets</rdfs:comment>
+  </owl:Class>
+  <owl:Class rdf:about="#PressureSensitiveAdhesive_PSA_2.2834">
+    <rdfs:subClassOf rdf:resource="bfo:MaterialEntity"/>
+    <rdfs:label>pressure-sensitive adhesive_2.2834</rdfs:label>
+    <rdfs:comment>&lt;adhesive&gt; in a dry state, is permanently tacky at room temperature and adheres readily to surfaces under light and brief pressure</rdfs:comment>
+    <skos:altLabel>PSA</skos:altLabel>
+  </owl:Class>
+  <owl:Class rdf:about="#PrimaryAnaerobicBiodegradation_2.1841">
+    <rdfs:subClassOf rdf:resource="bfo:Process"/>
+    <rdfs:label>primary anaerobic biodegradation_2.1841</rdfs:label>
+    <rdfs:comment>structural change (transformation) of a chemical compound by microorganisms, resulting in the loss of a specific property</rdfs:comment>
+  </owl:Class>
+  <!-- New additions from pages 125-132 -->
+  <owl:Class rdf:about="#Strain_2.1659">
+    <rdfs:subClassOf rdf:resource="#TestData"/>
+    <rdfs:label>strain_2.1659</rdfs:label>
+    <rdfs:comment>change, due to the application of a force, in the size of a body, referred to its original size.</rdfs:comment>
+  </owl:Class>
+  <owl:DatatypeProperty rdf:about="#hasStrainValue">
+    <rdfs:domain rdf:resource="#Strain_2.1659"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+    <rdfs:label>has strain value</rdfs:label>
+  </owl:DatatypeProperty>
+  <owl:Class rdf:about="#StrainRate_2.1001">
+    <rdfs:subClassOf rdf:resource="#TestData"/>
+    <rdfs:label>strain rate_2.1001</rdfs:label>
+    <rdfs:comment>rate of change of strain with time; Strain rate = dε/dt. NOTE It is expressed in reciprocal seconds (1/s).</rdfs:comment>
+  </owl:Class>
+  <owl:DatatypeProperty rdf:about="#hasStrainRateValue">
+    <rdfs:domain rdf:resource="#StrainRate_2.1001"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+    <rdfs:label>has strain rate value</rdfs:label>
+  </owl:DatatypeProperty>
+  <owl:Class rdf:about="#Strand_2.1002">
+    <rdfs:subClassOf rdf:resource="bfo:MaterialEntity"/>
+    <rdfs:label>strand_2.1002</rdfs:label>
+    <rdfs:comment>string of parallel filaments produced simultaneously, slightly bonded and without intentional twist.</rdfs:comment>
+  </owl:Class>
+  <owl:Class rdf:about="#StreamingBirefringence_2.1003">
+    <rdfs:subClassOf rdf:resource="#TestData"/>
+    <rdfs:label>streaming birefringence_2.1003</rdfs:label>
+    <rdfs:comment>flow birefringence introduced by flow in liquids, solutions and dispersions of optically anisotropic, anisometric or deformable molecules or particles, attributable to a non-random orientation of the molecules or particles.</rdfs:comment>
+  </owl:Class>
+  <owl:Class rdf:about="#StressAmplitude_2.1055">
+    <rdfs:subClassOf rdf:resource="#TestData"/>
+    <rdfs:label>stress amplitude_2.1055</rdfs:label>
+    <rdfs:comment>alternate stress equal to half the algebraic difference between the maximum and minimum stresses in a cycle. NOTE It is expressed in megapascals.</rdfs:comment>
+  </owl:Class>
+  <owl:DatatypeProperty rdf:about="#hasStressAmplitudeValue">
+    <rdfs:domain rdf:resource="#StressAmplitude_2.1055"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+    <rdfs:label>has stress amplitude value</rdfs:label>
+  </owl:DatatypeProperty>
+  <owl:Class rdf:about="#StressCrack_2.1006">
+    <rdfs:subClassOf rdf:resource="bfo:Process"/>
+    <rdfs:label>stress crack_2.1006</rdfs:label>
+    <rdfs:comment>external or internal crack in a plastic caused by stresses which are less than the short-time mechanical strength of the plastic.</rdfs:comment>
+  </owl:Class>
+  <owl:Class rdf:about="#StressIntensityFactor_2.1007">
+    <rdfs:subClassOf rdf:resource="#TestData"/>
+    <rdfs:label>stress intensity factor_2.1007</rdfs:label>
+    <rdfs:comment>&lt;fracture toughness testing&gt; limiting value of the product of the stress perpendicular to the crack area at a distance, r, from the crack tip and of the square root of 2πr, as r tends to zero. NOTE It is expressed in pascal square root metres (Pa·m^1/2).</rdfs:comment>
+  </owl:Class>
+  <owl:DatatypeProperty rdf:about="#hasStressIntensityFactorValue">
+    <rdfs:domain rdf:resource="#StressIntensityFactor_2.1007"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+    <rdfs:label>has stress intensity factor value</rdfs:label>
+  </owl:DatatypeProperty>
+  <owl:Class rdf:about="#StressIntensityFactorRange_2.1505">
+    <rdfs:subClassOf rdf:resource="#TestData"/>
+    <rdfs:label>stress intensity factor range_2.1505</rdfs:label>
+    <rdfs:comment>&lt;fatigue crack propagation testing&gt; difference between the maximum and the minimum stress intensity factors in one test cycle.</rdfs:comment>
+  </owl:Class>
+  <owl:DatatypeProperty rdf:about="#hasStressIntensityFactorRangeValue">
+    <rdfs:domain rdf:resource="#StressIntensityFactorRange_2.1505"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+    <rdfs:label>has stress intensity factor range value</rdfs:label>
+  </owl:DatatypeProperty>
+  <owl:Class rdf:about="#StressRatio_2.1114">
+    <rdfs:subClassOf rdf:resource="#TestData"/>
+    <rdfs:label>stress ratio_2.1114</rdfs:label>
+    <rdfs:comment>algebraic ratio of the minimum stress to the maximum stress in one cycle.</rdfs:comment>
+  </owl:Class>
+  <owl:DatatypeProperty rdf:about="#hasStressRatioValue">
+    <rdfs:domain rdf:resource="#StressRatio_2.1114"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+    <rdfs:label>has stress ratio value</rdfs:label>
+  </owl:DatatypeProperty>
+  <owl:Class rdf:about="#StressStrainHysteresisLoop_2.775">
+    <rdfs:subClassOf rdf:resource="#TestData"/>
+    <rdfs:label>stress-strain hysteresis loop_2.775</rdfs:label>
+    <rdfs:comment>&lt;dynamic mechanical testing&gt; stress expressed as a function of the strain in a viscoelastic material subjected to sinusoidal vibrations.</rdfs:comment>
+  </owl:Class>
+  <owl:Class rdf:about="#StretchRatio_2.1171">
+    <rdfs:subClassOf rdf:resource="#TestData"/>
+    <rdfs:label>stretch ratio_2.1171</rdfs:label>
+    <rdfs:comment>&lt;blow moulding&gt; ratio of the length of the parison to the length of the cavity in which it is to be blown.</rdfs:comment>
+  </owl:Class>
+  <owl:DatatypeProperty rdf:about="#hasStretchRatioValue">
+    <rdfs:domain rdf:resource="#StretchRatio_2.1171"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+    <rdfs:label>has stretch ratio value</rdfs:label>
+  </owl:DatatypeProperty>
+  <owl:Class rdf:about="#StrikeThrough_2.1675">
+    <rdfs:subClassOf rdf:resource="bfo:GenericallyDependentContinuant"/>
+    <rdfs:label>strike-through_2.1675</rdfs:label>
+    <rdfs:comment>presence of adhesive on the surface of a porous adherend, the adhesive having penetrated through the adherend from the bond line.</rdfs:comment>
+  </owl:Class>
+  <owl:Class rdf:about="#Stringing_2.1095">
+    <rdfs:subClassOf rdf:resource="bfo:GenericallyDependentContinuant"/>
+    <rdfs:label>stringing_2.1095</rdfs:label>
+    <rdfs:comment>property of an adhesive that results in stringing or the formation of filaments or threads when previously bonded surfaces are separated.</rdfs:comment>
+    <skos:altLabel>stringiness</skos:altLabel>
+  </owl:Class>
+  <owl:Class rdf:about="#StripperPlate_2.1119">
+    <rdfs:subClassOf rdf:resource="bfo:MaterialEntity"/>
+    <rdfs:label>stripper plate_2.1119</rdfs:label>
+    <rdfs:comment>part of a mould that makes possible a rapid ejection, e.g. the removal of bottle caps with threaded heads from the mould.</rdfs:comment>
+  </owl:Class>
+  <owl:Class rdf:about="#Stroke_2.1121">
+    <rdfs:subClassOf rdf:resource="bfo:GenericallyDependentContinuant"/>
+    <rdfs:label>stroke_2.1121</rdfs:label>
+    <rdfs:comment>travel of the ram of a press.</rdfs:comment>
+  </owl:Class>
+  <owl:Class rdf:about="#StructuralAdhesive_2.1122">
+    <rdfs:subClassOf rdf:resource="bfo:MaterialEntity"/>
+    <rdfs:label>structural adhesive_2.1122</rdfs:label>
+    <rdfs:comment>adhesive of proven reliability in structural engineering applications in which the bond can be stressed to a high proportion of its maximum failing load for long periods without failure.</rdfs:comment>
+  </owl:Class>
+  <owl:Class rdf:about="#StructuralBond_2.1672">
+    <rdfs:subClassOf rdf:resource="bfo:GenericallyDependentContinuant"/>
+    <rdfs:label>structural bond_2.1672</rdfs:label>
+    <rdfs:comment>bond capable of sustaining in a structure a specified strength level under a combination of stresses for a specified period of time.</rdfs:comment>
+  </owl:Class>
+  <owl:Class rdf:about="#Substrate_2.118">
+    <rdfs:subClassOf rdf:resource="bfo:MaterialEntity"/>
+    <rdfs:label>substrate_2.118</rdfs:label>
+    <rdfs:comment>object or semi-manufactured product (e.g. wire, extruded metallic section or plastic profile, sheet, film, paper, textile product, etc.) on which a coating or layer of another material is applied from the gas, liquid or plastic phase by coating, by laminating or generated by a chemical process.</rdfs:comment>
+    <skos:altLabel>substrate</skos:altLabel>
+  </owl:Class>
+  <owl:Class rdf:about="#SupportedFilmAdhesive_2.1526">
+    <rdfs:subClassOf rdf:resource="bfo:MaterialEntity"/>
+    <rdfs:label>supported-film adhesive_2.1526</rdfs:label>
+    <rdfs:comment>adhesive, supplied in sheet or film form, with an incorporated carrier that remains in the bond when the adhesive is applied and used.</rdfs:comment>
+    <skos:altLabel>supported film adhesive</skos:altLabel>
+  </owl:Class>
+  <owl:Class rdf:about="#SurfaceCleaning_2.1614">
+    <rdfs:subClassOf rdf:resource="bfo:Process"/>
+    <rdfs:label>surface cleaning_2.1614</rdfs:label>
+    <rdfs:comment>&lt;adhesives&gt; surface treatment to remove substances impairing adhesion from the surfaces to be bonded.</rdfs:comment>
+  </owl:Class>
+  <owl:Class rdf:about="#SurfaceFlash_2.1281">
+    <rdfs:subClassOf rdf:resource="bfo:Process"/>
+    <rdfs:label>surface flash_2.1281</rdfs:label>
+    <rdfs:comment>&lt;fire testing&gt; 'burning behaviour' movement of transient flame over the surface of a material without ignition of its basic structure. See also 'surface burn'.</rdfs:comment>
+  </owl:Class>
+  <owl:Class rdf:about="#SurfacePreparation_2.1613">
+    <rdfs:subClassOf rdf:resource="bfo:Process"/>
+    <rdfs:label>surface preparation_2.1613</rdfs:label>
+    <rdfs:comment>&lt;adhesives&gt; physical and/or chemical treatments applied to adherends to render them suitable (or more suitable) for bonding.</rdfs:comment>
+  </owl:Class>
+  <owl:Class rdf:about="#SurfaceResistivity_2.1311">
+    <rdfs:subClassOf rdf:resource="#TestData"/>
+    <rdfs:label>surface resistivity_2.1311</rdfs:label>
+    <rdfs:comment>quantity of the dc. electric field strength by the linear current density in the surface layer of a material. NOTE The surface resistivity of a material is equal to the surface resistance between two electrodes forming opposite sides of a square. The size of the square is immaterial.</rdfs:comment>
+  </owl:Class>
+  <owl:DatatypeProperty rdf:about="#hasSurfaceResistivityValue">
+    <rdfs:domain rdf:resource="#SurfaceResistivity_2.1311"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+    <rdfs:label>has surface resistivity value</rdfs:label>
+  </owl:DatatypeProperty>
+  <owl:Class rdf:about="#SurfaceTension_2.1089">
+    <rdfs:subClassOf rdf:resource="#TestData"/>
+    <rdfs:label>surface tension_2.1089</rdfs:label>
+    <rdfs:comment>property of liquids arising from unbalanced molecular cohesive forces at or near the surface, as a result of which the surface tends to contract and has properties resembling those of a stretched elastic membrane.</rdfs:comment>
+  </owl:Class>
+  <owl:DatatypeProperty rdf:about="#hasSurfaceTensionValue">
+    <rdfs:domain rdf:resource="#SurfaceTension_2.1089"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+    <rdfs:label>has surface tension value</rdfs:label>
+  </owl:DatatypeProperty>
+  <owl:Class rdf:about="#SurfaceTreatment_2.1133">
+    <rdfs:subClassOf rdf:resource="bfo:Process"/>
+    <rdfs:label>surface treatment_2.1133</rdfs:label>
+    <rdfs:comment>prebond treatment (deprecated)</rdfs:comment>
+    <skos:altLabel>prebond treatment</skos:altLabel>
+    <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
+  </owl:Class>
+  <owl:Class rdf:about="#SurfacingMat_2.1134">
+    <rdfs:subClassOf rdf:resource="bfo:MaterialEntity"/>
+    <rdfs:label>surfacing mat_2.1134</rdfs:label>
+    <rdfs:comment>thin compact sheet of bonded staple fibres or continuous filaments, used as the surface layer of composites. NOTE The fibres can be of glass or organic material.</rdfs:comment>
+  </owl:Class>
+  <owl:Class rdf:about="#Suspension_2.1135">
+    <rdfs:subClassOf rdf:resource="bfo:MaterialEntity"/>
+    <rdfs:label>suspension_2.1135</rdfs:label>
+    <rdfs:comment>heterogeneous system in which a solid is distributed as fine particles in a liquid.</rdfs:comment>
+  </owl:Class>
+  <owl:Class rdf:about="#SuspensionPolymerization_2.1136">
+    <rdfs:subClassOf rdf:resource="bfo:Process"/>
+    <rdfs:label>suspension polymerization_2.1136</rdfs:label>
+    <rdfs:comment>polymerization in which the monomer is dispersed as fine droplets in water or another suitable inert non-solvent.</rdfs:comment>
+  </owl:Class>
+  <owl:Class rdf:about="#Swelling_2.1138">
+    <rdfs:subClassOf rdf:resource="bfo:Process"/>
+    <rdfs:label>swelling_2.1138</rdfs:label>
+    <rdfs:comment>increase in volume of a body when immersed in a liquid or exposed to a vapour.</rdfs:comment>
+  </owl:Class>
+  <owl:Class rdf:about="#SyntheticResin_2.1545">
+    <rdfs:subClassOf rdf:resource="#PolymerMaterial"/>
+    <rdfs:label>synthetic resin_2.1545</rdfs:label>
+    <rdfs:comment>resin based on a synthetic monomer.</rdfs:comment>
+  </owl:Class>
+  <owl:Class rdf:about="#Tack_2.1603">
+    <rdfs:subClassOf rdf:resource="bfo:GenericallyDependentContinuant"/>
+    <rdfs:label>tack_2.1603</rdfs:label>
+    <rdfs:comment>property of a material that enables it to form a bond immediately on contact with another surface, which can be adhered or another layer of adhesive.</rdfs:comment>
+  </owl:Class>
+  <owl:Class rdf:about="#TackForce_2.1604">
+    <rdfs:subClassOf rdf:resource="#TestData"/>
+    <rdfs:label>tack force_2.1604</rdfs:label>
+    <rdfs:comment>force necessary to separate an adhesive coat from a second surface shortly after they have been brought into contact under a load equal only to the weight of the adhesively coated article (for example, tape). NOTE The tack force can increase with time as the coat flows.</rdfs:comment>
+  </owl:Class>
+  <owl:DatatypeProperty rdf:about="#hasTackForceValue">
+    <rdfs:domain rdf:resource="#TackForce_2.1604"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+    <rdfs:label>has tack force value</rdfs:label>
+  </owl:DatatypeProperty>
+  <owl:Class rdf:about="#TackLife_2.1605">
+    <rdfs:subClassOf rdf:resource="#TestData"/>
+    <rdfs:label>tack life_2.1605</rdfs:label>
+    <rdfs:comment>period of time for which an adhesive coat will be in the tack dry condition (i.e. capable of adhering on contact with another surface, although it seems dry to the touch) after application to a specified adherend under specified conditions of temperature and humidity.</rdfs:comment>
+  </owl:Class>
+  <owl:DatatypeProperty rdf:about="#hasTackLifeValue">
+    <rdfs:domain rdf:resource="#TackLife_2.1605"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+    <rdfs:label>has tack life value</rdfs:label>
+  </owl:DatatypeProperty>
+  <owl:Class rdf:about="#Tackifier_2.1553">
+    <rdfs:subClassOf rdf:resource="bfo:MaterialEntity"/>
+    <rdfs:label>tackifier_2.1553</rdfs:label>
+    <rdfs:comment>substance intended to enhance the tack or the tack range of an adhesive coat.</rdfs:comment>
+  </owl:Class>
+  <owl:Class rdf:about="#TacticBlock_2.1142">
+    <rdfs:subClassOf rdf:resource="#PolymerMaterial"/>
+    <rdfs:label>tactic block_2.1142</rdfs:label>
+    <rdfs:comment>regular block that can be described by only one species of configurational repeating unit in a single sequential arrangement.</rdfs:comment>
+  </owl:Class>
+  <owl:Class rdf:about="#TacticBlockPolymer_2.1143">
+    <rdfs:subClassOf rdf:resource="#PolymerMaterial"/>
+    <rdfs:label>tactic block polymer_2.1143</rdfs:label>
+    <rdfs:comment>polymer, the molecules of which consist of tactic blocks connected linearly.</rdfs:comment>
+  </owl:Class>
+  <owl:Class rdf:about="#TacticPolymer_2.1144">
+    <rdfs:subClassOf rdf:resource="#PolymerMaterial"/>
+    <rdfs:label>tactic polymer_2.1144</rdfs:label>
+    <rdfs:comment>polymer, the molecules of which can be described in terms of only one species of configurational repeating unit in a single sequential arrangement.</rdfs:comment>
+  </owl:Class>
+  <!-- end additions -->
+  <!-- New additions from pages 131-138 (tensile, tear, test specimen, related terms) -->
+  <owl:Class rdf:about="#Tear_2.1150">
+    <rdfs:subClassOf rdf:resource="bfo:Process"/>
+    <rdfs:label>tear_2.1150</rdfs:label>
+    <rdfs:comment>verb: divide or disrupt by the pulling effect of opposing forces.</rdfs:comment>
+  </owl:Class>
+  <owl:Class rdf:about="#TearPropagationForce_2.1151">
+    <rdfs:subClassOf rdf:resource="#TestData"/>
+    <rdfs:label>tear propagation force_2.1151</rdfs:label>
+    <rdfs:comment>force required to continue the growth of a tear initiated in a plastic film.</rdfs:comment>
+  </owl:Class>
+  <owl:DatatypeProperty rdf:about="#hasTearPropagationForceValue">
+    <rdfs:domain rdf:resource="#TearPropagationForce_2.1151"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+    <rdfs:label>has tear propagation force value</rdfs:label>
+  </owl:DatatypeProperty>
+  <owl:Class rdf:about="#TearPropagationResistance_2.1152">
+    <rdfs:subClassOf rdf:resource="#TestData"/>
+    <rdfs:label>tear propagation resistance_2.1152</rdfs:label>
+    <rdfs:comment>force per unit cross-section force divided by the thickness of the specimen.</rdfs:comment>
+  </owl:Class>
+  <owl:DatatypeProperty rdf:about="#hasTearPropagationResistanceValue">
+    <rdfs:domain rdf:resource="#TearPropagationResistance_2.1152"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+    <rdfs:label>has tear propagation resistance value</rdfs:label>
+  </owl:DatatypeProperty>
+  <owl:Class rdf:about="#TearResistance_2.1153">
+    <rdfs:subClassOf rdf:resource="#TestData"/>
+    <rdfs:label>tear resistance_2.1153</rdfs:label>
+    <rdfs:comment>force required to tear a test specimen of a thin material.</rdfs:comment>
+  </owl:Class>
+  <owl:DatatypeProperty rdf:about="#hasTearResistanceValue">
+    <rdfs:domain rdf:resource="#TearResistance_2.1153"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+    <rdfs:label>has tear resistance value</rdfs:label>
+  </owl:DatatypeProperty>
+  <owl:Class rdf:about="#Telomer_2.1154">
+    <rdfs:subClassOf rdf:resource="#PolymerMaterial"/>
+    <rdfs:label>telomer_2.1154</rdfs:label>
+    <rdfs:comment>polymer composed of molecules having terminal groups incapable, under the conditions of the synthesis, of reacting with additional monomers to form larger polymer molecules of the same chemical type.</rdfs:comment>
+  </owl:Class>
+  <owl:Class rdf:about="#TakeOff_2.1146">
+    <rdfs:subClassOf rdf:resource="bfo:MaterialEntity"/>
+    <rdfs:label>take-off_2.1146</rdfs:label>
+    <rdfs:comment>device for conveying extruded or calendered material away from the machine.</rdfs:comment>
+  </owl:Class>
+  <owl:Class rdf:about="#TakeUp_2.1147">
+    <rdfs:subClassOf rdf:resource="bfo:MaterialEntity"/>
+    <rdfs:label>take-up_2.1147</rdfs:label>
+    <rdfs:comment>device for winding extruded or calendered material.</rdfs:comment>
+  </owl:Class>
+  <owl:Class rdf:about="#TerpeneResin_2.1567">
+    <rdfs:subClassOf rdf:resource="bfo:MaterialEntity"/>
+    <rdfs:label>terpene resin_2.1567</rdfs:label>
+    <rdfs:comment>resin consisting essentially of abietic acid and its isomers and obtained from pine trees by the sulfate-cellulose process; used as a tackifier.</rdfs:comment>
+  </owl:Class>
+  <owl:Class rdf:about="#TestSpecimen_2.964">
+    <rdfs:subClassOf rdf:resource="bfo:MaterialEntity"/>
+    <rdfs:label>test specimen_2.964</rdfs:label>
+    <rdfs:comment>piece of material of appropriate shape and size, prepared so that it is ready for use in a test.</rdfs:comment>
+  </owl:Class>
+  <owl:Class rdf:about="#SpeedOfTesting_2.1435">
+    <rdfs:subClassOf rdf:resource="#TestData"/>
+    <rdfs:label>speed of testing_2.1435</rdfs:label>
+    <rdfs:comment>&lt;tensile testing&gt; rate of separation of the grips of the test machine during the test. NOTE It is expressed in millimetres per minute.</rdfs:comment>
+  </owl:Class>
+  <owl:DatatypeProperty rdf:about="#hasSpeedOfTestingValue">
+    <rdfs:domain rdf:resource="#SpeedOfTesting_2.1435"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+    <rdfs:label>has speed of testing value</rdfs:label>
+  </owl:DatatypeProperty>
+  <owl:Class rdf:about="#TensionMode_2.1658">
+    <rdfs:subClassOf rdf:resource="bfo:GenericallyDependentContinuant"/>
+    <rdfs:label>tension mode_2.1658</rdfs:label>
+    <rdfs:comment>&lt;testing of adhesives&gt; mode of application of a tensile force normal to the plane of a joint between rigid adherends and uniformly distributed over the whole area of the bond line.</rdfs:comment>
+  </owl:Class>
+  <owl:Class rdf:about="#TensileStrength_2.1156">
+    <rdfs:subClassOf rdf:resource="#TestData"/>
+    <rdfs:label>tensile strength_2.1156</rdfs:label>
+    <rdfs:comment>&lt;tensile testing&gt; maximum tensile stress sustained by a test specimen during a tensile test. NOTE It is expressed in megapascals.</rdfs:comment>
+  </owl:Class>
+  <owl:DatatypeProperty rdf:about="#hasTensileStrengthValue">
+    <rdfs:domain rdf:resource="#TensileStrength_2.1156"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+    <rdfs:label>has tensile strength value</rdfs:label>
+  </owl:DatatypeProperty>
+  <owl:Class rdf:about="#TensileStress_2.1436">
+    <rdfs:subClassOf rdf:resource="#TestData"/>
+    <rdfs:label>tensile stress_2.1436</rdfs:label>
+    <rdfs:comment>&lt;tensile testing&gt; tensile stress per unit area of the original cross-section of a test specimen within the specimen gauge length at any given moment. NOTE It is expressed in megapascals.</rdfs:comment>
+  </owl:Class>
+  <owl:DatatypeProperty rdf:about="#hasTensileStressValue">
+    <rdfs:domain rdf:resource="#TensileStress_2.1436"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+    <rdfs:label>has tensile stress value</rdfs:label>
+  </owl:DatatypeProperty>
+  <owl:Class rdf:about="#TensileWorkToBreak_2.1287">
+    <rdfs:subClassOf rdf:resource="#TestData"/>
+    <rdfs:label>tensile work to break_2.1287</rdfs:label>
+    <rdfs:comment>&lt;tensile testing&gt; energy under a plot of the applied stress against the grip displacement, the applied stress being determined from the ratio of the tensile force to the minimum initial cross-sectional area of the specimen. NOTE It is expressed in kilojoules per square metre.</rdfs:comment>
+  </owl:Class>
+  <owl:DatatypeProperty rdf:about="#hasTensileWorkToBreakValue">
+    <rdfs:domain rdf:resource="#TensileWorkToBreak_2.1287"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+    <rdfs:label>has tensile work to break value</rdfs:label>
+  </owl:DatatypeProperty>
+  <owl:Class rdf:about="#TensileCreepModulus_2.1457">
+    <rdfs:subClassOf rdf:resource="#TestData"/>
+    <rdfs:label>tensile-creep modulus_2.1457</rdfs:label>
+    <rdfs:comment>&lt;tensile-creep testing&gt; ratio of the initial stress to the tensile-creep strain. NOTE It is expressed in megapascals.</rdfs:comment>
+  </owl:Class>
+  <owl:DatatypeProperty rdf:about="#hasTensileCreepModulusValue">
+    <rdfs:domain rdf:resource="#TensileCreepModulus_2.1457"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+    <rdfs:label>has tensile-creep modulus value</rdfs:label>
+  </owl:DatatypeProperty>
+  <owl:Class rdf:about="#TensileCreepStrain_2.1455">
+    <rdfs:subClassOf rdf:resource="#TestData"/>
+    <rdfs:label>tensile-creep strain_2.1455</rdfs:label>
+    <rdfs:comment>&lt;tensile-creep testing&gt; change, produced by the applied load, in the distance between the gauge marks on the test specimen relative to the original distance between them. NOTE It is expressed as a dimensionless ratio or as a percentage.</rdfs:comment>
+  </owl:Class>
+  <owl:DatatypeProperty rdf:about="#hasTensileCreepStrainValue">
+    <rdfs:domain rdf:resource="#TensileCreepStrain_2.1455"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+    <rdfs:label>has tensile-creep strain value</rdfs:label>
+  </owl:DatatypeProperty>
+  <owl:Class rdf:about="#TensileImpactStrength_2.2784">
+    <rdfs:subClassOf rdf:resource="#TestData"/>
+    <rdfs:label>tensile-impact strength_2.2784</rdfs:label>
+    <rdfs:comment>energy absorbed in breaking a specimen by a single blow of the pendulum of a tensile-impact testing machine under specified conditions. NOTE The specimen can be notched or unnotched. NOTE 2 Tensile-impact strength is expressed in kilojoules per square metre.</rdfs:comment>
+  </owl:Class>
+  <owl:DatatypeProperty rdf:about="#hasTensileImpactStrengthValue">
+    <rdfs:domain rdf:resource="#TensileImpactStrength_2.2784"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+    <rdfs:label>has tensile-impact strength value</rdfs:label>
+  </owl:DatatypeProperty>
+  <!-- end new additions -->
+  <!-- Additions from pages 137-144 -->
+  <owl:Class rdf:about="#ThermalRadiation_2.761">
+    <rdfs:subClassOf rdf:resource="bfo:Process"/>
+    <rdfs:label>thermal radiation_2.761</rdfs:label>
+    <rdfs:comment>transfer of thermal energy by electromagnetic waves.</rdfs:comment>
+  </owl:Class>
+  <owl:Class rdf:about="#ThermalStability_2.1166">
+    <rdfs:subClassOf rdf:resource="bfo:GenericallyDependentContinuant"/>
+    <rdfs:label>thermal stability_2.1166</rdfs:label>
+    <rdfs:comment>ability of a material to resist degradation under the action of heat.</rdfs:comment>
+  </owl:Class>
+  <owl:Class rdf:about="#ThermalInsulationCriterion_I_2.760">
+    <rdfs:subClassOf rdf:resource="bfo:GenericallyDependentContinuant"/>
+    <rdfs:label>thermal-insulation criterion 'I'_2.760</rdfs:label>
+    <rdfs:comment>criterion, determined from the results of a fire resistance test, by which the ability of a separating element to prevent the passage of heat is assessed.</rdfs:comment>
+  </owl:Class>
+  <owl:Class rdf:about="#ThermallyFoamedPlastic_2.1167">
+    <rdfs:subClassOf rdf:resource="bfo:MaterialEntity"/>
+    <rdfs:label>thermally foamed plastic_2.1167</rdfs:label>
+    <rdfs:comment>cellular plastic produced by applying heat to effect gaseous decomposition or volatilization of a constituent.</rdfs:comment>
+  </owl:Class>
+  <owl:Class rdf:about="#Thermodilatometry_2.1169">
+    <rdfs:subClassOf rdf:resource="#TestProcedure"/>
+    <rdfs:label>thermodilatometry_2.1169</rdfs:label>
+    <rdfs:comment>technique in which a dimension of a substance under negligible load is measured as a function of temperature or time while the substance is subjected to a controlled temperature programme.</rdfs:comment>
+  </owl:Class>
+  <owl:Class rdf:about="#ThermomechanicalMeasurement_2.1170">
+    <rdfs:subClassOf rdf:resource="#TestProcedure"/>
+    <rdfs:label>thermomechanical measurement_2.1170</rdfs:label>
+    <rdfs:comment>technique in which the deformation of a substance under non-oscillatory load is measured as a function of temperature while the substance is subjected to a controlled temperature programme.</rdfs:comment>
+  </owl:Class>
+  <owl:Class rdf:about="#ThermophilicIncubationPeriod_2.1870">
+    <rdfs:subClassOf rdf:resource="#TestData"/>
+    <rdfs:label>thermophilic incubation period_2.1870</rdfs:label>
+    <rdfs:comment>composting of plastics waste: incubation at 58 °C to allow the development of microorganisms growing at high temperature (expressed as time).</rdfs:comment>
+  </owl:Class>
+  <owl:DatatypeProperty rdf:about="#hasThermophilicIncubationPeriodValue">
+    <rdfs:domain rdf:resource="#ThermophilicIncubationPeriod_2.1870"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+    <rdfs:label>has thermophilic incubation period value</rdfs:label>
+  </owl:DatatypeProperty>
+  <owl:Class rdf:about="#ThermoplasticElastomer_2.1179">
+    <rdfs:subClassOf rdf:resource="bfo:MaterialEntity"/>
+    <rdfs:label>thermoplastic elastomer_2.1179</rdfs:label>
+    <rdfs:comment>polymer or blend of polymers that has properties at its service temperature similar to those of vulcanized rubber but which can be processed and reprocessed at elevated temperatures like thermoplastics.</rdfs:comment>
+  </owl:Class>
+  <owl:Class rdf:about="#Thermoplastic_Adjective_2.1177">
+    <rdfs:subClassOf rdf:resource="bfo:GenericallyDependentContinuant"/>
+    <rdfs:label>thermoplastic (adjective)_2.1177</rdfs:label>
+    <rdfs:comment>having the property of being softenable and reprocessable on heating.</rdfs:comment>
+  </owl:Class>
+  <owl:Class rdf:about="#Thermoplastic_Noun_2.1181">
+    <rdfs:subClassOf rdf:resource="bfo:MaterialEntity"/>
+    <rdfs:label>thermoplastic (noun)_2.1181</rdfs:label>
+    <rdfs:comment>plastic which softens on heating and which can be moulded and remoulded on heating without chemical change.</rdfs:comment>
+  </owl:Class>
+  <owl:Class rdf:about="#Thermoset_Noun_2.1181b">
+    <rdfs:subClassOf rdf:resource="bfo:MaterialEntity"/>
+    <rdfs:label>thermoset_2.1181</rdfs:label>
+    <rdfs:comment>plastic which, when cured by heat or other means, changes into a substantially infusible and insoluble product.</rdfs:comment>
+  </owl:Class>
+  <owl:Class rdf:about="#ThermosettingPlastic_2.1184">
+    <rdfs:subClassOf rdf:resource="bfo:MaterialEntity"/>
+    <rdfs:label>thermosetting plastic_2.1184</rdfs:label>
+    <rdfs:comment>plastic that has thermosetting properties.</rdfs:comment>
+  </owl:Class>
+  <owl:Class rdf:about="#ThermosettingAdhesive_2.1183">
+    <rdfs:subClassOf rdf:resource="bfo:MaterialEntity"/>
+    <rdfs:label>thermosetting adhesive_2.1183</rdfs:label>
+    <rdfs:comment>adhesive which is capable of becoming substantially infusible and insoluble product when cured by heat or by other means.</rdfs:comment>
+  </owl:Class>
+  <owl:Class rdf:about="#Thicker_2.1186">
+    <rdfs:subClassOf rdf:resource="bfo:MaterialEntity"/>
+    <rdfs:label>thicker_2.1186</rdfs:label>
+    <rdfs:comment>substance that increases the viscosity of a liquid polymeric system.</rdfs:comment>
+  </owl:Class>
+  <owl:Class rdf:about="#Thickness_2.187">
+    <rdfs:subClassOf rdf:resource="#TestData"/>
+    <rdfs:label>thickness_2.187</rdfs:label>
+    <rdfs:comment>&lt;test specimen&gt; the shorter dimension of the rectangular cross-section perpendicular to the longitudinal direction of a bar (beam) test specimen. NOTE It is expressed in millimetres.</rdfs:comment>
+  </owl:Class>
+  <owl:DatatypeProperty rdf:about="#hasThicknessValue">
+    <rdfs:domain rdf:resource="#Thickness_2.187"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+    <rdfs:label>has thickness value</rdfs:label>
+  </owl:DatatypeProperty>
+  <owl:Class rdf:about="#ThioureaFormaldehydeResin_2.1187">
+    <rdfs:subClassOf rdf:resource="#PolymerMaterial"/>
+    <rdfs:label>thiourea-formaldehyde resin_2.1187</rdfs:label>
+    <rdfs:comment>amino resin made by the polycondensation of thiourea (thiocarbamide) with formaldehyde.</rdfs:comment>
+  </owl:Class>
+  <owl:Class rdf:about="#Thixotropy_2.1600">
+    <rdfs:subClassOf rdf:resource="bfo:Process"/>
+    <rdfs:label>thixotropy_2.1600</rdfs:label>
+    <rdfs:comment>degree of apparent viscosity under shear stress, followed by a gradual recovery when the stress is removed.</rdfs:comment>
+  </owl:Class>
+  <owl:Class rdf:about="#TimeToRupture_2.145">
+    <rdfs:subClassOf rdf:resource="#TestData"/>
+    <rdfs:label>time to rupture_2.145</rdfs:label>
+    <rdfs:comment>&lt;creep testing&gt; period of time during which a specimen is under full load until it ruptures.</rdfs:comment>
+  </owl:Class>
+  <owl:DatatypeProperty rdf:about="#hasTimeToRuptureValue">
+    <rdfs:domain rdf:resource="#TimeToRupture_2.145"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+    <rdfs:label>has time to rupture value</rdfs:label>
+  </owl:DatatypeProperty>
+  <owl:Class rdf:about="#Torpedo_2.1189">
+    <rdfs:subClassOf rdf:resource="bfo:MaterialEntity"/>
+    <rdfs:label>torpedo_2.1189</rdfs:label>
+    <rdfs:comment>streamlined metal device placed in the path of flow of the plastic material in the heating cylinders of injection-moulding machines and extruders, or in extrusion dies, to spread the melt into thin layers and to enable the material to come into contact with the heating areas.</rdfs:comment>
+  </owl:Class>
+  <owl:Class rdf:about="#TotalDrySolidsContent_2.1872">
+    <rdfs:subClassOf rdf:resource="#TestData"/>
+    <rdfs:label>total dry solids content_2.1872</rdfs:label>
+    <rdfs:comment>amount of solids obtained by taking a known volume of test material and drying at about 105 °C to constant mass.</rdfs:comment>
+  </owl:Class>
+  <owl:DatatypeProperty rdf:about="#hasTotalDrySolidsContentValue">
+    <rdfs:domain rdf:resource="#TotalDrySolidsContent_2.1872"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+    <rdfs:label>has total dry solids content value</rdfs:label>
+  </owl:DatatypeProperty>
+  <owl:Class rdf:about="#TotalOrganicCarbon_TOC_2.1875">
+    <rdfs:subClassOf rdf:resource="#TestData"/>
+    <rdfs:label>total organic carbon TOC_2.1875</rdfs:label>
+    <rdfs:comment>composting of plastics waste: all the carbon present in the organic matter in the material being composted.</rdfs:comment>
+    <skos:altLabel>TOC</skos:altLabel>
+  </owl:Class>
+  <owl:DatatypeProperty rdf:about="#hasTotalOrganicCarbonValue">
+    <rdfs:domain rdf:resource="#TotalOrganicCarbon_TOC_2.1875"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+    <rdfs:label>has total organic carbon value</rdfs:label>
+  </owl:DatatypeProperty>
+  <owl:Class rdf:about="#TotalSpectralTransmittance_2.1877">
+    <rdfs:subClassOf rdf:resource="#TestData"/>
+    <rdfs:label>total spectral transmittance_2.1877</rdfs:label>
+    <rdfs:comment>ratio of the transmitted radiant flux (regular and diffuse) to the incident radiant flux when a parallel beam of monochromatic radiation of a given wavelength passes through a specimen.</rdfs:comment>
+  </owl:Class>
+  <owl:DatatypeProperty rdf:about="#hasTotalSpectralTransmittanceValue">
+    <rdfs:domain rdf:resource="#TotalSpectralTransmittance_2.1877"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+    <rdfs:label>has total spectral transmittance value</rdfs:label>
+  </owl:DatatypeProperty>
+  <owl:Class rdf:about="#TotalLuminousTransmittance_2.1873">
+    <rdfs:subClassOf rdf:resource="#TestData"/>
+    <rdfs:label>total luminous transmittance_2.1873</rdfs:label>
+    <rdfs:comment>ratio of the transmitted luminous flux to the incident luminous flux when a parallel beam of light passes through a specimen.</rdfs:comment>
+  </owl:Class>
+  <owl:DatatypeProperty rdf:about="#hasTotalLuminousTransmittanceValue">
+    <rdfs:domain rdf:resource="#TotalLuminousTransmittance_2.1873"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+    <rdfs:label>has total luminous transmittance value</rdfs:label>
+  </owl:DatatypeProperty>
+  <owl:Class rdf:about="#ToxicHazard_2.763">
+    <rdfs:subClassOf rdf:resource="bfo:GenericallyDependentContinuant"/>
+    <rdfs:label>toxic hazard_2.763</rdfs:label>
+    <rdfs:comment>potential for injury or loss of life by exposure to toxicants with respect to their potency, quantity, concentration and duration of exposure.</rdfs:comment>
+  </owl:Class>
+  <owl:Class rdf:about="#Toxicity_2.767">
+    <rdfs:subClassOf rdf:resource="bfo:GenericallyDependentContinuant"/>
+    <rdfs:label>toxicity_2.767</rdfs:label>
+    <rdfs:comment>ability of a substance to produce an adverse effect upon a living organism.</rdfs:comment>
+  </owl:Class>
+  <owl:Class rdf:about="#ToxicPotency_2.764">
+    <rdfs:subClassOf rdf:resource="#TestData"/>
+    <rdfs:label>toxic potency_2.764</rdfs:label>
+    <rdfs:comment>measure of the amount of toxicant required to elicit a specific toxic effect.</rdfs:comment>
+  </owl:Class>
+  <owl:DatatypeProperty rdf:about="#hasToxicPotencyValue">
+    <rdfs:domain rdf:resource="#ToxicPotency_2.764"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+    <rdfs:label>has toxic potency value</rdfs:label>
+  </owl:DatatypeProperty>
+  <owl:Class rdf:about="#ToxicRisk_2.765">
+    <rdfs:subClassOf rdf:resource="bfo:GenericallyDependentContinuant"/>
+    <rdfs:label>toxic risk_2.765</rdfs:label>
+    <rdfs:comment>result of multiplying the probability of occurrence of a toxic hazard to be expected in a given technical operation or state by the consequence or extent of injury to be expected on the occurrence of the toxic hazard.</rdfs:comment>
+  </owl:Class>
+  <owl:Class rdf:about="#Toxicant_2.766">
+    <rdfs:subClassOf rdf:resource="bfo:MaterialEntity"/>
+    <rdfs:label>toxicant_2.766</rdfs:label>
+    <rdfs:comment>substance which has an adverse effect upon a living organism.</rdfs:comment>
+  </owl:Class>
+  <owl:Class rdf:about="#TrackingResistance_2.768">
+    <rdfs:subClassOf rdf:resource="#TestData"/>
+    <rdfs:label>tracking resistance_2.768</rdfs:label>
+    <rdfs:comment>ability of a material to withstand a test voltage, under specified conditions, without creating conducting paths on the surface of the material and without the occurrence of flame.</rdfs:comment>
+  </owl:Class>
+  <owl:DatatypeProperty rdf:about="#hasTrackingResistanceValue">
+    <rdfs:domain rdf:resource="#TrackingResistance_2.768"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+    <rdfs:label>has tracking resistance value</rdfs:label>
+  </owl:DatatypeProperty>
+  <owl:Class rdf:about="#Transparency_2.1200">
+    <rdfs:subClassOf rdf:resource="bfo:GenericallyDependentContinuant"/>
+    <rdfs:label>transparency_2.1200</rdfs:label>
+    <rdfs:comment>property of a material by which a negligible portion of the transmitted light undergoes scattering, thereby enabling objects to be distinguished clearly through the material.</rdfs:comment>
+  </owl:Class>
+  <owl:Class rdf:about="#TransparentPlastic_2.1879">
+    <rdfs:subClassOf rdf:resource="#PolymerMaterial"/>
+    <rdfs:label>transparent plastic_2.1879</rdfs:label>
+    <rdfs:comment>plastic in which the transmittance of light is essentially regular and which has a high transmittance in the visible region of the spectrum.</rdfs:comment>
+  </owl:Class>
+  <owl:Class rdf:about="#TwoPartAdhesive_2.1535">
+    <rdfs:subClassOf rdf:resource="bfo:MaterialEntity"/>
+    <rdfs:label>two-part adhesive_2.1535</rdfs:label>
+    <rdfs:comment>adhesive that consists of two separate reactive components that are mixed before use.</rdfs:comment>
+  </owl:Class>
+  <owl:Class rdf:about="#TransferTape_2.1528">
+    <rdfs:subClassOf rdf:resource="bfo:MaterialEntity"/>
+    <rdfs:label>transfer tape_2.1528</rdfs:label>
+    <rdfs:comment>carrier coated with a pressure-sensitive adhesive which, when detached from the substrate, permits the carrier to be removed, leaving only the adhesive.</rdfs:comment>
+  </owl:Class>
+  <!-- end additions from pages 137-144 -->
+  <!-- New classes extracted from pages 143-149 -->
+  <owl:Class rdf:about="#Turbidity_2.1208">
+    <rdfs:subClassOf rdf:resource="#TestData"/>
+    <rdfs:label>turbidity_2.1208</rdfs:label>
+    <rdfs:comment>apparent absorbance of incident radiation, attributable to scattering.</rdfs:comment>
+  </owl:Class>
+  <owl:DatatypeProperty rdf:about="#hasTurbidityValue">
+    <rdfs:domain rdf:resource="#Turbidity_2.1208"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+    <rdfs:label>has turbidity value</rdfs:label>
+  </owl:DatatypeProperty>
+  <owl:Class rdf:about="#TwoWayStickAdhesive_2.1533">
+    <rdfs:subClassOf rdf:resource="bfo:MaterialEntity"/>
+    <rdfs:label>two-way-stick adhesive_2.1533</rdfs:label>
+    <rdfs:comment>adhesive that is applied to both adherends.</rdfs:comment>
+    <skos:altLabel>double-spread adhesive</skos:altLabel>
+  </owl:Class>
+  <owl:Class rdf:about="#TypeOfFailure_2.772">
+    <rdfs:subClassOf rdf:resource="bfo:GenericallyDependentContinuant"/>
+    <rdfs:label>type of failure_2.772</rdfs:label>
+    <rdfs:comment>&lt;puncture testing&gt; type of deformation behaviour of the material under test.</rdfs:comment>
+  </owl:Class>
+  <owl:Class rdf:about="#TypeOfFailure_2.1344">
+    <rdfs:subClassOf rdf:resource="bfo:GenericallyDependentContinuant"/>
+    <rdfs:label>type of failure_2.1344</rdfs:label>
+    <rdfs:comment>&lt;Charpy and Izod impact testing&gt; type of deformation behaviour of the material under test.</rdfs:comment>
+  </owl:Class>
+  <owl:Class rdf:about="#UltrasonicWelding_2.1209">
+    <rdfs:subClassOf rdf:resource="bfo:Process"/>
+    <rdfs:label>ultrasonic welding_2.1209</rdfs:label>
+    <rdfs:comment>pressure welding process in which the surfaces to be united are softened by heat produced by intramolecular vibratory motion at ultrasonic frequencies.</rdfs:comment>
+  </owl:Class>
+  <owl:Class rdf:about="#Undercure_2.1210">
+    <rdfs:subClassOf rdf:resource="bfo:GenericallyDependentContinuant"/>
+    <rdfs:label>undercure_2.1210</rdfs:label>
+    <rdfs:comment>state of cure of a polymeric system when curing conditions (e.g. time, temperature, radiation, amounts of curing additives) have been insufficient to produce a satisfactory cure.</rdfs:comment>
+  </owl:Class>
+  <owl:Class rdf:about="#Undercut_2.1211">
+    <rdfs:subClassOf rdf:resource="bfo:MaterialEntity"/>
+    <rdfs:label>undercut_2.1211</rdfs:label>
+    <rdfs:comment>depression in the wall of a mould cavity that necessitates deformation of the moulding or the use of special mould construction for ejection.</rdfs:comment>
+  </owl:Class>
+  <owl:Class rdf:about="#UnidirectionalFabric_2.1212">
+    <rdfs:subClassOf rdf:resource="bfo:MaterialEntity"/>
+    <rdfs:label>unidirectional fabric_2.1212</rdfs:label>
+    <rdfs:comment>fabric with a great number of yarns or rovings in one direction (usually the warp) and fewer and generally finer yarns in the other direction, resulting in a fabric much stronger in the first direction than in the other.</rdfs:comment>
+  </owl:Class>
+  <owl:Class rdf:about="#UnidirectionalPrepreg_2.1085">
+    <rdfs:subClassOf rdf:resource="bfo:MaterialEntity"/>
+    <rdfs:label>unidirectional prepreg_2.1085</rdfs:label>
+    <rdfs:comment>unidirectional structure, that has been impregnated with a thermosetting or thermoplastic resin system.</rdfs:comment>
+  </owl:Class>
+  <owl:Class rdf:about="#MonodispersePolymer_2.1213">
+    <rdfs:subClassOf rdf:resource="#PolymerMaterial"/>
+    <rdfs:label>monodisperse polymer_2.1213</rdfs:label>
+    <rdfs:comment>polymer molecules which are uniform with respect to their relative molecular mass and constitution.</rdfs:comment>
+  </owl:Class>
+  <owl:Class rdf:about="#UnsaturatedPolyester_2.1216">
+    <rdfs:subClassOf rdf:resource="#PolymerMaterial"/>
+    <rdfs:label>unsaturated polyester_2.1216</rdfs:label>
+    <rdfs:comment>polyester characterized by carbon-carbon unsaturation in the polymer chain, which permits subsequent crosslinking with an unsaturated monomer or prepolymer.</rdfs:comment>
+    <skos:altLabel>UP</skos:altLabel>
+  </owl:Class>
+  <owl:Class rdf:about="#UnsupportedFilmAdhesive_2.1525">
+    <rdfs:subClassOf rdf:resource="bfo:MaterialEntity"/>
+    <rdfs:label>unsupported-film adhesive_2.1525</rdfs:label>
+    <rdfs:comment>adhesive supplied in sheet, film or web form, without an incorporated carrier.</rdfs:comment>
+    <skos:altLabel>unsupported film adhesive</skos:altLabel>
+  </owl:Class>
+  <owl:Class rdf:about="#UntreatedFibre_2.1047">
+    <rdfs:subClassOf rdf:resource="bfo:MaterialEntity"/>
+    <rdfs:label>untreated fibre_2.1047</rdfs:label>
+    <rdfs:comment>fibre that has not been subjected to the process of surface treatment.</rdfs:comment>
+  </owl:Class>
+  <owl:Class rdf:about="#UpstrokePress_2.1217">
+    <rdfs:subClassOf rdf:resource="bfo:Process"/>
+    <rdfs:label>upstroke press_2.1217</rdfs:label>
+    <rdfs:comment>press in which the pressing device is situated below the moving table, pressure being applied by an upward movement of this device.</rdfs:comment>
+  </owl:Class>
+  <owl:Class rdf:about="#UreaPlastic_2.1219">
+    <rdfs:subClassOf rdf:resource="#PolymerMaterial"/>
+    <rdfs:label>urea plastic_2.1219</rdfs:label>
+    <rdfs:comment>plastic based on amino resins, urea being present in the greatest amount by mass of the amines or amides involved in the polymerization.</rdfs:comment>
+  </owl:Class>
+  <owl:Class rdf:about="#UrethanePlastic_2.1220">
+    <rdfs:subClassOf rdf:resource="#PolymerMaterial"/>
+    <rdfs:label>urethane plastic_2.1220</rdfs:label>
+    <rdfs:comment>plastic based on polymers in which the repeated structural units in the chains are of the urethane type, or on copolymers in which urethane and other types of repeated structural unit are present in the macromolecule.</rdfs:comment>
+  </owl:Class>
+  <owl:Class rdf:about="#VacuumPressing_2.1633">
+    <rdfs:subClassOf rdf:resource="bfo:Process"/>
+    <rdfs:label>vacuum pressing_2.1633</rdfs:label>
+    <rdfs:comment>application of pressure to an assembly by inserting the assembly into a flexible cover or bag from which the air is then evacuated.</rdfs:comment>
+  </owl:Class>
+  <owl:Class rdf:about="#VacuumThermoforming_2.1222">
+    <rdfs:subClassOf rdf:resource="#TestProcedure"/>
+    <rdfs:label>vacuum thermoforming_2.1222</rdfs:label>
+    <rdfs:comment>snap-back thermoforming process in which a vacuum is used to form a heated sheet against the mould surface.</rdfs:comment>
+  </owl:Class>
+  <owl:Class rdf:about="#Veil_2.442">
+    <rdfs:subClassOf rdf:resource="bfo:MaterialEntity"/>
+    <rdfs:label>veil_2.442</rdfs:label>
+    <rdfs:comment>&lt;textile glass&gt; thin layer made from (continuous or chopped) glass filaments held together with a binder.</rdfs:comment>
+  </owl:Class>
+  <owl:Class rdf:about="#Veneer_2.1224">
+    <rdfs:subClassOf rdf:resource="bfo:MaterialEntity"/>
+    <rdfs:label>veneer_2.1224</rdfs:label>
+    <rdfs:comment>thin wood sheeting used to make plywood or to serve as a decorative surface layer on a laminate.</rdfs:comment>
+  </owl:Class>
+  <owl:Class rdf:about="#Vent_2.1225">
+    <rdfs:subClassOf rdf:resource="bfo:MaterialEntity"/>
+    <rdfs:label>vent_2.1225</rdfs:label>
+    <rdfs:comment>slot or groove provided in a mould or machine to allow air and gas to escape during moulding, extrusion or forming.</rdfs:comment>
+  </owl:Class>
+  <owl:Class rdf:about="#VerificationOfAnInstrument_2.1926">
+    <rdfs:subClassOf rdf:resource="bfo:Process"/>
+    <rdfs:label>verification of an instrument_2.1926</rdfs:label>
+    <rdfs:comment>&lt;durometer hardness&gt; all of the operations carried out in order to ensure compliance of a durometer with the requirements of the test method standard.</rdfs:comment>
+  </owl:Class>
+  <owl:Class rdf:about="#VerificationOfAnInstrument_2.1483">
+    <rdfs:subClassOf rdf:resource="bfo:Process"/>
+    <rdfs:label>verification of an instrument_2.1483</rdfs:label>
+    <rdfs:comment>&lt;general&gt; proof, with the use of calibrated standards or standard reference materials, that the calibration of the instrument is accurate.</rdfs:comment>
+  </owl:Class>
+  <owl:Class rdf:about="#VeryLowDensityPolyethylene_PE_LD_2.1375">
+    <rdfs:subClassOf rdf:resource="#PolymerMaterial"/>
+    <rdfs:label>very-low density polyethylene PE-LD_2.1375</rdfs:label>
+    <rdfs:comment>polyethylene which has many short-chain branches, an insignificant number of long-chain branches and a density typically of 0,910 grams/cubic centimetre or less.</rdfs:comment>
+    <skos:altLabel>PE-LD</skos:altLabel>
+  </owl:Class>
+  <owl:Class rdf:about="#VicatSofteningTemperature_2.957">
+    <rdfs:subClassOf rdf:resource="#TestData"/>
+    <rdfs:label>Vicat softening temperature_2.957</rdfs:label>
+    <rdfs:comment>temperature at which a specified indenter tip with a flat point penetrates 1 mm into a plastic test specimen, when the temperature of the specimen is raised in a specified rate from room temperature Note: It is expressed in degrees Celsius.</rdfs:comment>
+  </owl:Class>
+  <owl:DatatypeProperty rdf:about="#hasVicatSofteningTemperatureValue">
+    <rdfs:domain rdf:resource="#VicatSofteningTemperature_2.957"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+    <rdfs:label>has Vicat softening temperature value</rdfs:label>
+  </owl:DatatypeProperty>
+  <owl:Class rdf:about="#VinylAcetatePlastic_2.1227">
+    <rdfs:subClassOf rdf:resource="#PolymerMaterial"/>
+    <rdfs:label>vinyl acetate plastic_2.1227</rdfs:label>
+    <rdfs:comment>plastic based on polymers of vinyl acetate or copolymers of vinyl acetate with other monomers, the vinyl acetate being in the greatest amount by mass.</rdfs:comment>
+  </owl:Class>
+  <owl:Class rdf:about="#VinylChloridePlastic_2.1228">
+    <rdfs:subClassOf rdf:resource="#PolymerMaterial"/>
+    <rdfs:label>vinyl chloride plastic_2.1228</rdfs:label>
+    <rdfs:comment>plastic based on polymers of vinyl chloride or copolymers of vinyl chloride with other monomers, the vinyl chloride being in the greatest amount by mass.</rdfs:comment>
+  </owl:Class>
+  <owl:Class rdf:about="#VinylResin_2.1229">
+    <rdfs:subClassOf rdf:resource="#PolymerMaterial"/>
+    <rdfs:label>vinyl resin_2.1229</rdfs:label>
+    <rdfs:comment>resin made by polymerization of monomers containing the vinyl group.</rdfs:comment>
+  </owl:Class>
+  <owl:Class rdf:about="#VinylideneChloridePlastic_2.1230">
+    <rdfs:subClassOf rdf:resource="#PolymerMaterial"/>
+    <rdfs:label>vinylidene chloride plastic_2.1230</rdfs:label>
+    <rdfs:comment>plastic based on polymers of vinylidene chloride or copolymers of vinylidene chloride with other monomers, the vinylidene chloride being in the greatest amount by mass.</rdfs:comment>
+  </owl:Class>
+  <owl:Class rdf:about="#VinylPlastisol_2.1231">
+    <rdfs:subClassOf rdf:resource="#MaterialEntity"/>
+    <rdfs:label>vinyl plastisol_2.1231</rdfs:label>
+    <rdfs:comment>plastic based on polymers of vinyl chloride or copolymers of vinyl chloride with other monomers, in the form of pellets, granules, powder, floc, etc., that has not been subjected to use or processing other than that required for its initial manufacture.</rdfs:comment>
+  </owl:Class>
+  <owl:Class rdf:about="#Viscoelasticity_2.1232">
+    <rdfs:subClassOf rdf:resource="bfo:GenericallyDependentContinuant"/>
+    <rdfs:label>viscoelasticity_2.1232</rdfs:label>
+    <rdfs:comment>stress response of a material acting as though it were a combination of an elastic solid and a viscous fluid with flow dependent on time, temperature, load and rate of loading.</rdfs:comment>
+  </owl:Class>
+  <owl:Class rdf:about="#VisibleFibre_2.1237">
+    <rdfs:subClassOf rdf:resource="bfo:MaterialEntity"/>
+    <rdfs:label>visible fibre_2.1237</rdfs:label>
+    <rdfs:comment>fibre wetted incompletely with resin and hence appearing at the surface of a reinforced plastic.</rdfs:comment>
+  </owl:Class>
+  <owl:Class rdf:about="#Void_2.1238">
+    <rdfs:subClassOf rdf:resource="bfo:MaterialEntity"/>
+    <rdfs:label>void_2.1238</rdfs:label>
+    <rdfs:comment>&lt;non-cellular plastics&gt; enclosed cavity of an undefined shape, containing air or some other gas.</rdfs:comment>
+  </owl:Class>
+  <owl:Class rdf:about="#Void_2.1239">
+    <rdfs:subClassOf rdf:resource="bfo:MaterialEntity"/>
+    <rdfs:label>void_2.1239</rdfs:label>
+    <rdfs:comment>&lt;cellular plastics&gt; cavity formed unintentionally in cellular plastics and substantially larger than the characteristic individual cells.</rdfs:comment>
+  </owl:Class>
+  <owl:Class rdf:about="#VolatileSolidsContent_2.1889">
+    <rdfs:subClassOf rdf:resource="#TestData"/>
+    <rdfs:label>volatile-solids content_2.1889</rdfs:label>
+    <rdfs:comment>amount of solids obtained by subtracting the residue of a known volume of test material or compost after incineration at about 550 °C from the total dry solids of the same test sample.</rdfs:comment>
+  </owl:Class>
+  <owl:DatatypeProperty rdf:about="#hasVolatileSolidsContentValue">
+    <rdfs:domain rdf:resource="#VolatileSolidsContent_2.1889"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+    <rdfs:label>has volatile solids content value</rdfs:label>
+  </owl:DatatypeProperty>
+  <owl:Class rdf:about="#VolumeExpansion_2.1240">
+    <rdfs:subClassOf rdf:resource="#TestData"/>
+    <rdfs:label>volume expansion_2.1240</rdfs:label>
+    <rdfs:comment>increase in the volume of a specimen under specified test conditions.</rdfs:comment>
+  </owl:Class>
+  <owl:DatatypeProperty rdf:about="#hasVolumeExpansionValue">
+    <rdfs:domain rdf:resource="#VolumeExpansion_2.1240"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+    <rdfs:label>has volume expansion value</rdfs:label>
+  </owl:DatatypeProperty>
+  <owl:Class rdf:about="#VolumeResistance_2.1241">
+    <rdfs:subClassOf rdf:resource="#TestData"/>
+    <rdfs:label>volume resistance_2.1241</rdfs:label>
+    <rdfs:comment>quotient of the voltage applied between two electrodes which are in contact with, or embedded in, two opposite sides of a specimen by that portion of the current flowing through the volume of the specimen, excluding current flowing along the surface.</rdfs:comment>
+  </owl:Class>
+  <owl:Class rdf:about="#VolumetricFeeding_2.1243">
+    <rdfs:subClassOf rdf:resource="bfo:Process"/>
+    <rdfs:label>volumetric feeding_2.1243</rdfs:label>
+    <rdfs:comment>moulding: way of feeding in which the material being fed is controlled volumetrically.</rdfs:comment>
+  </owl:Class>
+  <owl:Class rdf:about="#Warp_2.1245">
+    <rdfs:subClassOf rdf:resource="bfo:GenericallyDependentContinuant"/>
+    <rdfs:label>warp_2.1245</rdfs:label>
+    <rdfs:comment>dimensional distortion of a plastic object after moulding or other fabrication, caused by non-uniform shrinkage or internal stress.</rdfs:comment>
+  </owl:Class>
+  <owl:Class rdf:about="#Waste_2.1710">
+    <rdfs:subClassOf rdf:resource="bfo:MaterialEntity"/>
+    <rdfs:label>waste_2.1710</rdfs:label>
+    <rdfs:comment>any material or object which the holder discards, or intends to discard, or is required to discard.</rdfs:comment>
+  </owl:Class>
+  <owl:Class rdf:about="#WaterAbsorption_2.1246">
+    <rdfs:subClassOf rdf:resource="#TestData"/>
+    <rdfs:label>water absorption_2.1246</rdfs:label>
+    <rdfs:comment>amount of water absorbed by a material under specified test conditions.</rdfs:comment>
+  </owl:Class>
+  <owl:DatatypeProperty rdf:about="#hasWaterAbsorptionValue">
+    <rdfs:domain rdf:resource="#WaterAbsorption_2.1246"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+    <rdfs:label>has water absorption value</rdfs:label>
+  </owl:DatatypeProperty>
+  <owl:Class rdf:about="#WaterBorneAdhesive_2.1473">
+    <rdfs:subClassOf rdf:resource="bfo:MaterialEntity"/>
+    <rdfs:label>water-borne adhesive_2.1473</rdfs:label>
+    <rdfs:comment>adhesive in which the solvent, or the continuous phase, is water.</rdfs:comment>
+  </owl:Class>
+  <owl:Class rdf:about="#WaterHoldingCapacity_2.1892">
+    <rdfs:subClassOf rdf:resource="#TestData"/>
+    <rdfs:label>water-holding capacity_2.1892</rdfs:label>
+    <rdfs:comment>mass of water which evaporates from a known mass of material saturated with water when the material is dried to constant mass at 105 °C, divided by the dry mass of the material.</rdfs:comment>
+  </owl:Class>
+  <owl:DatatypeProperty rdf:about="#hasWaterHoldingCapacityValue">
+    <rdfs:domain rdf:resource="#WaterHoldingCapacity_2.1892"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+    <rdfs:label>has water-holding capacity value</rdfs:label>
+  </owl:DatatypeProperty>
+  <owl:Class rdf:about="#WaterResistant_2.1671">
+    <rdfs:subClassOf rdf:resource="bfo:GenericallyDependentContinuant"/>
+    <rdfs:label>water-resistant_2.1671</rdfs:label>
+    <rdfs:comment>property of an adhesive able to withstand prolonged contact with water whilst retaining adequate bond strength and other properties necessary for its intended purpose.</rdfs:comment>
+  </owl:Class>
+  <owl:Class rdf:about="#Waterproof_2.1671">
+    <rdfs:subClassOf rdf:resource="bfo:GenericallyDependentContinuant"/>
+    <rdfs:label>waterproof_2.1671</rdfs:label>
+    <rdfs:comment>deprecated synonym for water-resistant used in some contexts.</rdfs:comment>
+    <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
+  </owl:Class>
+  <owl:Class rdf:about="#WeightFeeding_2.1250">
+    <rdfs:subClassOf rdf:resource="bfo:Process"/>
+    <rdfs:label>weight feeding_2.1250</rdfs:label>
+    <rdfs:comment>&lt;moulding&gt; way of feeding in which the material being fed is controlled gravimetrically.</rdfs:comment>
+  </owl:Class>
+  <owl:Class rdf:about="#WeldLine_2.1251">
+    <rdfs:subClassOf rdf:resource="bfo:MaterialEntity"/>
+    <rdfs:label>weld line_2.1251</rdfs:label>
+    <rdfs:comment>mark on a moulded plastic formed by the union of two or more streams of plastic flowing together; also known as knit line or weld mark.</rdfs:comment>
+    <skos:altLabel>kint line</skos:altLabel>
+    <skos:altLabel>weld mark</skos:altLabel>
+  </owl:Class>
+  <owl:Class rdf:about="#Welding_2.1252">
+    <rdfs:subClassOf rdf:resource="bfo:Process"/>
+    <rdfs:label>welding_2.1252</rdfs:label>
+    <rdfs:comment>process of uniting softened surfaces of materials, generally with the aid of heat.</rdfs:comment>
+  </owl:Class>
+  <owl:Class rdf:about="#WetBonding_2.1626">
+    <rdfs:subClassOf rdf:resource="bfo:MaterialEntity"/>
+    <rdfs:label>wet bonding_2.1626</rdfs:label>
+    <rdfs:comment>adhesives where the adhesive coats applied still contain substantial amounts of volatile adhesive constituents when the coats are brought together; also referred to as "wet-stick" adhesives.</rdfs:comment>
+  </owl:Class>
+  <owl:Class rdf:about="#WetStrength_2.1253">
+    <rdfs:subClassOf rdf:resource="#TestData"/>
+    <rdfs:label>wet strength_2.1253</rdfs:label>
+    <rdfs:comment>&lt;adhesives&gt; strength of an adhesive joint determined immediately after removal from a liquid in which it has been immersed under specified conditions of time, temperature and composition.</rdfs:comment>
+  </owl:Class>
+  <owl:DatatypeProperty rdf:about="#hasWetStrengthValue">
+    <rdfs:domain rdf:resource="#WetStrength_2.1253"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+    <rdfs:label>has wet strength value</rdfs:label>
+  </owl:DatatypeProperty>
+  <owl:Class rdf:about="#Wettability_2.1607">
+    <rdfs:subClassOf rdf:resource="bfo:GenericallyDependentContinuant"/>
+    <rdfs:label>wettability_2.1607</rdfs:label>
+    <rdfs:comment>extent to which a liquid wets a solid surface as expressed by the contact angle between the liquid and the solid surface.</rdfs:comment>
+  </owl:Class>
+  <owl:Class rdf:about="#WhitePointTemperature_2.1255">
+    <rdfs:subClassOf rdf:resource="#TestData"/>
+    <rdfs:label>white point temperature_2.1255</rdfs:label>
+    <rdfs:comment>&lt;dispersion&gt; limiting temperature below which an opaque mass, and above which a transparent film, is formed.</rdfs:comment>
+  </owl:Class>
+  <!-- end new classes -->
+</rdf:RDF>

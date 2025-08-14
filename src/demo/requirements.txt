@@ -1,7 +1,7 @@
-openai==1.82.1
-streamlit==1.45.1
-azure-identity==1.23.0
-python-dotenv==1.1.0
-langchain==0.3.25
-langchain-openai==0.3.18
+openai==1.99.9
+streamlit==1.48.1
+azure-identity==1.24.0
+python-dotenv==1.1.1
+langchain==0.3.27
+langchain-openai==0.3.30
 owlready2==0.48
